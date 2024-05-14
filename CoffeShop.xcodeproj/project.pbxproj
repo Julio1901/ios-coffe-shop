@@ -18,6 +18,8 @@
 		F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8C32BF2DCE800CD0BA4 /* LoginScreen.swift */; };
 		F439B8C72BF2E33E00CD0BA4 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F439B8C62BF2E33E00CD0BA4 /* Sora-Regular.ttf */; };
 		F439B8C92BF2E48B00CD0BA4 /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */; };
+		F439B8D22BF3B3FE00CD0BA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8D12BF3B3FE00CD0BA4 /* Extensions.swift */; };
+		F439B8D92BF3B9A400CD0BA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F439B8D72BF3B9A400CD0BA4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		F439B8C32BF2DCE800CD0BA4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		F439B8C62BF2E33E00CD0BA4 /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
 		F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-SemiBold.ttf"; sourceTree = "<group>"; };
+		F439B8D12BF3B3FE00CD0BA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F439B8D82BF3B9A400CD0BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		F439B8912BF2D96500CD0BA4 /* CoffeShop */ = {
 			isa = PBXGroup;
 			children = (
+				F439B8CE2BF3B22F00CD0BA4 /* Common */,
 				F439B8C52BF2E32300CD0BA4 /* fonts */,
 				F439B8C22BF2DCB400CD0BA4 /* Screens */,
 				F439B8922BF2D96500CD0BA4 /* AppDelegate.swift */,
@@ -111,6 +116,7 @@
 				F439B89B2BF2D96700CD0BA4 /* Assets.xcassets */,
 				F439B89D2BF2D96700CD0BA4 /* LaunchScreen.storyboard */,
 				F439B8A02BF2D96700CD0BA4 /* Info.plist */,
+				F439B8D72BF3B9A400CD0BA4 /* Localizable.strings */,
 			);
 			path = CoffeShop;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 				F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		F439B8CE2BF3B22F00CD0BA4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F439B8D12BF3B3FE00CD0BA4 /* Extensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F439B8D92BF3B9A400CD0BA4 /* Localizable.strings in Resources */,
 				F439B89C2BF2D96700CD0BA4 /* Assets.xcassets in Resources */,
 				F439B8C72BF2E33E00CD0BA4 /* Sora-Regular.ttf in Resources */,
 				F439B8C92BF2E48B00CD0BA4 /* Sora-SemiBold.ttf in Resources */,
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F439B8972BF2D96500CD0BA4 /* ViewController.swift in Sources */,
+				F439B8D22BF3B3FE00CD0BA4 /* Extensions.swift in Sources */,
 				F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */,
 				F439B8932BF2D96500CD0BA4 /* AppDelegate.swift in Sources */,
 				F439B8952BF2D96500CD0BA4 /* SceneDelegate.swift in Sources */,
@@ -327,6 +343,14 @@
 				F439B89E2BF2D96700CD0BA4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F439B8D72BF3B9A400CD0BA4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F439B8D82BF3B9A400CD0BA4 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

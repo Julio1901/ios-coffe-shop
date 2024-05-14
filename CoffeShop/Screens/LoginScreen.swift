@@ -22,7 +22,7 @@ class LoginScreen: UIView {
     private var titleLabel: UILabel = {
        let it = UILabel()
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.text = "Fall in Love with\nCoffee in Blissful\nDelight!"
+        it.setText(key: "welcome_screen_title")
         it.textColor = UIColor(.white)
         it.font = UIFont(name: "Sora-SemiBold", size: 32)
         it.numberOfLines = 0
@@ -34,7 +34,7 @@ class LoginScreen: UIView {
     private var subTitleLabel : UILabel = {
         let it = UILabel()
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.text = "Welcome to our cozy coffee corner, where\nevery cup is a delightful for you."
+        it.setText(key: "welcome_screen_subtitle")
         it.font = UIFont(name: "Sora-Regular", size: 14)
         it.textColor = UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0)
         it.numberOfLines = 0
@@ -45,29 +45,17 @@ class LoginScreen: UIView {
     
     private var getStartedButton: UIButton = {
         let it = UIButton()
-        it.setTitle("Get Started", for: .normal)
+        it.setText(key: "welcome_screen_button_message", for: .normal)
+        it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 18)
         it.heightAnchor.constraint(equalToConstant: 56).isActive = true
         it.backgroundColor = UIColor(red: 198/255.0, green: 124/255.0, blue: 78/255.0, alpha: 1.0)
         it.setTitleColor(UIColor.white, for: .normal)
-        it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 18)
         it.layer.cornerRadius = 16
         it.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchDown)
         it.addTarget(self, action: #selector(buttonReleased(_:)), for: .touchUpInside)
         it.translatesAutoresizingMaskIntoConstraints = false
         return it
     }()
-    
-    
-    @objc private func buttonPressed(_ sender: UIButton) {
-        // Altera a aparência do botão quando pressionado
-        sender.backgroundColor = UIColor.black
-    }
-    
-    
-    @objc private func buttonReleased(_ sender: UIButton) {
-        // Altera a aparência do botão quando pressionado
-        sender.backgroundColor = UIColor(red: 198/255.0, green: 124/255.0, blue: 78/255.0, alpha: 1.0)
-    }
     
     init(){
         super.init(frame: .zero)
@@ -83,10 +71,16 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupConstraints() {
+    @objc private func buttonPressed(_ sender: UIButton) {
+        sender.backgroundColor = UIColor(red: 178/255.0, green: 104/255.0, blue: 58/255.0, alpha: 1.0)
+    }
     
+    @objc private func buttonReleased(_ sender: UIButton) {
+        sender.backgroundColor = UIColor(red: 198/255.0, green: 124/255.0, blue: 78/255.0, alpha: 1.0)
+    }
+    
+    private func setupConstraints() {
         let safeArea = safeAreaLayoutGuide
-        
         
         NSLayoutConstraint.activate([
             backGroundImage.topAnchor.constraint(equalTo: self.topAnchor),
@@ -94,19 +88,16 @@ class LoginScreen: UIView {
             backGroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
            
         ])
-        
         NSLayoutConstraint.activate([
             titleLabel.bottomAnchor.constraint(equalTo: subTitleLabel.topAnchor, constant: -8),
             titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
         ])
-        
         NSLayoutConstraint.activate([
             subTitleLabel.bottomAnchor.constraint(equalTo: getStartedButton.topAnchor, constant: -32),
             subTitleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             subTitleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
         ])
-        
         NSLayoutConstraint.activate([
             getStartedButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20),
             getStartedButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
