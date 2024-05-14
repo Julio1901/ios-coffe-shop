@@ -8,10 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    private var initialScreen = LoginScreen()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view = initialScreen
     }
 
 

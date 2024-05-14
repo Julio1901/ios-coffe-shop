@@ -10,12 +10,14 @@
 		F439B8932BF2D96500CD0BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8922BF2D96500CD0BA4 /* AppDelegate.swift */; };
 		F439B8952BF2D96500CD0BA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8942BF2D96500CD0BA4 /* SceneDelegate.swift */; };
 		F439B8972BF2D96500CD0BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8962BF2D96500CD0BA4 /* ViewController.swift */; };
-		F439B89A2BF2D96500CD0BA4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F439B8992BF2D96500CD0BA4 /* Base */; };
 		F439B89C2BF2D96700CD0BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F439B89B2BF2D96700CD0BA4 /* Assets.xcassets */; };
 		F439B89F2BF2D96700CD0BA4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F439B89E2BF2D96700CD0BA4 /* Base */; };
 		F439B8AA2BF2D96700CD0BA4 /* CoffeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8A92BF2D96700CD0BA4 /* CoffeShopTests.swift */; };
 		F439B8B42BF2D96700CD0BA4 /* CoffeShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8B32BF2D96700CD0BA4 /* CoffeShopUITests.swift */; };
 		F439B8B62BF2D96700CD0BA4 /* CoffeShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8B52BF2D96700CD0BA4 /* CoffeShopUITestsLaunchTests.swift */; };
+		F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8C32BF2DCE800CD0BA4 /* LoginScreen.swift */; };
+		F439B8C72BF2E33E00CD0BA4 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F439B8C62BF2E33E00CD0BA4 /* Sora-Regular.ttf */; };
+		F439B8C92BF2E48B00CD0BA4 /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		F439B8922BF2D96500CD0BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F439B8942BF2D96500CD0BA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F439B8962BF2D96500CD0BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F439B8992BF2D96500CD0BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F439B89B2BF2D96700CD0BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F439B89E2BF2D96700CD0BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F439B8A02BF2D96700CD0BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		F439B8AF2BF2D96700CD0BA4 /* CoffeShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F439B8B32BF2D96700CD0BA4 /* CoffeShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeShopUITests.swift; sourceTree = "<group>"; };
 		F439B8B52BF2D96700CD0BA4 /* CoffeShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F439B8C32BF2DCE800CD0BA4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		F439B8C62BF2E33E00CD0BA4 /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
+		F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,11 @@
 		F439B8912BF2D96500CD0BA4 /* CoffeShop */ = {
 			isa = PBXGroup;
 			children = (
+				F439B8C52BF2E32300CD0BA4 /* fonts */,
+				F439B8C22BF2DCB400CD0BA4 /* Screens */,
 				F439B8922BF2D96500CD0BA4 /* AppDelegate.swift */,
 				F439B8942BF2D96500CD0BA4 /* SceneDelegate.swift */,
 				F439B8962BF2D96500CD0BA4 /* ViewController.swift */,
-				F439B8982BF2D96500CD0BA4 /* Main.storyboard */,
 				F439B89B2BF2D96700CD0BA4 /* Assets.xcassets */,
 				F439B89D2BF2D96700CD0BA4 /* LaunchScreen.storyboard */,
 				F439B8A02BF2D96700CD0BA4 /* Info.plist */,
@@ -125,6 +130,23 @@
 				F439B8B52BF2D96700CD0BA4 /* CoffeShopUITestsLaunchTests.swift */,
 			);
 			path = CoffeShopUITests;
+			sourceTree = "<group>";
+		};
+		F439B8C22BF2DCB400CD0BA4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F439B8C32BF2DCE800CD0BA4 /* LoginScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F439B8C52BF2E32300CD0BA4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F439B8C62BF2E33E00CD0BA4 /* Sora-Regular.ttf */,
+				F439B8C82BF2E48B00CD0BA4 /* Sora-SemiBold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F439B89C2BF2D96700CD0BA4 /* Assets.xcassets in Resources */,
+				F439B8C72BF2E33E00CD0BA4 /* Sora-Regular.ttf in Resources */,
+				F439B8C92BF2E48B00CD0BA4 /* Sora-SemiBold.ttf in Resources */,
 				F439B89F2BF2D96700CD0BA4 /* Base in Resources */,
-				F439B89A2BF2D96500CD0BA4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F439B8972BF2D96500CD0BA4 /* ViewController.swift in Sources */,
+				F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */,
 				F439B8932BF2D96500CD0BA4 /* AppDelegate.swift in Sources */,
 				F439B8952BF2D96500CD0BA4 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F439B8982BF2D96500CD0BA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F439B8992BF2D96500CD0BA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F439B89D2BF2D96700CD0BA4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +462,6 @@
 				INFOPLIST_FILE = CoffeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +488,6 @@
 				INFOPLIST_FILE = CoffeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
