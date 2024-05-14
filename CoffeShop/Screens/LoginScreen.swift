@@ -27,16 +27,43 @@ class LoginScreen: UIView {
         it.translatesAutoresizingMaskIntoConstraints = false
         it.text = "Welcome to our cozy coffee corner, where every cup is a delightful for you."
         it.font = UIFont(name: "Sora-Regular", size: 14)
+        it.textColor = UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0)
         it.numberOfLines = 0
         it.lineBreakMode = .byWordWrapping
         return it
     }()
     
+    private var getStartedButton: UIButton = {
+        let it = UIButton()
+        it.setTitle("Get Started", for: .normal)
+        it.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        it.backgroundColor = UIColor(red: 198/255.0, green: 124/255.0, blue: 78/255.0, alpha: 1.0)
+        it.setTitleColor(UIColor.white, for: .normal)
+        it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 18)
+        it.layer.cornerRadius = 16
+        it.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchDown)
+        it.addTarget(self, action: #selector(buttonReleased(_:)), for: .touchUpInside)
+        it.translatesAutoresizingMaskIntoConstraints = false
+        return it
+    }()
+    
+    
+    @objc private func buttonPressed(_ sender: UIButton) {
+        // Altera a aparência do botão quando pressionado
+        sender.backgroundColor = UIColor.black
+    }
+    
+    
+    @objc private func buttonReleased(_ sender: UIButton) {
+        // Altera a aparência do botão quando pressionado
+        sender.backgroundColor = UIColor(red: 198/255.0, green: 124/255.0, blue: 78/255.0, alpha: 1.0)
+    }
     
     init(){
         super.init(frame: .zero)
         addSubview(titleLabel)
         addSubview(subTitleLabel)
+        addSubview(getStartedButton)
         setupConstraints()
         self.backgroundColor = UIColor(.white)
     }
@@ -59,6 +86,14 @@ class LoginScreen: UIView {
             subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 0),
             subTitleLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 0),
         ])
+        
+        NSLayoutConstraint.activate([
+            getStartedButton.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 8),
+            getStartedButton.leadingAnchor.constraint(equalTo: subTitleLabel.leadingAnchor, constant: 0),
+            getStartedButton.trailingAnchor.constraint(equalTo: subTitleLabel.trailingAnchor, constant: 0),
+           
+        ])
+
 
 
     }
