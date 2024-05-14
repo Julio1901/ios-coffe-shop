@@ -9,15 +9,24 @@ import UIKit
 
 class LoginScreen: UIView {
 
-    private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 36
-    private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -36
+    private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 24
+    private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -24
+    
+    private var backGroundImage: UIImageView = {
+        let it = UIImageView()
+        it.image = UIImage(named: "coffe-background-image")
+        it.translatesAutoresizingMaskIntoConstraints = false
+        return it
+    }()
     
     private var titleLabel: UILabel = {
        let it = UILabel()
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.text = "Fall in Love with Coffee in Blissful Delight!"
+        it.text = "Fall in Love with\nCoffee in Blissful\nDelight!"
+        it.textColor = UIColor(.white)
         it.font = UIFont(name: "Sora-SemiBold", size: 32)
         it.numberOfLines = 0
+        it.textAlignment = .center
         it.lineBreakMode = .byWordWrapping
         return it
     }()
@@ -25,10 +34,11 @@ class LoginScreen: UIView {
     private var subTitleLabel : UILabel = {
         let it = UILabel()
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.text = "Welcome to our cozy coffee corner, where every cup is a delightful for you."
+        it.text = "Welcome to our cozy coffee corner, where\nevery cup is a delightful for you."
         it.font = UIFont(name: "Sora-Regular", size: 14)
         it.textColor = UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0)
         it.numberOfLines = 0
+        it.textAlignment = .center
         it.lineBreakMode = .byWordWrapping
         return it
     }()
@@ -61,11 +71,12 @@ class LoginScreen: UIView {
     
     init(){
         super.init(frame: .zero)
+        addSubview(backGroundImage)
         addSubview(titleLabel)
         addSubview(subTitleLabel)
         addSubview(getStartedButton)
         setupConstraints()
-        self.backgroundColor = UIColor(.white)
+        self.backgroundColor = UIColor(.black)
     }
     
     required init?(coder: NSCoder) {
@@ -75,27 +86,32 @@ class LoginScreen: UIView {
     private func setupConstraints() {
     
         let safeArea = safeAreaLayoutGuide
+        
+        
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0),
+            backGroundImage.topAnchor.constraint(equalTo: self.topAnchor),
+            backGroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            backGroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+           
+        ])
+        
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: subTitleLabel.topAnchor, constant: -8),
             titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
         ])
         
         NSLayoutConstraint.activate([
-            subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 0),
-            subTitleLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 0),
+            subTitleLabel.bottomAnchor.constraint(equalTo: getStartedButton.topAnchor, constant: -32),
+            subTitleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
+            subTitleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
         ])
         
         NSLayoutConstraint.activate([
-            getStartedButton.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 8),
-            getStartedButton.leadingAnchor.constraint(equalTo: subTitleLabel.leadingAnchor, constant: 0),
-            getStartedButton.trailingAnchor.constraint(equalTo: subTitleLabel.trailingAnchor, constant: 0),
-           
+            getStartedButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20),
+            getStartedButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
+            getStartedButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
         ])
-
-
-
     }
     
 }
