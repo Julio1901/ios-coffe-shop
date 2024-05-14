@@ -43,7 +43,7 @@ class LoginScreen: UIView {
         return it
     }()
     
-    private var getStartedButton: UIButton = {
+    private lazy var getStartedButton: UIButton = {
         let it = UIButton()
         it.setText(key: "welcome_screen_button_message", for: .normal)
         it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 18)
