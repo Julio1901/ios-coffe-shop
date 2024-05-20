@@ -8,13 +8,13 @@
 import UIKit
 
 extension UILabel {
-    func setText (key: String) {
+    public func setText (key: String) {
         self.text = NSLocalizedString(key, comment: "")
     }
 }
 
 extension UIButton {
-    func setText(key: String, for state: UIControl.State) {
+    public func setText(key: String, for state: UIControl.State) {
         let text = NSLocalizedString(key, comment: "")
         self.setTitle(text, for: state)
     }
