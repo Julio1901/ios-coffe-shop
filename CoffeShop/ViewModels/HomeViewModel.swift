@@ -7,35 +7,24 @@
 
 import Foundation
 
-struct HomeViewModel {
+class HomeViewModel {
+        
+    private let coffeeRepository: CoffeeRepository
+    var coffeeList: [Coffee] = []
     
-    func getCoffeeList () async throws -> [Coffee] {
-        let endpoint = "https://fake-coffee-api.vercel.app/api"
-        
-        guard let url = URL(string: endpoint) else {
-            throw CoffeeApiError.invalidURL
+    init(coffeeRepository: CoffeeRepository) {
+        self.coffeeRepository = coffeeRepository
+    }
+
+    func fetchCoffeeList() {
+        Task{
+            do {
+                let coffees = try await coffeeRepository.getCoffeeList()
+                coffeeList = coffees
+            } catch {
+                print("Error fetch coffee list \(error.localizedDescription)")
+            }
         }
-        
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw CoffeeApiError.invalidResponse
-        }
-        
-        do {
-            let decoder = JSONDecoder()
-            return try decoder.decode([Coffee].self, from: data)
-        } catch {
-            throw CoffeeApiError.decodingError
-        }
-            
     }
     
-}
-
-
-enum CoffeeApiError : Error {
-    case invalidURL
-    case invalidResponse
-    case decodingError
 }
