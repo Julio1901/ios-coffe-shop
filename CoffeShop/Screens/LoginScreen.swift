@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol LoginScreenDelegate: AnyObject {
+    func navigateToHome()
+}
+
 class LoginScreen: UIView {
 
     private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 24
     private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -24
+    
+    weak var delegate: LoginScreenDelegate?
     
     private var backGroundImage: UIImageView = {
         let it = UIImageView()
@@ -73,6 +79,7 @@ class LoginScreen: UIView {
     
     @objc private func buttonPressed(_ sender: UIButton) {
         sender.backgroundColor = UIColor(red: 178/255.0, green: 104/255.0, blue: 58/255.0, alpha: 1.0)
+        delegate?.navigateToHome()
     }
     
     @objc private func buttonReleased(_ sender: UIButton) {

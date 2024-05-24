@@ -7,16 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LoginScreenDelegate {
+
     
     private var initialScreen = LoginScreen()
     private var homeViewModel : HomeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         let coffeeRepository = CoffeeRepositoryImpl()
         homeViewModel = HomeViewModel(coffeeRepository: coffeeRepository)
+        initialScreen.delegate = self
         view = initialScreen
         fetchCoffeeList()
     }
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
     private func fetchCoffeeList() {
         homeViewModel.fetchCoffeeList()
     }
+
     
+    func navigateToHome() {
+        let homeViewController = HomeViewController()
+        navigationController?.pushViewController(homeViewController, animated: true)
+    }
+
 }
 
