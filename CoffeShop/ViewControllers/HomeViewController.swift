@@ -17,7 +17,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         super.viewDidLoad()
         initialScreen.coffeeList.dataSource = self
         initialScreen.coffeeList.delegate = self
-        initialScreen.coffeeList.register(CustomCoffeeCell.self, forCellWithReuseIdentifier: "CustomCoffeeCell")
+        initialScreen.coffeeList.register(CoffeeWithPriceCell.self, forCellWithReuseIdentifier: "CoffeeWithPriceCell")
         view = initialScreen
         
     }
@@ -28,8 +28,8 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCoffeeCell", for: indexPath) as! CustomCoffeeCell
-        cell.coffeName.text = dataList[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeWithPriceCell", for: indexPath) as! CoffeeWithPriceCell
+//        cell.coffeName.text = dataList[indexPath.row]
         return cell
     }
     

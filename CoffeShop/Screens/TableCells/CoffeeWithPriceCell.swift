@@ -11,23 +11,33 @@ class CoffeeWithPriceCell: UICollectionViewCell {
     
     static let reuseIdentifier = "CoffeeWithPriceCell"
     
+    private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 8
+    private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -8
     
     private var image: UIImageView = {
         let it = UIImageView()
-        it.image = UIImage(named: "coffe-background-image")
+        it.image = UIImage(named: "coffe-product-image")
+        it.contentMode = .scaleToFill
+        it.layer.cornerRadius = 12
+        it.layer.masksToBounds = true
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.heightAnchor.constraint(equalToConstant: 128).isActive = true
-        it.widthAnchor.constraint(equalToConstant: 140).isActive = true
         return it
     }()
     
+    private var ratingLayer: UIView = {
+        let it = UIView()
+        it.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.30)
+        it.layer.cornerRadius = 12
+        it.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
+        it.translatesAutoresizingMaskIntoConstraints = false
+        return it
+    }()
     
     override init(frame: CGRect) {
             super.init(frame: frame)
-            contentView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-            contentView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+            self.backgroundColor = UIColor(.blue)
             addSubview(image)
-        self.backgroundColor = UIColor(.black)
+            addSubview(ratingLayer)
             setupConstraints()
         }
         
@@ -37,11 +47,17 @@ class CoffeeWithPriceCell: UICollectionViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: self.topAnchor),
-            image.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            image.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-         
-           
+            image.topAnchor.constraint(equalTo: topAnchor),
+            image.centerXAnchor.constraint(equalTo: centerXAnchor),
+            image.widthAnchor.constraint(equalToConstant: 140),
+            image.heightAnchor.constraint(equalToConstant: 128),
+            
+            ratingLayer.topAnchor.constraint(equalTo: image.topAnchor),
+            ratingLayer.trailingAnchor.constraint(equalTo: image.trailingAnchor),
+            ratingLayer.widthAnchor.constraint(equalToConstant: 51),
+            ratingLayer.heightAnchor.constraint(equalToConstant: 28),
+            
+            
         ])
     }
 }

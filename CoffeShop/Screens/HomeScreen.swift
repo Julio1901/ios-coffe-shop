@@ -64,41 +64,4 @@ class HomeScreen : UIView {
         ])
     }
     
-//    func setupCoffeeList(dataSource: UICollectionViewDataSource, delegate: UICollectionViewDelegateFlowLayout){
-//        coffeeList.dataSource = dataSource
-//        coffeeList.delegate = delegate
-//    }
-    
-    
 }
-
-
-class CustomCoffeeCell: UICollectionViewCell {
-    let coffeName =  UILabel()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(coffeName)
-        self.backgroundColor = UIColor(.blue)
-        coffeName.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            coffeName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            coffeName.leadingAnchor.constraint(equalTo: leadingAnchor),
-            coffeName.trailingAnchor.constraint(equalTo: trailingAnchor),
-            coffeName.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-//        coffeName.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//        coffeName.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-//        coffeName.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        coffeName.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        coffeName.layer.cornerRadius = 20
-        coffeName.layer.masksToBounds = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-}
-
