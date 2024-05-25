@@ -11,3 +11,6 @@
 "welcome_screen_subtitle" = "Welcome to our cozy coffee corner, where\nevery cup is a delightful for you.";
 "welcome_screen_button_message" = "Get Started";
 "home_screen" = "Home Screen";
+
+//MARK: Home Screen
+"price_not_found" = "Price not found";

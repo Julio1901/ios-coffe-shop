@@ -31,6 +31,9 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeWithPriceCell", for: indexPath) as! CoffeeWithPriceCell
 //        cell.coffeName.text = dataList[indexPath.row]
         cell.rating = "4.8"
+        cell.title = "Flat White"
+        cell.coffeeType = "Espresso"
+        cell.price = "3.53"
         return cell
     }
     

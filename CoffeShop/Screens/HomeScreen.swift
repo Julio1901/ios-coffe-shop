@@ -30,7 +30,6 @@ class HomeScreen : UIView {
         let layout = UICollectionViewFlowLayout()
         let it = UICollectionView(frame: .zero, collectionViewLayout: layout)
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.backgroundColor = UIColor(.orange)
         return it
     }()
         
