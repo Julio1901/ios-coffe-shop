@@ -7,30 +7,36 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+
     
     private var initialScreen = HomeScreen()
     private var dataList = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialScreen.coffeeList.dataSource = self
+        initialScreen.coffeeList.delegate = self
+        initialScreen.coffeeList.register(CustomCoffeeCell.self, forCellWithReuseIdentifier: "CustomCoffeeCell")
         view = initialScreen
-        initialScreen.configureCoffeeList(delegate: self, dataSource: self)
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        dataList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCoffeeCell", for: indexPath) as! CustomCoffeeCell
+        cell.coffeName.text = dataList[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: view.frame.width/2 - 15, height: 156)
+        return CGSize(width: 156, height: 238)
     }
     
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: CoffeeWithPriceCell.reuseIdentifier, for: indexPath)
-        
-        cell.textLabel?.text = dataList[indexPath.row]
-        return cell
-    }
-}
