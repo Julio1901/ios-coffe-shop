@@ -30,11 +30,11 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeWithPriceCell", for: indexPath) as! CoffeeWithPriceCell
 //        cell.coffeName.text = dataList[indexPath.row]
+        cell.rating = "4.8"
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: view.frame.width/2 - 15, height: 156)
         return CGSize(width: 156, height: 238)
     }
     
