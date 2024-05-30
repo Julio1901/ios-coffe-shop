@@ -24,6 +24,8 @@
 		F439B8D22BF3B3FE00CD0BA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8D12BF3B3FE00CD0BA4 /* Extensions.swift */; };
 		F439B8D92BF3B9A400CD0BA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F439B8D72BF3B9A400CD0BA4 /* Localizable.strings */; };
 		F439B8DC2BF3DD7000CD0BA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439B8DB2BF3DD7000CD0BA4 /* Extensions.swift */; };
+		F45DE9F82C08C9B400F774AF /* CoffeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DE9F72C08C9B400F774AF /* CoffeeListViewModel.swift */; };
+		F45DE9FA2C08D49700F774AF /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DE9F92C08D49700F774AF /* CoffeeViewModel.swift */; };
 		F46B24C12C01087F009DB130 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B24C02C01087F009DB130 /* HomeScreen.swift */; };
 		F46B24C42C0110D1009DB130 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B24C32C0110D1009DB130 /* HomeViewController.swift */; };
 		F46B24C72C01210C009DB130 /* CoffeeWithPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B24C62C01210C009DB130 /* CoffeeWithPriceCell.swift */; };
@@ -78,6 +80,8 @@
 		F439B8D12BF3B3FE00CD0BA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F439B8D82BF3B9A400CD0BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F439B8DB2BF3DD7000CD0BA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F45DE9F72C08C9B400F774AF /* CoffeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListViewModel.swift; sourceTree = "<group>"; };
+		F45DE9F92C08D49700F774AF /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		F46B24C02C01087F009DB130 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F46B24C32C0110D1009DB130 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F46B24C62C01210C009DB130 /* CoffeeWithPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeWithPriceCell.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				F475CF102BFAEABB0074AA86 /* HomeViewModel.swift */,
+				F45DE9F72C08C9B400F774AF /* CoffeeListViewModel.swift */,
+				F45DE9F92C08D49700F774AF /* CoffeeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -513,8 +519,10 @@
 				F475CF142BFB6EA50074AA86 /* CoffeeRepository.swift in Sources */,
 				F439B8D22BF3B3FE00CD0BA4 /* Extensions.swift in Sources */,
 				F475CF162BFB6F140074AA86 /* CoffeeRepositoryImpl.swift in Sources */,
+				F45DE9F82C08C9B400F774AF /* CoffeeListViewModel.swift in Sources */,
 				F46B24C12C01087F009DB130 /* HomeScreen.swift in Sources */,
 				F475CF112BFAEABB0074AA86 /* HomeViewModel.swift in Sources */,
+				F45DE9FA2C08D49700F774AF /* CoffeeViewModel.swift in Sources */,
 				F475CF192BFB6FF20074AA86 /* CoffeeApiError.swift in Sources */,
 				F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */,
 				F439B8932BF2D96500CD0BA4 /* AppDelegate.swift in Sources */,

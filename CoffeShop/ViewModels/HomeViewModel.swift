@@ -7,24 +7,27 @@
 
 import Foundation
 
-class HomeViewModel {
-        
-    private let coffeeRepository: CoffeeRepository
-    var coffeeList: [Coffee] = []
-    
-    init(coffeeRepository: CoffeeRepository) {
-        self.coffeeRepository = coffeeRepository
-    }
+protocol HomeViewModelDelegate {
+    func updateCoffeeList()
+}
 
-    func fetchCoffeeList() {
-        Task{
-            do {
-                let coffees = try await coffeeRepository.getCoffeeList()
-                coffeeList = coffees
-            } catch {
-                print("Error fetch coffee list \(error.localizedDescription)")
-            }
-        }
+
+class HomeViewModel : CoffeeListViewModelDelegate {
+    
+    func updateCoffeeList() {
+        delegate.updateCoffeeList()
+    }
+            
+    var coffeeListViewModel: CoffeeListViewModel
+    var delegate : HomeViewModelDelegate!
+    
+    //TODO: make this with dependency injection
+    init(coffeRepository: CoffeeRepository) {
+        self.coffeeListViewModel = CoffeeListViewModel(coffeeRepository: coffeRepository)
+        coffeeListViewModel.delegate = self
     }
     
+    
+
+
 }

@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct Coffee : Codable {
-    let id : Int
-    let name : String
+struct Coffee: Codable {
+    let id: Int
+    let name: String
     let description: String
     let price: Double
+    let grindOption: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description, price
+        case grindOption = "grind_option"
+    }
 }
