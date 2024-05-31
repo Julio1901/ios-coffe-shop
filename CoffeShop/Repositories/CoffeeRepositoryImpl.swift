@@ -25,12 +25,10 @@ class CoffeeRepositoryImpl : CoffeeRepository {
             do {
                 let decoder = JSONDecoder()
                 var coffees = try decoder.decode([Coffee].self, from: data)
-
-                
-                
-                let coffeeImage = try await getImageUrl()
-                coffees[1].coffeeImage = coffeeImage
-                
+                for index in 0..<coffees.count {
+                    let coffeeImage = try await getImageUrl()
+                    coffees[index].coffeeImage = coffeeImage
+            }
                 return coffees
             } catch {
                 throw CoffeeApiError.decodingError
