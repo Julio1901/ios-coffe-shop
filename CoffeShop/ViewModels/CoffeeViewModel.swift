@@ -39,23 +39,8 @@ struct CoffeeViewModel {
         return  formattedString
     }
     
-    var image: Data {
-            if let imageData = self.coffee.imageData {
-                return imageData
-            } else {
-                // Se coffee.imageData for nulo, carregue a imagem predefinida como Data
-                if let defaultImagePath = Bundle.main.path(forResource: "coffe-product-image", ofType: "png") {
-                    if let defaultImageData = try? Data(contentsOf: URL(fileURLWithPath: defaultImagePath)) {
-                        return defaultImageData
-                    } else {
-                        print("Erro ao carregar a imagem padrão")
-                    }
-                } else {
-                    print("Imagem padrão não encontrada")
-                }
-                // Se ocorrer algum erro, retorne Data vazia
-                return Data()
-            }
-        }
+    var image: CoffeeImage? {
+        return self.coffee.coffeeImage
+    }
     
 }

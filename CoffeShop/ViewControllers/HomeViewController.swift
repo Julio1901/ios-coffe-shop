@@ -47,11 +47,25 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         cell.title = vm.name
         cell.coffeeType = vm.grindOption
         cell.price = vm.price
-        if let image = UIImage(data: vm.image) {
-              cell.image.image = image
-          } else {
-              print("Error converting image data to a UIImage")
-          }
+//        if let image = UIImage(data: vm.image) {
+//              cell.image.image = image
+//          } else {
+//              print("Error converting image data to a UIImage")
+//          }
+        
+        Task{
+            
+            guard let coffeeImage = vm.image?.file else { return }
+            
+                if let image = await fetchImageData(from: coffeeImage) {
+                            // Atualize a UI na thread principal
+                            DispatchQueue.main.async {
+                                cell.image.image = image
+                            }
+                }
+        }
+  
+        
         return cell
     }
     
@@ -64,6 +78,21 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
               self.initialScreen.coffeeList.reloadData()
           }
     }
+    
+    
+    func fetchImageData(from urlString: String) async -> UIImage? {
+            guard let url = URL(string: urlString) else { return nil }
+            
+            do {
+                // Baixe os dados da imagem
+                let (data, _) = try await URLSession.shared.data(from: url)
+                return UIImage(data: data)
+            } catch {
+                print("Erro ao baixar a imagem: \(error)")
+                return nil
+            }
+        }
+    
     
 }
 

@@ -46,25 +46,9 @@
             filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getCoffeeList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8ECA93D-30F7-4A0D-8210-99C098226964"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "fetchImageData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -82,6 +66,234 @@
             endingLineNumber = "30"
             landmarkName = "fetchCoffeeList()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DDD76FA-E3B8-4843-A682-8FBA0F331D33"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getCoffeeList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getCoffeeList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8 - c293c1fada4cb663"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getCoffeeList() async throws -&gt; Swift.Array&lt;CoffeShop.Coffee&gt;"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
+               </Location>
+               <Location
+                  uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8 - 77e80353dedb3117"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getCoffeeList() async throws -&gt; Swift.Array&lt;CoffeShop.Coffee&gt;"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8 - 3d37f3fa403f963a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for CoffeShop.CoffeeRepositoryImpl.getCoffeeList() async throws -&gt; Swift.Array&lt;CoffeShop.Coffee&gt;"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8 - c293c1fada4cb529"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getCoffeeList() async throws -&gt; Swift.Array&lt;CoffeShop.Coffee&gt;"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "A2575A59-55A0-4C0D-93F2-C591C249A2E8 - 91bb7e1de7fe28cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getCoffeeList() async throws -&gt; Swift.Array&lt;CoffeShop.Coffee&gt;"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC01290F-7752-4C63-9368-35BF4718FA68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getImageUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C64F124-4563-4E1E-B21A-5249A6866293"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getImageUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C335D9EE-BFAA-4146-B934-3284BBC95E2B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getImageUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F29DFA7D-BBD9-4FA2-A25B-3091E31F9E70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getImageUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91042AF0-FEDC-4F8A-86DE-929B4C9F37EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getImageUrl()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91042AF0-FEDC-4F8A-86DE-929B4C9F37EB - dde87197d3157a56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getImageUrl() async throws -&gt; CoffeShop.CoffeeImage"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60">
+               </Location>
+               <Location
+                  uuid = "91042AF0-FEDC-4F8A-86DE-929B4C9F37EB - 93ba06e0712a3650"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getImageUrl() async throws -&gt; CoffeShop.CoffeeImage"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60">
+               </Location>
+               <Location
+                  uuid = "91042AF0-FEDC-4F8A-86DE-929B4C9F37EB - cc5dd27ac7de9453"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CoffeShop.CoffeeRepositoryImpl.getImageUrl() async throws -&gt; CoffeShop.CoffeeImage"
+                  moduleName = "CoffeShop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliocesar/Documents/projects/iOS/CoffeShop/CoffeShop/Repositories/CoffeeRepositoryImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

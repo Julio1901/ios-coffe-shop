@@ -13,10 +13,10 @@ struct Coffee: Codable {
     let description: String
     let price: Double
     let grindOption: [String]
-    var imageData: Data?
+    var coffeeImage: CoffeeImage?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, description, price, imageData
+        case id, name, description, price, coffeeImage
         case grindOption = "grind_option"
     }
 }
