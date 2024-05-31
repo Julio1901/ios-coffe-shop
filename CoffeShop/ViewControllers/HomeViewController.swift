@@ -9,23 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate  {
     
-    
-    func updateCoffeeList() {
-        DispatchQueue.main.async {
-              self.initialScreen.coffeeList.reloadData()
-          }
-    }
-    
-
-    
     private var initialScreen = HomeScreen()
-    private var dataList = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5",
-                            "Item 6","Item 7","Item 8","Item 9","Item 10","Item 11",
-                            "Item 12","Item 13","Item 14","Item 15","Item 16","Item 17"]
-    
-    
     private var homeViewModel : HomeViewModel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +20,9 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         let coffeeRepository = CoffeeRepositoryImpl()
         homeViewModel = HomeViewModel(coffeRepository: coffeeRepository)
         homeViewModel.delegate = self
+        homeViewModel.loadCoffeeListData()
         view = initialScreen
-        
     }
-    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -50,20 +34,35 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeWithPriceCell", for: indexPath) as! CoffeeWithPriceCell
-//        cell.coffeName.text = dataList[indexPath.row]
-        
-        
+
+        cell.rating = ""
+        cell.title = ""
+        cell.coffeeType = ""
+        cell.price = ""
+        cell.image.image = UIImage()
+                
         let vm = self.homeViewModel.coffeeListViewModel.coffeesViewModel[indexPath.row]
         
         cell.rating = vm.rating
         cell.title = vm.name
         cell.coffeeType = vm.grindOption
         cell.price = vm.price
+        if let image = UIImage(data: vm.image) {
+              cell.image.image = image
+          } else {
+              print("Error converting image data to a UIImage")
+          }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 156, height: 238)
+    }
+    
+    func updateCoffeeList() {
+        DispatchQueue.main.async {
+              self.initialScreen.coffeeList.reloadData()
+          }
     }
     
 }

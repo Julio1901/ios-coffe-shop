@@ -11,7 +11,6 @@ class ViewController: UIViewController, LoginScreenDelegate {
 
     
     private var initialScreen = LoginScreen()
-//    private var homeViewModel : HomeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

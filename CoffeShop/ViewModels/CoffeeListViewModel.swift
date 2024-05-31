@@ -20,10 +20,13 @@ class CoffeeListViewModel {
     init(coffeeRepository: CoffeeRepository) {
         self.coffeeRepository = coffeeRepository
         self.coffeesViewModel = [CoffeeViewModel]()
+    }
+    
+    func loadData() {
         fetchCoffeeList()
     }
 
-    func fetchCoffeeList() {
+    private func fetchCoffeeList() {
         Task{
             do {
                 let coffees = try await coffeeRepository.getCoffeeList()

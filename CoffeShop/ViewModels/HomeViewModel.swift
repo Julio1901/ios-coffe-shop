@@ -28,6 +28,8 @@ class HomeViewModel : CoffeeListViewModelDelegate {
     }
     
     
-
+    func loadCoffeeListData() {
+        coffeeListViewModel.loadData()
+    }
 
 }
