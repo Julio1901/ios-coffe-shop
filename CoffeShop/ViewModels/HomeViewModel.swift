@@ -9,13 +9,18 @@ import Foundation
 
 protocol HomeViewModelDelegate {
     func updateCoffeeList()
+    func handleLoadingState()
 }
 
 
 class HomeViewModel : CoffeeListViewModelDelegate {
     
+    var loadingImageIsHidden = false
+    
     func updateCoffeeList() {
+        loadingImageIsHidden = true
         delegate.updateCoffeeList()
+        delegate.handleLoadingState()
     }
             
     var coffeeListViewModel: CoffeeListViewModel
@@ -26,8 +31,7 @@ class HomeViewModel : CoffeeListViewModelDelegate {
         self.coffeeListViewModel = CoffeeListViewModel(coffeeRepository: coffeRepository)
         coffeeListViewModel.delegate = self
     }
-    
-    
+        
     func loadCoffeeListData() {
         coffeeListViewModel.loadData()
     }

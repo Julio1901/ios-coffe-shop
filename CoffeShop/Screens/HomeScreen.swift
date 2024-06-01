@@ -10,7 +10,6 @@ import FLAnimatedImage
 
 class HomeScreen : UIView {
     
-    
     private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 24
     private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -24
     

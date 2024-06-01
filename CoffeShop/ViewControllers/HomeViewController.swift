@@ -9,7 +9,7 @@ import UIKit
 import FLAnimatedImage
 
 class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate  {
-    
+   
     private var initialScreen = HomeScreen()
     private var homeViewModel : HomeViewModel!
     
@@ -50,20 +50,15 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         cell.coffeeType = vm.grindOption
         cell.price = vm.price
 
-        
         Task{
-            
             guard let coffeeImage = vm.image?.file else { return }
             
                 if let image = await fetchImageData(from: coffeeImage) {
-                            // Atualize a UI na thread principal
                             DispatchQueue.main.async {
                                 cell.image.image = image
                             }
                 }
         }
-  
-        
         return cell
     }
     
@@ -82,7 +77,6 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
             guard let url = URL(string: urlString) else { return nil }
             
             do {
-                // Baixe os dados da imagem
                 let (data, _) = try await URLSession.shared.data(from: url)
                 return UIImage(data: data)
             } catch {
@@ -99,6 +93,13 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }else{
             print("Erro ao carregar o GIF.")
         }
+    }
+    
+    func handleLoadingState() {
+        DispatchQueue.main.async {
+            self.initialScreen.loadingImage.isHidden = self.homeViewModel.loadingImageIsHidden
+        }
+        
     }
 
 }
