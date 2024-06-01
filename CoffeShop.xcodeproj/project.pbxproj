@@ -34,6 +34,7 @@
 		F475CF142BFB6EA50074AA86 /* CoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF132BFB6EA50074AA86 /* CoffeeRepository.swift */; };
 		F475CF162BFB6F140074AA86 /* CoffeeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF152BFB6F140074AA86 /* CoffeeRepositoryImpl.swift */; };
 		F475CF192BFB6FF20074AA86 /* CoffeeApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */; };
+		F47EA1BF2C0B67E900C93A32 /* loading-coffee.gif in Resources */ = {isa = PBXBuildFile; fileRef = F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */; };
 		F4BCDBF92C0A2FD400555F7F /* CoffeeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BCDBF82C0A2FD400555F7F /* CoffeeImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		F475CF132BFB6EA50074AA86 /* CoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepository.swift; sourceTree = "<group>"; };
 		F475CF152BFB6F140074AA86 /* CoffeeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepositoryImpl.swift; sourceTree = "<group>"; };
 		F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApiError.swift; sourceTree = "<group>"; };
+		F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-coffee.gif"; sourceTree = "<group>"; };
 		F4BCDBF82C0A2FD400555F7F /* CoffeeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeImage.swift; sourceTree = "<group>"; };
 		FB6F2E76DEF9DE5AD9C7C115 /* Pods_CoffeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 		F439B8912BF2D96500CD0BA4 /* CoffeShop */ = {
 			isa = PBXGroup;
 			children = (
+				F47EA1BD2C0B67D100C93A32 /* Resources */,
 				F475CF172BFB6FD20074AA86 /* Errors */,
 				F475CF122BFB6E7C0074AA86 /* Repositories */,
 				F475CF0F2BFAEAA00074AA86 /* ViewModels */,
@@ -295,6 +298,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		F47EA1BD2C0B67D100C93A32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +317,7 @@
 				F439B88B2BF2D96500CD0BA4 /* Sources */,
 				F439B88C2BF2D96500CD0BA4 /* Frameworks */,
 				F439B88D2BF2D96500CD0BA4 /* Resources */,
+				76F39E5DB82DE2DDEFDBA15A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +356,7 @@
 				F439B8AB2BF2D96700CD0BA4 /* Sources */,
 				F439B8AC2BF2D96700CD0BA4 /* Frameworks */,
 				F439B8AD2BF2D96700CD0BA4 /* Resources */,
+				DFCDA3E0084CCD8867F5A885 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -404,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F439B8D92BF3B9A400CD0BA4 /* Localizable.strings in Resources */,
+				F47EA1BF2C0B67E900C93A32 /* loading-coffee.gif in Resources */,
 				F439B89C2BF2D96700CD0BA4 /* Assets.xcassets in Resources */,
 				F439B8C72BF2E33E00CD0BA4 /* Sora-Regular.ttf in Resources */,
 				F439B8C92BF2E48B00CD0BA4 /* Sora-SemiBold.ttf in Resources */,
@@ -509,6 +523,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76F39E5DB82DE2DDEFDBA15A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeShop/Pods-CoffeShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeShop/Pods-CoffeShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeShop/Pods-CoffeShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFCDA3E0084CCD8867F5A885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeShop-CoffeShopUITests/Pods-CoffeShop-CoffeShopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeShop-CoffeShopUITests/Pods-CoffeShop-CoffeShopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeShop-CoffeShopUITests/Pods-CoffeShop-CoffeShopUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -627,7 +675,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -690,7 +738,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

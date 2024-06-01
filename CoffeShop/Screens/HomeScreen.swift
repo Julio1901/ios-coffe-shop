@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import FLAnimatedImage
 
 class HomeScreen : UIView {
     
     
     private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 24
     private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -24
-    
     
     private var titleLabel: UILabel = {
        let it = UILabel()
@@ -33,12 +33,21 @@ class HomeScreen : UIView {
         return it
     }()
         
+    var loadingImage: FLAnimatedImageView! = {
+        let it = FLAnimatedImageView()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        it.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        return it
+    }()
+    
     
     init(){
         super.init(frame: .zero)
         self.backgroundColor = UIColor(.white)
         addSubview(titleLabel)
         addSubview(coffeeList)
+        addSubview(loadingImage)
         setupConstraints()
     }
     
@@ -54,11 +63,13 @@ class HomeScreen : UIView {
             titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             
-            
             coffeeList.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
             coffeeList.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             coffeeList.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
-            coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+            coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            
+            loadingImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingImage.centerYAnchor.constraint(equalTo: centerYAnchor)
             
         ])
     }

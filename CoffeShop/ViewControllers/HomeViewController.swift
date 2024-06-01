@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FLAnimatedImage
 
 class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate  {
     
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         homeViewModel = HomeViewModel(coffeRepository: coffeeRepository)
         homeViewModel.delegate = self
         homeViewModel.loadCoffeeListData()
+        prepareLoadingImage()
         view = initialScreen
     }
     
@@ -47,11 +49,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         cell.title = vm.name
         cell.coffeeType = vm.grindOption
         cell.price = vm.price
-//        if let image = UIImage(data: vm.image) {
-//              cell.image.image = image
-//          } else {
-//              print("Error converting image data to a UIImage")
-//          }
+
         
         Task{
             
@@ -91,8 +89,17 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
                 print("Erro ao baixar a imagem: \(error)")
                 return nil
             }
+    }
+    
+    func prepareLoadingImage() {
+        if let path = Bundle.main.path(forResource: "loading-coffee", ofType: "gif"),
+        let gifData = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+            let animatedImage = FLAnimatedImage(animatedGIFData: gifData)
+            initialScreen.loadingImage.animatedImage = animatedImage
+        }else{
+            print("Erro ao carregar o GIF.")
         }
-    
-    
+    }
+
 }
 

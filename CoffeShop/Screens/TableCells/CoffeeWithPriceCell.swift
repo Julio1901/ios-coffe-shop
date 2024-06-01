@@ -46,7 +46,6 @@ class CoffeeWithPriceCell: UICollectionViewCell {
     
     var image: UIImageView = {
         let it = UIImageView()
-//        it.image = UIImage(named: "coffe-product-image")
         it.contentMode = .scaleToFill
         it.layer.cornerRadius = 12
         it.layer.masksToBounds = true
