@@ -3,8 +3,8 @@ import Cocoa
 
 extension Snapshotting where Value == NSViewController, Format == NSImage {
   /// A snapshot strategy for comparing view controller views based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing view controller views based on pixel equality.
@@ -12,8 +12,8 @@ extension Snapshotting where Value == NSViewController, Format == NSImage {
   /// - Parameters:
   ///   - precision: The percentage of pixels that must match.
   ///   - size: A view size override.
-  public static func image(precision: Float = 1, size: CGSize? = nil) -> Snapshotting {
-    return Snapshotting<NSView, NSImage>.image(precision: precision, size: size).pullback { $0.view }
+  public static func imageView(precision: Float = 1, size: CGSize? = nil) -> Snapshotting {
+    return Snapshotting<NSView, NSImage>.imageView(precision: precision, size: size).pullback { $0.view }
   }
 }
 

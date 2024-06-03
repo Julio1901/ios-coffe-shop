@@ -3,15 +3,15 @@ import UIKit
 
 extension Snapshotting where Value == UIBezierPath, Format == UIImage {
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
   ///
   /// - Parameter precision: The percentage of pixels that must match.
-  public static func image(precision: Float = 1, scale: CGFloat = 1) -> Snapshotting {
-    return SimplySnapshotting.image(precision: precision, scale: scale).pullback { path in
+  public static func imageView(precision: Float = 1, scale: CGFloat = 1) -> Snapshotting {
+    return SimplySnapshotting.imageView(precision: precision, scale: scale).pullback { path in
       let bounds = path.bounds
       let format: UIGraphicsImageRendererFormat
       if #available(iOS 11.0, tvOS 11.0, *) {
@@ -20,7 +20,7 @@ extension Snapshotting where Value == UIBezierPath, Format == UIImage {
         format = UIGraphicsImageRendererFormat.default()
       }
       format.scale = scale
-      return UIGraphicsImageRenderer(bounds: bounds, format: format).image { ctx in
+      return UIGraphicsImageRenderer(bounds: bounds, format: format).imageView { ctx in
         path.fill()
       }
     }

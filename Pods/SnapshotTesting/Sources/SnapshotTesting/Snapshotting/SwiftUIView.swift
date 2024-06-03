@@ -19,8 +19,8 @@ public enum SwiftUISnapshotLayout {
 extension Snapshotting where Value: SwiftUI.View, Format == UIImage {
 
   /// A snapshot strategy for comparing SwiftUI Views based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing SwiftUI Views based on pixel equality.
@@ -30,7 +30,7 @@ extension Snapshotting where Value: SwiftUI.View, Format == UIImage {
   ///   - precision: The percentage of pixels that must match.
   ///   - size: A view size override.
   ///   - traits: A trait collection override.
-  public static func image(
+  public static func imageView(
     drawHierarchyInKeyWindow: Bool = false,
     precision: Float = 1,
     layout: SwiftUISnapshotLayout = .sizeThatFits,
@@ -51,7 +51,7 @@ extension Snapshotting where Value: SwiftUI.View, Format == UIImage {
         config = .init(safeArea: .zero, size: size, traits: traits)
       }
 
-      return SimplySnapshotting.image(precision: precision, scale: traits.displayScale).asyncPullback { view in
+      return SimplySnapshotting.imageView(precision: precision, scale: traits.displayScale).asyncPullback { view in
         var config = config
 
         let controller: UIViewController

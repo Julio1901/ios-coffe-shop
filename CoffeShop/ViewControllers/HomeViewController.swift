@@ -41,7 +41,8 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         cell.title = ""
         cell.coffeeType = ""
         cell.price = ""
-        cell.image.image = UIImage()
+        cell.imageView.image = UIImage()
+        cell.showLoader()
                 
         let vm = self.homeViewModel.coffeeListViewModel.coffeesViewModel[indexPath.row]
         
@@ -55,7 +56,8 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
             
                 if let image = await fetchImageData(from: coffeeImage) {
                             DispatchQueue.main.async {
-                                cell.image.image = image
+                                cell.imageView.image = image
+                                cell.hideLoader()
                             }
                 }
         }

@@ -4,13 +4,13 @@ import XCTest
 
 extension Diffing where Value == NSImage {
   /// A pixel-diffing strategy for NSImage's which requires a 100% match.
-  public static let image = Diffing.image(precision: 1)
+  public static let imageView = Diffing.imageView(precision: 1)
 
   /// A pixel-diffing strategy for NSImage that allows customizing how precise the matching must be.
   ///
   /// - Parameter precision: A value between 0 and 1, where 1 means the images must match 100% of their pixels.
   /// - Returns: A new diffing strategy.
-  public static func image(precision: Float) -> Diffing {
+  public static func imageView(precision: Float) -> Diffing {
     return .init(
       toData: { NSImagePNGRepresentation($0)! },
       fromData: { NSImage(data: $0)! }
@@ -22,7 +22,7 @@ extension Diffing where Value == NSImage {
         : "Newly-taken snapshot@\(new.size) does not match reference@\(old.size)."
       return (
         message,
-        [XCTAttachment(image: old), XCTAttachment(image: new), XCTAttachment(image: difference)]
+        [XCTAttachment(imageView: old), XCTAttachment(imageView: new), XCTAttachment(imageView: difference)]
       )
     }
   }
@@ -30,25 +30,25 @@ extension Diffing where Value == NSImage {
 
 extension Snapshotting where Value == NSImage, Format == NSImage {
   /// A snapshot strategy for comparing images based on pixel equality.
-  public static var image: Snapshotting {
-    return .image(precision: 1)
+  public static var imageView: Snapshotting {
+    return .imageView(precision: 1)
   }
 
   /// A snapshot strategy for comparing images based on pixel equality.
   ///
   /// - Parameter precision: The percentage of pixels that must match.
-  public static func image(precision: Float) -> Snapshotting {
+  public static func imageView(precision: Float) -> Snapshotting {
     return .init(
       pathExtension: "png",
-      diffing: .image(precision: precision)
+      diffing: .imageView(precision: precision)
     )
   }
 }
 
-private func NSImagePNGRepresentation(_ image: NSImage) -> Data? {
-  guard let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else { return nil }
+private func NSImagePNGRepresentation(_ imageView: NSImage) -> Data? {
+  guard let cgImage = imageView.cgImage(forProposedRect: nil, context: nil, hints: nil) else { return nil }
   let rep = NSBitmapImageRep(cgImage: cgImage)
-  rep.size = image.size
+  rep.size = imageView.size
   return rep.representation(using: .png, properties: [:])
 }
 

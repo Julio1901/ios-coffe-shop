@@ -3,27 +3,27 @@ import Cocoa
 
 extension Snapshotting where Value == CGPath, Format == NSImage {
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
   ///
   /// - Parameter precision: The percentage of pixels that must match.
-  public static func image(precision: Float = 1, drawingMode: CGPathDrawingMode = .eoFill) -> Snapshotting {
-    return SimplySnapshotting.image(precision: precision).pullback { path in
+  public static func imageView(precision: Float = 1, drawingMode: CGPathDrawingMode = .eoFill) -> Snapshotting {
+    return SimplySnapshotting.imageView(precision: precision).pullback { path in
       let bounds = path.boundingBoxOfPath
       var transform = CGAffineTransform(translationX: -bounds.origin.x, y: -bounds.origin.y)
       let path = path.copy(using: &transform)!
 
-      let image = NSImage(size: bounds.size)
-      image.lockFocus()
+      let imageView = NSImage(size: bounds.size)
+      imageView.lockFocus()
       let context = NSGraphicsContext.current!.cgContext
 
       context.addPath(path)
       context.drawPath(using: drawingMode)
-      image.unlockFocus()
-      return image
+      imageView.unlockFocus()
+      return imageView
     }
   }
 }
@@ -32,15 +32,15 @@ import UIKit
 
 extension Snapshotting where Value == CGPath, Format == UIImage {
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
   ///
   /// - Parameter precision: The percentage of pixels that must match.
-  public static func image(precision: Float = 1, scale: CGFloat = 1, drawingMode: CGPathDrawingMode = .eoFill) -> Snapshotting {
-    return SimplySnapshotting.image(precision: precision, scale: scale).pullback { path in
+  public static func imageView(precision: Float = 1, scale: CGFloat = 1, drawingMode: CGPathDrawingMode = .eoFill) -> Snapshotting {
+    return SimplySnapshotting.imageView(precision: precision, scale: scale).pullback { path in
       let bounds = path.boundingBoxOfPath
       let format: UIGraphicsImageRendererFormat
       if #available(iOS 11.0, tvOS 11.0, *) {
@@ -49,7 +49,7 @@ extension Snapshotting where Value == CGPath, Format == UIImage {
         format = UIGraphicsImageRendererFormat.default()
       }
       format.scale = scale
-      return UIGraphicsImageRenderer(bounds: bounds, format: format).image { ctx in
+      return UIGraphicsImageRenderer(bounds: bounds, format: format).imageView { ctx in
         let cgContext = ctx.cgContext
         cgContext.addPath(path)
         cgContext.drawPath(using: drawingMode)

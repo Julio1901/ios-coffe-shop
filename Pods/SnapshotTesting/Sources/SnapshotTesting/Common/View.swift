@@ -551,9 +551,9 @@ func addImagesForRenderedViews(_ view: View) -> [Async<View>] {
     .map { async in
       [
         Async { callback in
-          async.run { image in
+          async.run { imageView in
             let imageView = ImageView()
-            imageView.image = image
+            imageView.imageView = imageView
             imageView.frame = view.frame
             #if os(macOS)
             view.superview?.addSubview(imageView, positioned: .above, relativeTo: view)
@@ -592,11 +592,11 @@ extension View {
       if #available(macOS 10.11, *) {
         let cgImage = inWindow { skView.texture(from: skView.scene!)!.cgImage() }
         #if os(macOS)
-        let image = Image(cgImage: cgImage, size: skView.bounds.size)
+        let imageView = Image(cgImage: cgImage, size: skView.bounds.size)
         #elseif os(iOS) || os(tvOS)
-        let image = Image(cgImage: cgImage)
+        let imageView = Image(cgImage: cgImage)
         #endif
-        return Async(value: image)
+        return Async(value: imageView)
       } else {
         fatalError("Taking SKView snapshots requires macOS 10.11 or greater")
       }
@@ -612,9 +612,9 @@ extension View {
                 callback(Image())
                 return
               }
-              wkWebView.takeSnapshot(with: nil) { image, _ in
+              wkWebView.takeSnapshot(with: nil) { imageView, _ in
                 _ = delegate
-                callback(image!)
+                callback(imageView!)
               }
             }
           } else {
@@ -640,7 +640,7 @@ extension View {
   #if os(iOS) || os(tvOS)
   func asImage() -> Image {
     let renderer = UIGraphicsImageRenderer(bounds: bounds)
-    return renderer.image { rendererContext in
+    return renderer.imageView { rendererContext in
       layer.render(in: rendererContext.cgContext)
     }
   }
@@ -737,7 +737,7 @@ func snapshotView(
     return (view.snapshot ?? Async { callback in
       addImagesForRenderedViews(view).sequence().run { views in
         callback(
-          renderer(bounds: view.bounds, for: traits).image { ctx in
+          renderer(bounds: view.bounds, for: traits).imageView { ctx in
             if drawHierarchyInKeyWindow {
               view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
             } else {

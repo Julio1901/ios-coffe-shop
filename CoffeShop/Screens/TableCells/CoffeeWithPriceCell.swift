@@ -44,7 +44,16 @@ class CoffeeWithPriceCell: UICollectionViewCell {
         }
     }
     
-    var image: UIImageView = {
+//    var image: UIImage? {
+//           didSet {
+//               imageView.image = image
+//               if image != nil {
+//                   hideLoader()
+//               }
+//           }
+//       }
+    
+    var imageView: UIImageView = {
         let it = UIImageView()
         it.contentMode = .scaleToFill
         it.layer.cornerRadius = 12
@@ -115,9 +124,16 @@ class CoffeeWithPriceCell: UICollectionViewCell {
         return it
     }()
     
+    var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
+    
     override init(frame: CGRect) {
             super.init(frame: frame)
-            addSubview(image)
+            addSubview(imageView)
             addSubview(ratingLayer)
             addSubview(starIcon)
             addSubview(ratingNote)
@@ -125,7 +141,9 @@ class CoffeeWithPriceCell: UICollectionViewCell {
             addSubview(coffeeTypeLabel)
             addSubview(priceLabel)
             addSubview(addButton)
+            addSubview(activityIndicator)
             setupConstraints()
+            showLoader()
         }
         
         required init?(coder aDecoder: NSCoder) {
@@ -134,13 +152,13 @@ class CoffeeWithPriceCell: UICollectionViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: topAnchor),
-            image.centerXAnchor.constraint(equalTo: centerXAnchor),
-            image.widthAnchor.constraint(equalToConstant: 140),
-            image.heightAnchor.constraint(equalToConstant: 128),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 140),
+            imageView.heightAnchor.constraint(equalToConstant: 128),
             
-            ratingLayer.topAnchor.constraint(equalTo: image.topAnchor),
-            ratingLayer.trailingAnchor.constraint(equalTo: image.trailingAnchor),
+            ratingLayer.topAnchor.constraint(equalTo: imageView.topAnchor),
+            ratingLayer.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
             ratingLayer.widthAnchor.constraint(equalToConstant: 51),
             ratingLayer.heightAnchor.constraint(equalToConstant: 28),
             
@@ -151,8 +169,8 @@ class CoffeeWithPriceCell: UICollectionViewCell {
             ratingNote.leadingAnchor.constraint(equalTo: starIcon.trailingAnchor, constant: 4),
             ratingNote.centerYAnchor.constraint(equalTo: starIcon.centerYAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: image.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            titleLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
             
             coffeeTypeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             coffeeTypeLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
@@ -161,9 +179,19 @@ class CoffeeWithPriceCell: UICollectionViewCell {
             priceLabel.leadingAnchor.constraint(equalTo: coffeeTypeLabel.leadingAnchor),
             
             addButton.topAnchor.constraint(equalTo: coffeeTypeLabel.bottomAnchor, constant: 8),
-            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
         ])
     }
     
+    func showLoader() {
+        activityIndicator.startAnimating()
+    }
+    
+    func hideLoader() {
+        activityIndicator.stopAnimating()
+    }
 
 }

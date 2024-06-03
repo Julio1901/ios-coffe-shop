@@ -3,8 +3,8 @@ import UIKit
 
 extension Snapshotting where Value == UIViewController, Format == UIImage {
   /// A snapshot strategy for comparing view controller views based on pixel equality.
-  public static var image: Snapshotting {
-    return .image()
+  public static var imageView: Snapshotting {
+    return .imageView()
   }
 
   /// A snapshot strategy for comparing view controller views based on pixel equality.
@@ -14,7 +14,7 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
   ///   - precision: The percentage of pixels that must match.
   ///   - size: A view size override.
   ///   - traits: A trait collection override.
-  public static func image(
+  public static func imageView(
     on config: ViewImageConfig,
     precision: Float = 1,
     size: CGSize? = nil,
@@ -22,7 +22,7 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
     )
     -> Snapshotting {
 
-      return SimplySnapshotting.image(precision: precision, scale: traits.displayScale).asyncPullback { viewController in
+      return SimplySnapshotting.imageView(precision: precision, scale: traits.displayScale).asyncPullback { viewController in
         snapshotView(
           config: size.map { .init(safeArea: config.safeArea, size: $0, traits: config.traits) } ?? config,
           drawHierarchyInKeyWindow: false,
@@ -40,7 +40,7 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
   ///   - precision: The percentage of pixels that must match.
   ///   - size: A view size override.
   ///   - traits: A trait collection override.
-  public static func image(
+  public static func imageView(
     drawHierarchyInKeyWindow: Bool = false,
     precision: Float = 1,
     size: CGSize? = nil,
@@ -48,7 +48,7 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
     )
     -> Snapshotting {
 
-      return SimplySnapshotting.image(precision: precision, scale: traits.displayScale).asyncPullback { viewController in
+      return SimplySnapshotting.imageView(precision: precision, scale: traits.displayScale).asyncPullback { viewController in
         snapshotView(
           config: .init(safeArea: .zero, size: size, traits: traits),
           drawHierarchyInKeyWindow: drawHierarchyInKeyWindow,

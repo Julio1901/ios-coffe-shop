@@ -29,7 +29,7 @@ struct CoffeeViewModel {
     }
     
     var grindOption: String {
-        let randomIndex =  Int.random(in: 0...(coffee.grindOption.count - 1))
+        let randomIndex =  Int.random(in: 0..<coffee.grindOption.count)
         return coffee.grindOption[randomIndex]
     }
     
