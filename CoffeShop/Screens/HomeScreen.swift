@@ -25,15 +25,21 @@ class HomeScreen : UIView {
         return it
     }()
     
+    var listCategoryScrollView: UIScrollView = {
+           let scrollView = UIScrollView()
+           scrollView.translatesAutoresizingMaskIntoConstraints = false
+           scrollView.showsHorizontalScrollIndicator = false
+           return scrollView
+       }()
+    
     var listCategoryStackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis = .horizontal
-        sv.alignment = .fill
-        sv.distribution = .fillEqually
-        sv.spacing = 16
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
-    }()
+          let stackView = UIStackView()
+          stackView.axis = .horizontal
+          stackView.alignment = .fill
+          stackView.spacing = 16
+          stackView.translatesAutoresizingMaskIntoConstraints = false
+          return stackView
+      }()
     
     var coffeeList: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -57,7 +63,8 @@ class HomeScreen : UIView {
         addSubview(titleLabel)
         addSubview(coffeeList)
         addSubview(loadingImage)
-        addSubview(listCategoryStackView)
+        addSubview(listCategoryScrollView)
+        listCategoryScrollView.addSubview(listCategoryStackView)
         setupConstraints()
     }
     
@@ -73,12 +80,18 @@ class HomeScreen : UIView {
             titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             
-            listCategoryStackView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
-            listCategoryStackView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
-            listCategoryStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            listCategoryStackView.heightAnchor.constraint(equalToConstant: 29),
+            listCategoryScrollView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
+            listCategoryScrollView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
+            listCategoryScrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            listCategoryScrollView.heightAnchor.constraint(equalToConstant: 29),
             
-            coffeeList.topAnchor.constraint(equalTo: listCategoryStackView.bottomAnchor, constant: 16),
+            listCategoryStackView.leadingAnchor.constraint(equalTo: listCategoryScrollView.leadingAnchor),
+                       listCategoryStackView.trailingAnchor.constraint(equalTo: listCategoryScrollView.trailingAnchor),
+                       listCategoryStackView.topAnchor.constraint(equalTo: listCategoryScrollView.topAnchor),
+                       listCategoryStackView.bottomAnchor.constraint(equalTo: listCategoryScrollView.bottomAnchor),
+                       listCategoryStackView.heightAnchor.constraint(equalTo: listCategoryScrollView.heightAnchor),
+            
+            coffeeList.topAnchor.constraint(equalTo: listCategoryScrollView.bottomAnchor, constant: 16),
             coffeeList.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             coffeeList.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),

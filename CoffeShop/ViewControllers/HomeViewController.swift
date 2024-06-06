@@ -88,11 +88,26 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     }
     
     func populateCoffeListCategory() {
-        homeViewModel.coffeeListViewModel.coffeesType.forEach{ coffeType in
+
+        
+        let mockTypes =  [
+            "Whole Bean",
+            "Cafetiere",
+            "Filter",
+            "Espresso",
+            "Cafetiere",
+            "Filter",
+            "Cafetiere",
+            "Filter",
+        ]
+        
+        
+        for type in mockTypes {
             let categoryLabel = UILabel()
-            categoryLabel.text = coffeType
+            categoryLabel.text = type
             initialScreen.listCategoryStackView.addArrangedSubview(categoryLabel)
         }
+        
     }
 
 }

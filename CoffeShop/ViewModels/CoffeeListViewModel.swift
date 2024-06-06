@@ -45,9 +45,13 @@ class CoffeeListViewModel {
     
     private func getCoffessType() {
         coffeesViewModel.forEach { vm in
-            if !coffeesType.contains(vm.coffee.grindOption) {
-                coffeesType.append(vm.coffee.grindOption.description)
+            
+            for grindOption in vm.grindOption {
+                if !coffeesType.contains(grindOption.description) {
+                    coffeesType.append(grindOption.description)
+                }
             }
+            
         }
     }
     
