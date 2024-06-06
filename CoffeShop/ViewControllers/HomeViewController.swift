@@ -89,9 +89,9 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     
     func populateCoffeListCategory() {
         for type in homeViewModel.coffeeListViewModel.coffeesType {
-            let categoryLabel = UILabel()
-            categoryLabel.text = type
-            initialScreen.listCategoryStackView.addArrangedSubview(categoryLabel)
+            let button = SelectableCustomButton()
+            button.setTitle(type, for: .normal)
+            initialScreen.listCategoryStackView.addArrangedSubview(button)
         }
         
     }

@@ -36,6 +36,7 @@
 		F475CF192BFB6FF20074AA86 /* CoffeeApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */; };
 		F47EA1BF2C0B67E900C93A32 /* loading-coffee.gif in Resources */ = {isa = PBXBuildFile; fileRef = F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */; };
 		F4BCDBF92C0A2FD400555F7F /* CoffeeImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */; };
+		F4F209262C12797D0085C121 /* SelectableCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F209252C12797D0085C121 /* SelectableCustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApiError.swift; sourceTree = "<group>"; };
 		F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-coffee.gif"; sourceTree = "<group>"; };
 		F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeImageUrl.swift; sourceTree = "<group>"; };
+		F4F209252C12797D0085C121 /* SelectableCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCustomButton.swift; sourceTree = "<group>"; };
 		FB6F2E76DEF9DE5AD9C7C115 /* Pods_CoffeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 		F439B8912BF2D96500CD0BA4 /* CoffeShop */ = {
 			isa = PBXGroup;
 			children = (
+				F4F209242C1279500085C121 /* CustomComponents */,
 				F47EA1BD2C0B67D100C93A32 /* Resources */,
 				F475CF172BFB6FD20074AA86 /* Errors */,
 				F475CF122BFB6E7C0074AA86 /* Repositories */,
@@ -304,6 +307,14 @@
 				F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4F209242C1279500085C121 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F4F209252C12797D0085C121 /* SelectableCustomButton.swift */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +582,7 @@
 				F439B8D22BF3B3FE00CD0BA4 /* Extensions.swift in Sources */,
 				F475CF162BFB6F140074AA86 /* CoffeeRepositoryImpl.swift in Sources */,
 				F45DE9F82C08C9B400F774AF /* CoffeeListViewModel.swift in Sources */,
+				F4F209262C12797D0085C121 /* SelectableCustomButton.swift in Sources */,
 				F46B24C12C01087F009DB130 /* HomeScreen.swift in Sources */,
 				F475CF112BFAEABB0074AA86 /* HomeViewModel.swift in Sources */,
 				F4BCDBF92C0A2FD400555F7F /* CoffeeImageUrl.swift in Sources */,

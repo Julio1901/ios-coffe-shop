@@ -19,8 +19,6 @@ class CoffeeListViewModel {
     
     var delegate : CoffeeListViewModelDelegate!
     
-    
-    
     init(coffeeRepository: CoffeeRepository) {
         self.coffeeRepository = coffeeRepository
         self.coffeesViewModel = [CoffeeViewModel]()
