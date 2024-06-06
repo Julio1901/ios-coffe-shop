@@ -11,6 +11,12 @@ import UIKit
 struct CoffeeViewModel {
     
     var coffee: Coffee
+    let randomGrindIndex : Int
+    
+    init(coffee: Coffee) {
+        self.coffee = coffee
+        self.randomGrindIndex = Int.random(in: 0..<self.coffee.grindOption.count)
+    }
     
     var id: Int {
         return self.coffee.id
@@ -29,8 +35,7 @@ struct CoffeeViewModel {
     }
     
     var grindOption: String {
-        let randomIndex =  Int.random(in: 0..<coffee.grindOption.count)
-        return coffee.grindOption[randomIndex]
+        return coffee.grindOption[randomGrindIndex]
     }
     
     var rating: String {
@@ -38,10 +43,7 @@ struct CoffeeViewModel {
         let formattedString = String(format: "%.1f", randomDouble)
         return  formattedString
     }
-//    
-//    var image: CoffeeImageUrl? {
-//        return self.coffee.coffeeImageUrl
-//    }    
+  
     
     var image: Data? {
         return self.coffee.imageData
