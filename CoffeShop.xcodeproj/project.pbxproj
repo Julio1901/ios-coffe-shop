@@ -35,7 +35,7 @@
 		F475CF162BFB6F140074AA86 /* CoffeeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF152BFB6F140074AA86 /* CoffeeRepositoryImpl.swift */; };
 		F475CF192BFB6FF20074AA86 /* CoffeeApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */; };
 		F47EA1BF2C0B67E900C93A32 /* loading-coffee.gif in Resources */ = {isa = PBXBuildFile; fileRef = F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */; };
-		F4BCDBF92C0A2FD400555F7F /* CoffeeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BCDBF82C0A2FD400555F7F /* CoffeeImage.swift */; };
+		F4BCDBF92C0A2FD400555F7F /* CoffeeImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,7 @@
 		F475CF152BFB6F140074AA86 /* CoffeeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepositoryImpl.swift; sourceTree = "<group>"; };
 		F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApiError.swift; sourceTree = "<group>"; };
 		F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-coffee.gif"; sourceTree = "<group>"; };
-		F4BCDBF82C0A2FD400555F7F /* CoffeeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeImage.swift; sourceTree = "<group>"; };
+		F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeImageUrl.swift; sourceTree = "<group>"; };
 		FB6F2E76DEF9DE5AD9C7C115 /* Pods_CoffeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				F475CF0D2BFAE96F0074AA86 /* Coffee.swift */,
-				F4BCDBF82C0A2FD400555F7F /* CoffeeImage.swift */,
+				F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 				F45DE9F82C08C9B400F774AF /* CoffeeListViewModel.swift in Sources */,
 				F46B24C12C01087F009DB130 /* HomeScreen.swift in Sources */,
 				F475CF112BFAEABB0074AA86 /* HomeViewModel.swift in Sources */,
-				F4BCDBF92C0A2FD400555F7F /* CoffeeImage.swift in Sources */,
+				F4BCDBF92C0A2FD400555F7F /* CoffeeImageUrl.swift in Sources */,
 				F45DE9FA2C08D49700F774AF /* CoffeeViewModel.swift in Sources */,
 				F475CF192BFB6FF20074AA86 /* CoffeeApiError.swift in Sources */,
 				F439B8C42BF2DCE800CD0BA4 /* LoginScreen.swift in Sources */,

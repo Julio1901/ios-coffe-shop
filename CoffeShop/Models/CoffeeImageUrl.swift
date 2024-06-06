@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CoffeeImage: Codable {
+struct CoffeeImageUrl: Codable {
     var file: String
 }

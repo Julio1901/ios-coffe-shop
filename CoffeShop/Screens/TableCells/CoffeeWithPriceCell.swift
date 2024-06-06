@@ -43,16 +43,7 @@ class CoffeeWithPriceCell: UICollectionViewCell {
             }
         }
     }
-    
-//    var image: UIImage? {
-//           didSet {
-//               imageView.image = image
-//               if image != nil {
-//                   hideLoader()
-//               }
-//           }
-//       }
-    
+        
     var imageView: UIImageView = {
         let it = UIImageView()
         it.contentMode = .scaleToFill

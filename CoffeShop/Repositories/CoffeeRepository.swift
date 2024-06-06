@@ -9,4 +9,5 @@ import Foundation
 
 protocol CoffeeRepository {
     func getCoffeeList() async throws -> [Coffee]
+    func fetchImageData(urlString: String) async throws -> Data?
 }

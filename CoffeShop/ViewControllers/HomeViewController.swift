@@ -50,17 +50,12 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         cell.title = vm.name
         cell.coffeeType = vm.grindOption
         cell.price = vm.price
-
-        Task{
-            guard let coffeeImage = vm.image?.file else { return }
-            
-                if let image = await fetchImageData(from: coffeeImage) {
-                            DispatchQueue.main.async {
-                                cell.imageView.image = image
-                                cell.hideLoader()
-                            }
-                }
+        
+        if let imageData = vm.image {
+            cell.imageView.image = UIImage(data: imageData)
+            cell.hideLoader()
         }
+
         return cell
     }
     
@@ -69,24 +64,13 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     }
     
     func updateCoffeeList() {
+       
         DispatchQueue.main.async {
+              self.populateCoffeListCategory()
               self.initialScreen.coffeeList.reloadData()
           }
     }
-    
-    
-    func fetchImageData(from urlString: String) async -> UIImage? {
-            guard let url = URL(string: urlString) else { return nil }
-            
-            do {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                return UIImage(data: data)
-            } catch {
-                print("Erro ao baixar a imagem: \(error)")
-                return nil
-            }
-    }
-    
+
     func prepareLoadingImage() {
         if let path = Bundle.main.path(forResource: "loading-coffee", ofType: "gif"),
         let gifData = try? Data(contentsOf: URL(fileURLWithPath: path)) {
@@ -101,7 +85,14 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         DispatchQueue.main.async {
             self.initialScreen.loadingImage.isHidden = self.homeViewModel.loadingImageIsHidden
         }
-        
+    }
+    
+    func populateCoffeListCategory() {
+        homeViewModel.coffeeListViewModel.coffeesType.forEach{ coffeType in
+            let categoryLabel = UILabel()
+            categoryLabel.text = coffeType
+            initialScreen.listCategoryStackView.addArrangedSubview(categoryLabel)
+        }
     }
 
 }

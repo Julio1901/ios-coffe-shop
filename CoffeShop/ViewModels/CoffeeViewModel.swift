@@ -10,7 +10,7 @@ import UIKit
 
 struct CoffeeViewModel {
     
-    let coffee: Coffee
+    var coffee: Coffee
     
     var id: Int {
         return self.coffee.id
@@ -38,9 +38,13 @@ struct CoffeeViewModel {
         let formattedString = String(format: "%.1f", randomDouble)
         return  formattedString
     }
+//    
+//    var image: CoffeeImageUrl? {
+//        return self.coffee.coffeeImageUrl
+//    }    
     
-    var image: CoffeeImage? {
-        return self.coffee.coffeeImage
+    var image: Data? {
+        return self.coffee.imageData
     }
     
 }

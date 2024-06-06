@@ -25,6 +25,16 @@ class HomeScreen : UIView {
         return it
     }()
     
+    var listCategoryStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .horizontal
+        sv.alignment = .fill
+        sv.distribution = .fillEqually
+        sv.spacing = 16
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        return sv
+    }()
+    
     var coffeeList: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let it = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -47,6 +57,7 @@ class HomeScreen : UIView {
         addSubview(titleLabel)
         addSubview(coffeeList)
         addSubview(loadingImage)
+        addSubview(listCategoryStackView)
         setupConstraints()
     }
     
@@ -62,7 +73,12 @@ class HomeScreen : UIView {
             titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             
-            coffeeList.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            listCategoryStackView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
+            listCategoryStackView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
+            listCategoryStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            listCategoryStackView.heightAnchor.constraint(equalToConstant: 29),
+            
+            coffeeList.topAnchor.constraint(equalTo: listCategoryStackView.bottomAnchor, constant: 16),
             coffeeList.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             coffeeList.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),

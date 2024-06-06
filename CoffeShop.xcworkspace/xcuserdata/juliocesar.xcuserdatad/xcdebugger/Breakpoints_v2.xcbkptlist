@@ -62,8 +62,8 @@
             filePath = "CoffeShop/ViewModels/CoffeeListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "fetchCoffeeList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -161,22 +161,6 @@
             startingLineNumber = "57"
             endingLineNumber = "57"
             landmarkName = "getImageUrl()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8FDDEB3-9DF9-4281-A22D-1E731A789600"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoffeShop/ViewControllers/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "handleLoadingState()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

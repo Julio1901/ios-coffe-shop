@@ -15,7 +15,11 @@ class CoffeeListViewModel {
     
     private let coffeeRepository: CoffeeRepository
     var coffeesViewModel: [CoffeeViewModel]
+    var coffeesType: [String] = []
+    
     var delegate : CoffeeListViewModelDelegate!
+    
+    
     
     init(coffeeRepository: CoffeeRepository) {
         self.coffeeRepository = coffeeRepository
@@ -31,10 +35,18 @@ class CoffeeListViewModel {
             do {
                 let coffees = try await coffeeRepository.getCoffeeList()
                 coffeesViewModel = coffees.map(CoffeeViewModel.init)
-                print(coffeesViewModel[2].name)
+                getCoffessType()
                 delegate.updateCoffeeList()
             } catch {
                 print("Error fetch coffee list \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func getCoffessType() {
+        coffeesViewModel.forEach { vm in
+            if !coffeesType.contains(vm.coffee.grindOption) {
+                coffeesType.append(vm.coffee.grindOption.description)
             }
         }
     }
