@@ -10,10 +10,12 @@ import Foundation
 protocol HomeViewModelDelegate {
     func updateCoffeeList()
     func handleLoadingState()
+    func populateCoffessType()
 }
 
 
 class HomeViewModel : CoffeeListViewModelDelegate {
+
     
     var loadingImageIsHidden = false
     
@@ -36,4 +38,9 @@ class HomeViewModel : CoffeeListViewModelDelegate {
         coffeeListViewModel.loadData()
     }
 
+    func populateCoffessType() {
+        delegate.populateCoffessType()
+    }
+    
+    
 }

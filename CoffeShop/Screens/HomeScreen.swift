@@ -13,17 +13,65 @@ class HomeScreen : UIView {
     private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 24
     private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -24
     
-    private var titleLabel: UILabel = {
-       let it = UILabel()
+    private var topContainer: UIView = {
+        let it = UIView()
         it.translatesAutoresizingMaskIntoConstraints = false
-        it.setText(key: "home_screen")
-        it.textColor = UIColor(.black)
-        it.font = UIFont(name: "Sora-SemiBold", size: 32)
-        it.numberOfLines = 0
-        it.textAlignment = .center
-        it.lineBreakMode = .byWordWrapping
+        it.backgroundColor = UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 1.0)
         return it
     }()
+    
+//    private var titleLabel: UILabel = {
+//       let it = UILabel()
+//        it.translatesAutoresizingMaskIntoConstraints = false
+//        it.setText(key: "home_screen")
+//        it.textColor = UIColor(.black)
+//        it.font = UIFont(name: "Sora-SemiBold", size: 32)
+//        it.numberOfLines = 0
+//        it.textAlignment = .center
+//        it.lineBreakMode = .byWordWrapping
+//        return it
+//    }()
+    
+    private var locationLabel: UILabel = {
+        let it = UILabel()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.font = UIFont(name: "Sora-Regular", size: 12)
+        it.textColor = UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0)
+        it.setText(key: "location")
+        return it
+    }()
+    
+    private var locationButton: UIButton = {
+        let it  = UIButton()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 14)
+        it.setTitle("Bilzn, Tanjungbalai", for: .normal)
+        let arrowImage = UIImage(systemName: "chevron.down")
+        it.setImage(arrowImage, for: .normal)
+        it.semanticContentAttribute = .forceRightToLeft
+        it.imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
+        it.tintColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0)
+        it.showsMenuAsPrimaryAction = true
+        return it
+    }()
+    
+    var locationMenu: UIMenu = {
+        let it  = UIMenu(
+            title: "Location options", options: .displayInline, children: [
+                UIAction(title: "Test 1",  handler: { (_) in
+                    print("test 1 pressed")
+                }),
+                UIAction(title: "Test 2",  handler: { (_) in
+                    print("test 2 pressed")
+                }),
+                UIAction(title: "Test 3",  handler: { (_) in
+                    print("test 3 pressed")
+                })
+            ]
+        )
+        return it
+    }()
+    
     
     var listCategoryScrollView: UIScrollView = {
            let scrollView = UIScrollView()
@@ -44,6 +92,7 @@ class HomeScreen : UIView {
     var coffeeList: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let it = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        it.backgroundColor = UIColor(.white)
         it.translatesAutoresizingMaskIntoConstraints = false
         return it
     }()
@@ -60,12 +109,15 @@ class HomeScreen : UIView {
     init(){
         super.init(frame: .zero)
         self.backgroundColor = UIColor(.white)
-        addSubview(titleLabel)
+        addSubview(topContainer)
+        addSubview(locationLabel)
+        addSubview(locationButton)
         addSubview(coffeeList)
         addSubview(loadingImage)
         addSubview(listCategoryScrollView)
         listCategoryScrollView.addSubview(listCategoryStackView)
         setupConstraints()
+        locationButton.menu = locationMenu
     }
     
     required init?(coder: NSCoder) {
@@ -76,13 +128,20 @@ class HomeScreen : UIView {
         let safeArea = safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
-            titleLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
+            topContainer.topAnchor.constraint(equalTo: self.topAnchor),
+            topContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            topContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            topContainer.heightAnchor.constraint(equalToConstant: 280),
+            
+            locationLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 24),
+            locationLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 24),
+            
+            locationButton.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 8),
+            locationButton.leadingAnchor.constraint(equalTo: locationLabel.leadingAnchor),
             
             listCategoryScrollView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
             listCategoryScrollView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
-            listCategoryScrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            listCategoryScrollView.topAnchor.constraint(equalTo: topContainer.bottomAnchor),
             listCategoryScrollView.heightAnchor.constraint(equalToConstant: 29),
             
             listCategoryStackView.leadingAnchor.constraint(equalTo: listCategoryScrollView.leadingAnchor),
@@ -101,5 +160,4 @@ class HomeScreen : UIView {
             
         ])
     }
-    
 }

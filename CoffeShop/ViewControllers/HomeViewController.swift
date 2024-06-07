@@ -8,8 +8,9 @@
 import UIKit
 import FLAnimatedImage
 
-class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate  {
-   
+class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate {
+  
+    
     private var initialScreen = HomeScreen()
     private var homeViewModel : HomeViewModel!
     
@@ -23,6 +24,8 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         homeViewModel.delegate = self
         homeViewModel.loadCoffeeListData()
         prepareLoadingImage()
+
+        
         view = initialScreen
     }
     
@@ -64,13 +67,17 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     }
     
     func updateCoffeeList() {
-       
         DispatchQueue.main.async {
-              self.populateCoffeListCategory()
               self.initialScreen.coffeeList.reloadData()
           }
     }
-
+    
+    func populateCoffessType() {
+        DispatchQueue.main.async {
+            self.populateCoffeListCategory()
+        }
+    }
+    
     func prepareLoadingImage() {
         if let path = Bundle.main.path(forResource: "loading-coffee", ofType: "gif"),
         let gifData = try? Data(contentsOf: URL(fileURLWithPath: path)) {
@@ -81,6 +88,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }
     }
     
+    
     func handleLoadingState() {
         DispatchQueue.main.async {
             self.initialScreen.loadingImage.isHidden = self.homeViewModel.loadingImageIsHidden
@@ -90,11 +98,23 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     func populateCoffeListCategory() {
         for type in homeViewModel.coffeeListViewModel.coffeesType {
             let button = SelectableCustomButton()
+            button.delegate = self
             button.setTitle(type, for: .normal)
             initialScreen.listCategoryStackView.addArrangedSubview(button)
         }
-        
     }
-
+    
 }
 
+extension HomeViewController : SelectableCustomButtonDelegate {
+    func buttonPressed(buttonTitle: String) {
+        homeViewModel.coffeeListViewModel.filterByGrind(grindOption: buttonTitle)
+        initialScreen.listCategoryStackView.subviews.forEach { subView in
+            if let selectableCustomButton = subView as? SelectableCustomButton {
+                if (selectableCustomButton.titleLabel?.text != buttonTitle) {
+                    selectableCustomButton.setupDefaultState()
+                }
+            }
+        }
+    }
+}

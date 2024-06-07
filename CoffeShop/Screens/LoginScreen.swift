@@ -49,6 +49,7 @@ class LoginScreen: UIView {
         return it
     }()
     
+    
     private lazy var getStartedButton: UIButton = {
         let it = UIButton()
         it.setText(key: "welcome_screen_button_message", for: .normal)

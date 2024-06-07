@@ -9,12 +9,15 @@ import Foundation
 
 protocol CoffeeListViewModelDelegate {
     func updateCoffeeList()
+    func populateCoffessType()
 }
 
 class CoffeeListViewModel {
     
     private let coffeeRepository: CoffeeRepository
     var coffeesViewModel: [CoffeeViewModel]
+    private var _coffeesViewModel : [CoffeeViewModel]
+    
     var coffeesType: [String] = []
     
     var delegate : CoffeeListViewModelDelegate!
@@ -22,6 +25,7 @@ class CoffeeListViewModel {
     init(coffeeRepository: CoffeeRepository) {
         self.coffeeRepository = coffeeRepository
         self.coffeesViewModel = [CoffeeViewModel]()
+        self._coffeesViewModel = self.coffeesViewModel
     }
     
     func loadData() {
@@ -34,7 +38,9 @@ class CoffeeListViewModel {
                 let coffees = try await coffeeRepository.getCoffeeList()
                 coffeesViewModel = coffees.map(CoffeeViewModel.init)
                 getCoffessType()
+                _coffeesViewModel = coffeesViewModel
                 delegate.updateCoffeeList()
+                delegate.populateCoffessType()
             } catch {
                 print("Error fetch coffee list \(error.localizedDescription)")
             }
@@ -49,5 +55,15 @@ class CoffeeListViewModel {
               }
           }
     }
+    
+    func filterByGrind(grindOption: String){
+        if (grindOption == "") {
+            coffeesViewModel = _coffeesViewModel
+        }else {
+            coffeesViewModel = _coffeesViewModel.filter{ $0.grindOption.uppercased() == grindOption.uppercased() }
+        }
+        delegate.updateCoffeeList()
+    }
+
     
 }

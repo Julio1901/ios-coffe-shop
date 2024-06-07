@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol SelectableCustomButtonDelegate {
+    func buttonPressed (buttonTitle: String)
+}
+
 class SelectableCustomButton: UIButton {
 
+    private var wasSelected = false
+    var delegate : SelectableCustomButtonDelegate!
+    
     private func setupButton() {
         self.titleLabel?.adjustsFontSizeToFitWidth = true
         self.titleLabel?.minimumScaleFactor = 0.5
@@ -19,17 +26,42 @@ class SelectableCustomButton: UIButton {
         self.setTitleColor(.black, for: .normal)
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
+        self.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
     
+    func setupSelectedState() {
+        wasSelected = true
+        self.titleLabel?.textColor = UIColor(.white)
+        self.configuration?.baseBackgroundColor = UIColor(red: 198/255, green: 123/255, blue: 78/255, alpha: 1.0)
+    }
+    
+    func setupDefaultState() {
+        wasSelected = false
+        self.configuration?.baseBackgroundColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 0.35)
+        self.titleLabel?.textColor = UIColor(.black)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupButton()
     }
     
-
+    @objc private func buttonPressed(_ sender: UIButton) {
+        if wasSelected {
+            setupDefaultState()
+            delegate.buttonPressed(buttonTitle:"")
+        }else {
+            setupSelectedState()
+            delegate.buttonPressed(buttonTitle: sender.titleLabel?.text ?? "")
+        }
+        
+    }
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }
