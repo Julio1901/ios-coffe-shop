@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D533D93D-A2F6-4AF4-A392-CC265AF74BA3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoffeShop/ViewModels/CoffeeListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchCoffeeList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9DDD76FA-E3B8-4843-A682-8FBA0F331D33"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -174,8 +158,8 @@
             filePath = "CoffeShop/ViewModels/CoffeeListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "filterByGrind(grindOption:)"
             landmarkType = "7">
          </BreakpointContent>

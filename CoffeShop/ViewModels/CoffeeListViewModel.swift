@@ -28,12 +28,11 @@ class CoffeeListViewModel {
         self._coffeesViewModel = self.coffeesViewModel
     }
     
-    func loadData() {
-        fetchCoffeeList()
+    func loadData() async {
+        await fetchCoffeeList()
     }
 
-    private func fetchCoffeeList() {
-        Task{
+    private func fetchCoffeeList() async {
             do {
                 let coffees = try await coffeeRepository.getCoffeeList()
                 coffeesViewModel = coffees.map(CoffeeViewModel.init)
@@ -44,7 +43,6 @@ class CoffeeListViewModel {
             } catch {
                 print("Error fetch coffee list \(error.localizedDescription)")
             }
-        }
     }
     
     private func getCoffessType() {

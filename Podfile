@@ -11,7 +11,7 @@ target 'CoffeShop' do
   target 'CoffeShopTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SnapshotTesting'
+    # pod 'SnapshotTesting'
   end
 
   target 'CoffeShopUITests' do

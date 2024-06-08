@@ -22,7 +22,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         let coffeeRepository = CoffeeRepositoryImpl()
         homeViewModel = HomeViewModel(coffeRepository: coffeeRepository)
         homeViewModel.delegate = self
-        homeViewModel.loadCoffeeListData()
+        populateCoffeeList()
         prepareLoadingImage()
 
         
@@ -88,6 +88,12 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }
     }
     
+    
+    func populateCoffeeList()  {
+        Task {
+            await homeViewModel.loadCoffeeListData()
+        }
+    }
     
     func handleLoadingState() {
         DispatchQueue.main.async {

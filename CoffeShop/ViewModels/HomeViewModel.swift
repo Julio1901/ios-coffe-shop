@@ -34,8 +34,8 @@ class HomeViewModel : CoffeeListViewModelDelegate {
         coffeeListViewModel.delegate = self
     }
         
-    func loadCoffeeListData() {
-        coffeeListViewModel.loadData()
+    func loadCoffeeListData() async {
+       await coffeeListViewModel.loadData()
     }
 
     func populateCoffessType() {

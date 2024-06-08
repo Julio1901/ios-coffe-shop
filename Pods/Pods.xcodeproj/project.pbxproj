@@ -7,87 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07319FC388250B963206DB0BF5262128 /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF25B6FCFF91725846FB5D42C6E5C6A /* CGPath.swift */; };
-		1236390CAFF5D164C1F70D459BEDAA9E /* Pods-CoffeShop-CoffeShopUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D984FDA3C9D81C63CF4614B28AFD0E /* Pods-CoffeShop-CoffeShopUITests-dummy.m */; };
-		134A307FB783C1F73BEFB49E4D0F325F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */; };
-		1D0EF6FBAF37BB930183B8F5AA719CD2 /* SnapshotTesting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC01F8864CE12C4FD6320FBB77162 /* SnapshotTesting-dummy.m */; };
-		28F1B4D31269CC69CB5F41DBBCEF5222 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC173D223335D523FB0C37DCB6F7313B /* Any.swift */; };
-		2B507E9F301E6BC9F4D8EB8043B01CD3 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F53DB9260FDBF774730DE2FF1B0FCB /* FLAnimatedImage.m */; };
-		2C0C1A356E0D75368E196C24C3761129 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2400C587ABE02CF48F4E2E7BC864273C /* Diffing.swift */; };
-		3D1E0E44DB5DB31C932BBB9F1385B57A /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07C2DAA9A26BF9A1AF42A844E203CA /* NSView.swift */; };
-		3DAFC3A87D54F6BA47518F4904B7FE54 /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80D4728443C1FDACECB1DB6CF73A89 /* AssertSnapshot.swift */; };
-		4249BA5FD30CFB0680582D7C7C6EE392 /* AssertInlineSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEE543E5C524D9CD711C979DABC2B4 /* AssertInlineSnapshot.swift */; };
-		42656EE69CA697C4F483ED44B688B529 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4D3CD0D780BED0A555EFEFAD57B9F1 /* FLAnimatedImage-dummy.m */; };
-		480D1264071DA1967F86F28F5CF29B8B /* SpriteKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921CE16A1821A1059477447E15B5BEC7 /* SpriteKit.swift */; };
-		486A6DAD276EB55E6D7C9F515C86C227 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCF098E03F967A7E689AEA5B0BAAE5 /* SnapshotTestCase.swift */; };
-		49EBF9F83154DE0C9D5502C152416BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E1FB8F833858076BF34A3BBD8E2C58 /* CoreGraphics.framework */; };
-		4A8EE45D20D442748189087F6A430A75 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F163C8F5AE82C52450352BE19B9F173 /* XCTest.framework */; };
-		4F4D449821AB24276FA18CB343B2C3E8 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2E34BB9920AC2C819DD64741068DF /* Codable.swift */; };
-		532436EEB8C806728018E24162505A32 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FEB9FC966A17E5A0A7CD958F39AB2 /* Description.swift */; };
-		56687ED88A5F09B81B2296B3FDD12F4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */; };
-		5CA71008BD23B355944AC5383821C4E2 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2BE9480F3797A0A8342B24D668DEA /* Internal.swift */; };
-		6235B3883B6D9B3EF262ACFF43631F3D /* SceneKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBBB22FC4A5EFBF90764CDC723ACE78 /* SceneKit.swift */; };
-		6E91C0E1F97D0DCA638585D647C0C075 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF36E6B667AFB84FB6B1227DD1E5E03 /* FLAnimatedImageView.m */; };
-		6FA42D338F2CDE1914908E7D0662AED5 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72E96F0144F0F67426C689E8E62BDB /* Diff.swift */; };
-		70060B0C311FBDF840146EEE9B762220 /* PlistEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27937C1A0EC98BD35BF609DD126EB447 /* PlistEncoder.swift */; };
-		78BBB110735B5BD1BDDC3CD4FC563323 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961A385EE02F5FEDD75409E8CBD5E19 /* Data.swift */; };
-		7F5C5DD662B656505ECF172E1DDC232E /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F0DA268000E2585998E5D6BB069B /* UIBezierPath.swift */; };
-		8197A8F23E3FBF53C8C4BD6265E60F49 /* Pods-CoffeShopTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 144A1B852F7044EBBBF9495BFB4BD923 /* Pods-CoffeShopTests-dummy.m */; };
-		88DE0AA2E9071FD322F40132B5ACE852 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530107FF567A1B0BB549F46FF07FD17 /* String.swift */; };
-		9104476A4778BB28C819AB92599A5B6E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F5498D38832E3663D9FE801665A614 /* UIImage.swift */; };
-		928DBECCA86A6F98E4B42FA62C5FF051 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B14E4233F94EE0D1A58CE01AF9DAF7C /* View.swift */; };
-		957508AA897C27F86D544CCF1CED1904 /* NSBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D266F5557DD86C8C1B092FC73B32E5 /* NSBezierPath.swift */; };
-		96E71750BD8C847E125FAB3C7A336224 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD059F106D9BEB3695A95B69576F241B /* URLRequest.swift */; };
-		97BEDF828D70F8BE2BE4E917DD992C48 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0225BB8C51CA8EE326C8C8E3F84D3 /* NSImage.swift */; };
-		9B00AEBE5F221FE9815159125313C0BD /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3303281491F3CF23BC61DE80A32114 /* Wait.swift */; };
-		9D65BFC4B2C4B6102D6B7EC25A7CD739 /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32974DA72F0C410C9E7435C795ED9F7 /* NSViewController.swift */; };
-		9D6622CDE2793B13735F47C44A7743ED /* SnapshotTesting-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 389FDDBB12CA65BD4377676E558FAC2C /* SnapshotTesting-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F6B241BE1332F18DFCC2BF32E03C42C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F0B3A8F803FA6905B2B32CB2D4B51 /* UIView.swift */; };
-		9F7158EF1A3E6E778AB1F8712A3AA86E /* FLAnimatedImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F130A1848CB20490607770F31C53418 /* FLAnimatedImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFE414B3E0D49B39A358DE524B0839D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */; };
-		C0CB576917C2027120F9FD4A53E0811B /* Pods-CoffeShop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C778BAD23690E6C3CC5835ACC556ADD /* Pods-CoffeShop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2EF8D9AA9A14B9FD5BBD449CE010080 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E184FE9BDBC5C802F24EDDC8D4FF59C3 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C31C30E0AED9D8AA1C6182442771E02F /* Pods-CoffeShop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C5D0A436C72386662C1471DFD7900C /* Pods-CoffeShop-dummy.m */; };
-		C56B3E1A07308BCC8376D15C735B1C25 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A42952813E5D858C4B28EA2AFE2213 /* CALayer.swift */; };
-		C685FAE975137344D1474AD7E4096DA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86BF72E24F176ECFB44BE0D5E4FF7D8 /* QuartzCore.framework */; };
-		CEF00B7A6E495F3B1D692458E9FEDB2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */; };
-		CFFD67104AE4ABBFEB3801F9B8149664 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45689C6DE47FB0A7C0B0ECFF8CC6B55 /* Async.swift */; };
-		D0A29718080A06AB351F6FA41B725BEA /* XCTAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC5744CC1DB8AD9AFAA9F2ACFFB3BE /* XCTAttachment.swift */; };
-		D3C4D4F28C0180E812B6BA5FC4F5015B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422B4DDCACB7F5A6D5DD3B977862F6F /* UIViewController.swift */; };
-		D7AE9DBB6C5D2522EB24A673921F9365 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EBA327C4EC679E8227FC102D847DB /* SwiftUIView.swift */; };
-		D90B495E6670A06760E9380CF15AAB70 /* Pods-CoffeShopTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0F2C7BC39ABFF76BEBAD96922084301 /* Pods-CoffeShopTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA787DFD55A7814418DE78F66BA70847 /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F619CD2873016998AE9BBD53620B8 /* CaseIterable.swift */; };
-		DB1D0708A4D56029D14636419B03F14C /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4971E35D29778A75B72BC9026F4CBF17 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E113594EC32F9B04E66716925E7225C2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4DAF81360C70257A611A0E5D25CA176 /* ImageIO.framework */; };
-		EA35339386CD1251FAD44A9E74A25D74 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC6C21440C4D2305C331FE4732A67CA7 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB5F8B0D9E74FD8A1724B04E6AACFABE /* Snapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C26D76F74D52F1772B2ED8986BE208 /* Snapshotting.swift */; };
-		FBDEC13573FBD973712D033260E1794E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */; };
-		FEB8176EE5F7E44C5399D94BC6DE0C46 /* String+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2140D824D326C4B0E9C21E359CA58E /* String+SpecialCharacters.swift */; };
+		1236390CAFF5D164C1F70D459BEDAA9E /* Pods-CoffeShop-CoffeShopUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A91BABB2B3AAD9B41C29AF209C5F84 /* Pods-CoffeShop-CoffeShopUITests-dummy.m */; };
+		2B507E9F301E6BC9F4D8EB8043B01CD3 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */; };
+		42656EE69CA697C4F483ED44B688B529 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */; };
+		49EBF9F83154DE0C9D5502C152416BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */; };
+		56687ED88A5F09B81B2296B3FDD12F4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
+		6E91C0E1F97D0DCA638585D647C0C075 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */; };
+		8DB85E8A0BEFE46424FACEF36E35255D /* Pods-CoffeShopTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F7F89426B7D695579790D8D1E6E8FD /* Pods-CoffeShopTests-dummy.m */; };
+		9F7158EF1A3E6E778AB1F8712A3AA86E /* FLAnimatedImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0CB576917C2027120F9FD4A53E0811B /* Pods-CoffeShop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B719CB72AF6ACB39EA45A3834C62D3C0 /* Pods-CoffeShop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2EF8D9AA9A14B9FD5BBD449CE010080 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17C799E9DD854B49A8C6558274A7E4C5 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C31C30E0AED9D8AA1C6182442771E02F /* Pods-CoffeShop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB94F9074B660BDC8D297F3F91F3E83 /* Pods-CoffeShop-dummy.m */; };
+		C685FAE975137344D1474AD7E4096DA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */; };
+		CEF00B7A6E495F3B1D692458E9FEDB2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
+		D2D596789F9ED1EA00F4AB72FBCD561D /* Pods-CoffeShopTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEEEA6ED36EE4737AC5A426221AE389B /* Pods-CoffeShopTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB1D0708A4D56029D14636419B03F14C /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E113594EC32F9B04E66716925E7225C2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */; };
+		EA35339386CD1251FAD44A9E74A25D74 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF772FD03FEC63D3F7A46F0E16FB0C6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
+		FBDEC13573FBD973712D033260E1794E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4443ACFE93304A4E20DAAA3098E23A73 /* PBXContainerItemProxy */ = {
+		07D2A33F7BD5F54517480571558C24CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4A8E8992707D01510894596DB9BCCA00;
 			remoteInfo = FLAnimatedImage;
 		};
-		708565351F6E436346BAD00AFBE548E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ADEAE7CDD604DE4F3072E6021A314487;
-			remoteInfo = SnapshotTesting;
-		};
-		792479077C17205EDE0324D04E97A3B4 /* PBXContainerItemProxy */ = {
+		8A2851C7662C036ED597E6D0D5716699 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4E2CD53AF2BC0FFAC258235A6A3703E0;
 			remoteInfo = "Pods-CoffeShop";
 		};
-		919B57AE08A3EF2EE8FBC83EF78747D7 /* PBXContainerItemProxy */ = {
+		FBDFA79BC18A6A4BCC735D63506A95D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -97,95 +53,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01D266F5557DD86C8C1B092FC73B32E5 /* NSBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSBezierPath.swift; path = Sources/SnapshotTesting/Snapshotting/NSBezierPath.swift; sourceTree = "<group>"; };
-		09F0E2F21D431E0FABC6453F7FE042E5 /* Pods-CoffeShop-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShop-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0B14E4233F94EE0D1A58CE01AF9DAF7C /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Sources/SnapshotTesting/Common/View.swift; sourceTree = "<group>"; };
-		0DD2BE9480F3797A0A8342B24D668DEA /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Sources/SnapshotTesting/Common/Internal.swift; sourceTree = "<group>"; };
-		0E20C9E5A09BA9834C9DF97FB684AC40 /* FLAnimatedImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.release.xcconfig; sourceTree = "<group>"; };
-		1422B4DDCACB7F5A6D5DD3B977862F6F /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Sources/SnapshotTesting/Snapshotting/UIViewController.swift; sourceTree = "<group>"; };
-		144A1B852F7044EBBBF9495BFB4BD923 /* Pods-CoffeShopTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShopTests-dummy.m"; sourceTree = "<group>"; };
-		1BE53774BEE4E33D29A0F459E043D3E8 /* SnapshotTesting-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapshotTesting-Info.plist"; sourceTree = "<group>"; };
-		208BBC066791DE3BDA66D0D6693A542F /* FLAnimatedImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.debug.xcconfig; sourceTree = "<group>"; };
-		2400C587ABE02CF48F4E2E7BC864273C /* Diffing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = Sources/SnapshotTesting/Diffing.swift; sourceTree = "<group>"; };
-		24C2E34BB9920AC2C819DD64741068DF /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/SnapshotTesting/Snapshotting/Codable.swift; sourceTree = "<group>"; };
-		27937C1A0EC98BD35BF609DD126EB447 /* PlistEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlistEncoder.swift; path = Sources/SnapshotTesting/Common/PlistEncoder.swift; sourceTree = "<group>"; };
-		2BA68C89C702F28B8639385AC5E85A00 /* FLAnimatedImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FLAnimatedImage-Info.plist"; sourceTree = "<group>"; };
-		389986B7147D8724AD1DAE92CDAC57DF /* Pods-CoffeShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShopTests.release.xcconfig"; sourceTree = "<group>"; };
-		389FDDBB12CA65BD4377676E558FAC2C /* SnapshotTesting-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapshotTesting-umbrella.h"; sourceTree = "<group>"; };
-		3973EEFF2F2B16226D5F5096110B5353 /* Pods-CoffeShop-CoffeShopUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShop-CoffeShopUITests.modulemap"; sourceTree = "<group>"; };
-		3CBBB22FC4A5EFBF90764CDC723ACE78 /* SceneKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneKit.swift; path = Sources/SnapshotTesting/Snapshotting/SceneKit.swift; sourceTree = "<group>"; };
-		3F8917F3E4F5069F90BE789C47654649 /* Pods-CoffeShop-CoffeShopUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-CoffeShopUITests-Info.plist"; sourceTree = "<group>"; };
-		409F0B3A8F803FA6905B2B32CB2D4B51 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Sources/SnapshotTesting/Snapshotting/UIView.swift; sourceTree = "<group>"; };
+		0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.release.xcconfig; sourceTree = "<group>"; };
+		15569E17A7EB54BD6817B75024AD814E /* Pods-CoffeShopTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShopTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		17399F3ACC54E2A1F246EF79E737236D /* Pods-CoffeShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop.debug.xcconfig"; sourceTree = "<group>"; };
+		17C799E9DD854B49A8C6558274A7E4C5 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShop-CoffeShopUITests-umbrella.h"; sourceTree = "<group>"; };
+		22532B7A28B460F9FB2A5226863B1084 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop-CoffeShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		23AA2376FD094F0E7312FB871C7BE018 /* FLAnimatedImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FLAnimatedImage-Info.plist"; sourceTree = "<group>"; };
+		25357C900275DABEF1866F300B9F7413 /* Pods-CoffeShopTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShopTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D81C3A3DCF5F77E8E2E0662D823B4B1 /* Pods-CoffeShop-CoffeShopUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShop-CoffeShopUITests.modulemap"; sourceTree = "<group>"; };
+		3E3979938B936A1AE4095342DDCD2454 /* Pods-CoffeShop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShop.modulemap"; sourceTree = "<group>"; };
 		4181964AD4CFB1C659AA1759BA4991CE /* Pods-CoffeShop-CoffeShopUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CoffeShop-CoffeShopUITests"; path = Pods_CoffeShop_CoffeShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44D40B87772E8AE324D2DDC7081A7CD3 /* Pods-CoffeShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop.release.xcconfig"; sourceTree = "<group>"; };
-		4971E35D29778A75B72BC9026F4CBF17 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/include/FLAnimatedImageView.h; sourceTree = "<group>"; };
-		4BAC5744CC1DB8AD9AFAA9F2ACFFB3BE /* XCTAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCTAttachment.swift; path = Sources/SnapshotTesting/Common/XCTAttachment.swift; sourceTree = "<group>"; };
-		4EF25B6FCFF91725846FB5D42C6E5C6A /* CGPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPath.swift; path = Sources/SnapshotTesting/Snapshotting/CGPath.swift; sourceTree = "<group>"; };
-		4F130A1848CB20490607770F31C53418 /* FLAnimatedImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-umbrella.h"; sourceTree = "<group>"; };
-		54016EE492173E8101A109325ECBCA2C /* Pods-CoffeShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShopTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E477FEFC7652ED892D253AEC3ED5A85 /* Pods-CoffeShopTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeShopTests-frameworks.sh"; sourceTree = "<group>"; };
-		5EE718568FD7397E212F3D137EFD8CE4 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop-CoffeShopUITests.release.xcconfig"; sourceTree = "<group>"; };
-		63DDCEB30E57C06A861BD09A461FD57F /* Pods-CoffeShop-CoffeShopUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeShop-CoffeShopUITests-frameworks.sh"; sourceTree = "<group>"; };
-		69FCF098E03F967A7E689AEA5B0BAAE5 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTestCase.swift; path = Sources/SnapshotTesting/SnapshotTestCase.swift; sourceTree = "<group>"; };
-		6D80D4728443C1FDACECB1DB6CF73A89 /* AssertSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertSnapshot.swift; path = Sources/SnapshotTesting/AssertSnapshot.swift; sourceTree = "<group>"; };
-		6E3303281491F3CF23BC61DE80A32114 /* Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Wait.swift; path = Sources/SnapshotTesting/Extensions/Wait.swift; sourceTree = "<group>"; };
-		720694323AE8677082B080C2E9569182 /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
-		793748C4BA83B5CCE922EB5268D20D28 /* SnapshotTesting.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapshotTesting.modulemap; sourceTree = "<group>"; };
-		7961A385EE02F5FEDD75409E8CBD5E19 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Sources/SnapshotTesting/Snapshotting/Data.swift; sourceTree = "<group>"; };
-		7AF36E6B667AFB84FB6B1227DD1E5E03 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
-		7C778BAD23690E6C3CC5835ACC556ADD /* Pods-CoffeShop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShop-umbrella.h"; sourceTree = "<group>"; };
-		7EA7FEEE54454A230C5602803C3D5828 /* Pods-CoffeShop-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeShop-frameworks.sh"; sourceTree = "<group>"; };
-		8530107FF567A1B0BB549F46FF07FD17 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Sources/SnapshotTesting/Snapshotting/String.swift; sourceTree = "<group>"; };
-		8532F0DA268000E2585998E5D6BB069B /* UIBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBezierPath.swift; path = Sources/SnapshotTesting/Snapshotting/UIBezierPath.swift; sourceTree = "<group>"; };
-		8B8EBA327C4EC679E8227FC102D847DB /* SwiftUIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = Sources/SnapshotTesting/Snapshotting/SwiftUIView.swift; sourceTree = "<group>"; };
-		8F2140D824D326C4B0E9C21E359CA58E /* String+SpecialCharacters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+SpecialCharacters.swift"; path = "Sources/SnapshotTesting/Common/String+SpecialCharacters.swift"; sourceTree = "<group>"; };
-		921CE16A1821A1059477447E15B5BEC7 /* SpriteKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteKit.swift; path = Sources/SnapshotTesting/Snapshotting/SpriteKit.swift; sourceTree = "<group>"; };
-		931D157B0A78409756A7122B24112666 /* Pods-CoffeShopTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShopTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93D984FDA3C9D81C63CF4614B28AFD0E /* Pods-CoffeShop-CoffeShopUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShop-CoffeShopUITests-dummy.m"; sourceTree = "<group>"; };
-		9B3FEB9FC966A17E5A0A7CD958F39AB2 /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Sources/SnapshotTesting/Snapshotting/Description.swift; sourceTree = "<group>"; };
-		9C72E96F0144F0F67426C689E8E62BDB /* Diff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Sources/SnapshotTesting/Diff.swift; sourceTree = "<group>"; };
+		434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
+		453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
+		4EB94F9074B660BDC8D297F3F91F3E83 /* Pods-CoffeShop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShop-dummy.m"; sourceTree = "<group>"; };
+		4F85BF13F53EAD4256F35DA8DD93DAA5 /* Pods-CoffeShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5976A1CE08EBD629166860F772A7D007 /* Pods-CoffeShop-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeShop-frameworks.sh"; sourceTree = "<group>"; };
+		5A3F017BE7FE9C1F6F03DDED556A93DA /* Pods-CoffeShop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-Info.plist"; sourceTree = "<group>"; };
+		62A91BABB2B3AAD9B41C29AF209C5F84 /* Pods-CoffeShop-CoffeShopUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShop-CoffeShopUITests-dummy.m"; sourceTree = "<group>"; };
+		62F5AC883D3FC05EAAEBF81D72513203 /* Pods-CoffeShopTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShopTests-Info.plist"; sourceTree = "<group>"; };
+		6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/include/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
+		785420518AFF505A6D85993646EF12DC /* Pods-CoffeShop-CoffeShopUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeShop-CoffeShopUITests-frameworks.sh"; sourceTree = "<group>"; };
+		79C8DC6A36E37A78FE938AE6CA65E8E3 /* Pods-CoffeShopTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShopTests.modulemap"; sourceTree = "<group>"; };
+		7DDD75BAADB9ED805334403809B4F4A4 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		971F8334C651BDB3DE9899BB7115BC08 /* Pods-CoffeShop-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F163C8F5AE82C52450352BE19B9F173 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapshotTesting; path = SnapshotTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0F2C7BC39ABFF76BEBAD96922084301 /* Pods-CoffeShopTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShopTests-umbrella.h"; sourceTree = "<group>"; };
-		A3A42952813E5D858C4B28EA2AFE2213 /* CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Sources/SnapshotTesting/Snapshotting/CALayer.swift; sourceTree = "<group>"; };
-		A4C0225BB8C51CA8EE326C8C8E3F84D3 /* NSImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = Sources/SnapshotTesting/Snapshotting/NSImage.swift; sourceTree = "<group>"; };
-		A4DAF81360C70257A611A0E5D25CA176 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		AC6C21440C4D2305C331FE4732A67CA7 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/include/FLAnimatedImage.h; sourceTree = "<group>"; };
-		B7DF46F00C42D5F4BCADF54CB19BD79F /* Pods-CoffeShopTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShopTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BB637637A7D9B8A9511773718B7ABF5A /* SnapshotTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapshotTesting.debug.xcconfig; sourceTree = "<group>"; };
-		BFCEE543E5C524D9CD711C979DABC2B4 /* AssertInlineSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertInlineSnapshot.swift; path = Sources/SnapshotTesting/AssertInlineSnapshot.swift; sourceTree = "<group>"; };
-		C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C7E1FB8F833858076BF34A3BBD8E2C58 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		C94F9F2A18DDCAA88A04FC2CDC237893 /* SnapshotTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapshotTesting.release.xcconfig; sourceTree = "<group>"; };
-		CA07C2DAA9A26BF9A1AF42A844E203CA /* NSView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSView.swift; path = Sources/SnapshotTesting/Snapshotting/NSView.swift; sourceTree = "<group>"; };
-		CB6D4008FDC32CCFFBAB3A662E0FF421 /* Pods-CoffeShop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShop.modulemap"; sourceTree = "<group>"; };
-		CBF97DA47A2842AF08367E8EDB94FA60 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CD059F106D9BEB3695A95B69576F241B /* URLRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Sources/SnapshotTesting/Snapshotting/URLRequest.swift; sourceTree = "<group>"; };
-		CDBF39C2F7899B1F962CAC2D4A8CD136 /* Pods-CoffeShopTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShopTests-Info.plist"; sourceTree = "<group>"; };
-		D1F53DB9260FDBF774730DE2FF1B0FCB /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
-		D26AE9736458E4AC9DC62BAC04E9B4D1 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop-CoffeShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2F7F89426B7D695579790D8D1E6E8FD /* Pods-CoffeShopTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShopTests-dummy.m"; sourceTree = "<group>"; };
+		AAD1A71BCD9D6C5236D37B847F74E04C /* Pods-CoffeShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShopTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4AAC3F4DD220A2D0E26CDC47A1268C5 /* Pods-CoffeShop-CoffeShopUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-CoffeShopUITests-Info.plist"; sourceTree = "<group>"; };
+		B719CB72AF6ACB39EA45A3834C62D3C0 /* Pods-CoffeShop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShop-umbrella.h"; sourceTree = "<group>"; };
+		B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/include/FLAnimatedImage.h; sourceTree = "<group>"; };
+		CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.debug.xcconfig; sourceTree = "<group>"; };
+		CE9225FC32DD5EF5570561E579F55481 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop-CoffeShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF2527FCC2CE37B7B80EAA8892725BAA /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
 		D54B397F3051237D2710A080395A6436 /* Pods-CoffeShopTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CoffeShopTests"; path = Pods_CoffeShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D80F619CD2873016998AE9BBD53620B8 /* CaseIterable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaseIterable.swift; path = Sources/SnapshotTesting/Snapshotting/CaseIterable.swift; sourceTree = "<group>"; };
-		DA6AC01F8864CE12C4FD6320FBB77162 /* SnapshotTesting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapshotTesting-dummy.m"; sourceTree = "<group>"; };
-		DC173D223335D523FB0C37DCB6F7313B /* Any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Any.swift; path = Sources/SnapshotTesting/Snapshotting/Any.swift; sourceTree = "<group>"; };
-		E0D31BDF13C5614D0CCC42D74A5517D6 /* Pods-CoffeShopTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoffeShopTests.modulemap"; sourceTree = "<group>"; };
-		E184FE9BDBC5C802F24EDDC8D4FF59C3 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShop-CoffeShopUITests-umbrella.h"; sourceTree = "<group>"; };
-		E1E671E116FE4CC20296BFE1E0C8E413 /* Pods-CoffeShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop.debug.xcconfig"; sourceTree = "<group>"; };
-		E1F5498D38832E3663D9FE801665A614 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/SnapshotTesting/Snapshotting/UIImage.swift; sourceTree = "<group>"; };
+		D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-umbrella.h"; sourceTree = "<group>"; };
+		DEEEA6ED36EE4737AC5A426221AE389B /* Pods-CoffeShopTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeShopTests-umbrella.h"; sourceTree = "<group>"; };
+		E12623BA1CA02936047CAD2D0A149188 /* Pods-CoffeShop-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShop-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E2E9CC379A2FD1958D2D5B10A896C470 /* Pods-CoffeShop */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CoffeShop"; path = Pods_CoffeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E32974DA72F0C410C9E7435C795ED9F7 /* NSViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSViewController.swift; path = Sources/SnapshotTesting/Snapshotting/NSViewController.swift; sourceTree = "<group>"; };
-		EB756A678414C77A250887E8F4DA543F /* Pods-CoffeShop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-Info.plist"; sourceTree = "<group>"; };
-		ED95A574A02ACCDBFEF8E2B1B41E2225 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EEFA725A30E59DBF65B071B89E8E8450 /* FLAnimatedImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FLAnimatedImage.modulemap; sourceTree = "<group>"; };
-		F45689C6DE47FB0A7C0B0ECFF8CC6B55 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/SnapshotTesting/Async.swift; sourceTree = "<group>"; };
-		F5C5D0A436C72386662C1471DFD7900C /* Pods-CoffeShop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeShop-dummy.m"; sourceTree = "<group>"; };
-		F749DD894732525A4E2A7E47C1809602 /* SnapshotTesting-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapshotTesting-prefix.pch"; sourceTree = "<group>"; };
-		F86BF72E24F176ECFB44BE0D5E4FF7D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F901C46C02E0D6CDA5AC490E22120936 /* Pods-CoffeShop-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeShop-acknowledgements.plist"; sourceTree = "<group>"; };
-		F9C26D76F74D52F1772B2ED8986BE208 /* Snapshotting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Snapshotting.swift; path = Sources/SnapshotTesting/Snapshotting.swift; sourceTree = "<group>"; };
+		EEAB8E7043D04FB4145BD00640BE093C /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F69290135608F8ADAA9A0EBADF061877 /* Pods-CoffeShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeShop.release.xcconfig"; sourceTree = "<group>"; };
+		F8D1318E94015BEA0A4CDF0FF3C1EF1B /* FLAnimatedImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FLAnimatedImage.modulemap; sourceTree = "<group>"; };
 		FAA5F2D71B90788C908800A94534AA92 /* FLAnimatedImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FLAnimatedImage; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF4D3CD0D780BED0A555EFEFAD57B9F1 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,158 +129,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3E6F437DCDBD6A93A734772AFD5F236 /* Frameworks */ = {
+		A4317248097984F354EE0646F440D01E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE414B3E0D49B39A358DE524B0839D5 /* Foundation.framework in Frameworks */,
-				4A8EE45D20D442748189087F6A430A75 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2EFA3ED8E85328C3842130E41D796E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				134A307FB783C1F73BEFB49E4D0F325F /* Foundation.framework in Frameworks */,
+				EF772FD03FEC63D3F7A46F0E16FB0C6F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		088FBB394C848CBF752F83C586E171F2 /* Products */ = {
+		01FFDD6F2D9E551F7A779DDCF4090809 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FAA5F2D71B90788C908800A94534AA92 /* FLAnimatedImage */,
 				E2E9CC379A2FD1958D2D5B10A896C470 /* Pods-CoffeShop */,
 				4181964AD4CFB1C659AA1759BA4991CE /* Pods-CoffeShop-CoffeShopUITests */,
 				D54B397F3051237D2710A080395A6436 /* Pods-CoffeShopTests */,
-				A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18BAA1AAC6FBBC3F774920BD09A6435B /* Support Files */ = {
+		4B23E791B8839DB6941C7EB499DAE965 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				793748C4BA83B5CCE922EB5268D20D28 /* SnapshotTesting.modulemap */,
-				DA6AC01F8864CE12C4FD6320FBB77162 /* SnapshotTesting-dummy.m */,
-				1BE53774BEE4E33D29A0F459E043D3E8 /* SnapshotTesting-Info.plist */,
-				F749DD894732525A4E2A7E47C1809602 /* SnapshotTesting-prefix.pch */,
-				389FDDBB12CA65BD4377676E558FAC2C /* SnapshotTesting-umbrella.h */,
-				BB637637A7D9B8A9511773718B7ABF5A /* SnapshotTesting.debug.xcconfig */,
-				C94F9F2A18DDCAA88A04FC2CDC237893 /* SnapshotTesting.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapshotTesting";
-			sourceTree = "<group>";
-		};
-		35DFF01823AFEE4FB8E667A10FA3ECDC /* FLAnimatedImage */ = {
-			isa = PBXGroup;
-			children = (
-				AC6C21440C4D2305C331FE4732A67CA7 /* FLAnimatedImage.h */,
-				D1F53DB9260FDBF774730DE2FF1B0FCB /* FLAnimatedImage.m */,
-				4971E35D29778A75B72BC9026F4CBF17 /* FLAnimatedImageView.h */,
-				7AF36E6B667AFB84FB6B1227DD1E5E03 /* FLAnimatedImageView.m */,
-				B053491455705FF83F32FF3CC823DBEC /* Support Files */,
-			);
-			name = FLAnimatedImage;
-			path = FLAnimatedImage;
-			sourceTree = "<group>";
-		};
-		386817457E53D8D535A126AD4C0CE547 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C7E1FB8F833858076BF34A3BBD8E2C58 /* CoreGraphics.framework */,
-				C613FAEDDCF5242488DEF9B6C19242B5 /* Foundation.framework */,
-				A4DAF81360C70257A611A0E5D25CA176 /* ImageIO.framework */,
-				F86BF72E24F176ECFB44BE0D5E4FF7D8 /* QuartzCore.framework */,
-				9F163C8F5AE82C52450352BE19B9F173 /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4C0B769BA145C34A41002F615178B40D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35DFF01823AFEE4FB8E667A10FA3ECDC /* FLAnimatedImage */,
-				4F839501DC3E1B8C2A95BD3FD413CD7E /* SnapshotTesting */,
+				FDB06735842FB3FBE5AB3C4E35E664C4 /* FLAnimatedImage */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4F839501DC3E1B8C2A95BD3FD413CD7E /* SnapshotTesting */ = {
+		60232665171B90DA246EFBB82D587433 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC173D223335D523FB0C37DCB6F7313B /* Any.swift */,
-				BFCEE543E5C524D9CD711C979DABC2B4 /* AssertInlineSnapshot.swift */,
-				6D80D4728443C1FDACECB1DB6CF73A89 /* AssertSnapshot.swift */,
-				F45689C6DE47FB0A7C0B0ECFF8CC6B55 /* Async.swift */,
-				A3A42952813E5D858C4B28EA2AFE2213 /* CALayer.swift */,
-				D80F619CD2873016998AE9BBD53620B8 /* CaseIterable.swift */,
-				4EF25B6FCFF91725846FB5D42C6E5C6A /* CGPath.swift */,
-				24C2E34BB9920AC2C819DD64741068DF /* Codable.swift */,
-				7961A385EE02F5FEDD75409E8CBD5E19 /* Data.swift */,
-				9B3FEB9FC966A17E5A0A7CD958F39AB2 /* Description.swift */,
-				9C72E96F0144F0F67426C689E8E62BDB /* Diff.swift */,
-				2400C587ABE02CF48F4E2E7BC864273C /* Diffing.swift */,
-				0DD2BE9480F3797A0A8342B24D668DEA /* Internal.swift */,
-				01D266F5557DD86C8C1B092FC73B32E5 /* NSBezierPath.swift */,
-				A4C0225BB8C51CA8EE326C8C8E3F84D3 /* NSImage.swift */,
-				CA07C2DAA9A26BF9A1AF42A844E203CA /* NSView.swift */,
-				E32974DA72F0C410C9E7435C795ED9F7 /* NSViewController.swift */,
-				27937C1A0EC98BD35BF609DD126EB447 /* PlistEncoder.swift */,
-				3CBBB22FC4A5EFBF90764CDC723ACE78 /* SceneKit.swift */,
-				69FCF098E03F967A7E689AEA5B0BAAE5 /* SnapshotTestCase.swift */,
-				F9C26D76F74D52F1772B2ED8986BE208 /* Snapshotting.swift */,
-				921CE16A1821A1059477447E15B5BEC7 /* SpriteKit.swift */,
-				8530107FF567A1B0BB549F46FF07FD17 /* String.swift */,
-				8F2140D824D326C4B0E9C21E359CA58E /* String+SpecialCharacters.swift */,
-				8B8EBA327C4EC679E8227FC102D847DB /* SwiftUIView.swift */,
-				8532F0DA268000E2585998E5D6BB069B /* UIBezierPath.swift */,
-				E1F5498D38832E3663D9FE801665A614 /* UIImage.swift */,
-				409F0B3A8F803FA6905B2B32CB2D4B51 /* UIView.swift */,
-				1422B4DDCACB7F5A6D5DD3B977862F6F /* UIViewController.swift */,
-				CD059F106D9BEB3695A95B69576F241B /* URLRequest.swift */,
-				0B14E4233F94EE0D1A58CE01AF9DAF7C /* View.swift */,
-				6E3303281491F3CF23BC61DE80A32114 /* Wait.swift */,
-				4BAC5744CC1DB8AD9AFAA9F2ACFFB3BE /* XCTAttachment.swift */,
-				18BAA1AAC6FBBC3F774920BD09A6435B /* Support Files */,
-			);
-			name = SnapshotTesting;
-			path = SnapshotTesting;
-			sourceTree = "<group>";
-		};
-		94D6AB9034BEC8A69EC41F0BBCEE649C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F751BAF289653C92C5A08C9650964CA2 /* Pods-CoffeShop */,
-				D1DF497A28241908D642A287CCD1EF16 /* Pods-CoffeShop-CoffeShopUITests */,
-				D89D0A53F9C4160DF116B68A459F3ED5 /* Pods-CoffeShopTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B053491455705FF83F32FF3CC823DBEC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EEFA725A30E59DBF65B071B89E8E8450 /* FLAnimatedImage.modulemap */,
-				FF4D3CD0D780BED0A555EFEFAD57B9F1 /* FLAnimatedImage-dummy.m */,
-				2BA68C89C702F28B8639385AC5E85A00 /* FLAnimatedImage-Info.plist */,
-				720694323AE8677082B080C2E9569182 /* FLAnimatedImage-prefix.pch */,
-				4F130A1848CB20490607770F31C53418 /* FLAnimatedImage-umbrella.h */,
-				208BBC066791DE3BDA66D0D6693A542F /* FLAnimatedImage.debug.xcconfig */,
-				0E20C9E5A09BA9834C9DF97FB684AC40 /* FLAnimatedImage.release.xcconfig */,
+				F8D1318E94015BEA0A4CDF0FF3C1EF1B /* FLAnimatedImage.modulemap */,
+				745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */,
+				23AA2376FD094F0E7312FB871C7BE018 /* FLAnimatedImage-Info.plist */,
+				CF2527FCC2CE37B7B80EAA8892725BAA /* FLAnimatedImage-prefix.pch */,
+				D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */,
+				CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */,
+				0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FLAnimatedImage";
 			sourceTree = "<group>";
 		};
-		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
+		66DB5C3275A96B28FD4D80789C0C5513 /* Pods-CoffeShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				386817457E53D8D535A126AD4C0CE547 /* iOS */,
+				79C8DC6A36E37A78FE938AE6CA65E8E3 /* Pods-CoffeShopTests.modulemap */,
+				25357C900275DABEF1866F300B9F7413 /* Pods-CoffeShopTests-acknowledgements.markdown */,
+				15569E17A7EB54BD6817B75024AD814E /* Pods-CoffeShopTests-acknowledgements.plist */,
+				A2F7F89426B7D695579790D8D1E6E8FD /* Pods-CoffeShopTests-dummy.m */,
+				62F5AC883D3FC05EAAEBF81D72513203 /* Pods-CoffeShopTests-Info.plist */,
+				DEEEA6ED36EE4737AC5A426221AE389B /* Pods-CoffeShopTests-umbrella.h */,
+				4F85BF13F53EAD4256F35DA8DD93DAA5 /* Pods-CoffeShopTests.debug.xcconfig */,
+				AAD1A71BCD9D6C5236D37B847F74E04C /* Pods-CoffeShopTests.release.xcconfig */,
+			);
+			name = "Pods-CoffeShopTests";
+			path = "Target Support Files/Pods-CoffeShopTests";
+			sourceTree = "<group>";
+		};
+		8B12249BD3663CC9C782398C8D4374C4 /* Pods-CoffeShop */ = {
+			isa = PBXGroup;
+			children = (
+				3E3979938B936A1AE4095342DDCD2454 /* Pods-CoffeShop.modulemap */,
+				E12623BA1CA02936047CAD2D0A149188 /* Pods-CoffeShop-acknowledgements.markdown */,
+				971F8334C651BDB3DE9899BB7115BC08 /* Pods-CoffeShop-acknowledgements.plist */,
+				4EB94F9074B660BDC8D297F3F91F3E83 /* Pods-CoffeShop-dummy.m */,
+				5976A1CE08EBD629166860F772A7D007 /* Pods-CoffeShop-frameworks.sh */,
+				5A3F017BE7FE9C1F6F03DDED556A93DA /* Pods-CoffeShop-Info.plist */,
+				B719CB72AF6ACB39EA45A3834C62D3C0 /* Pods-CoffeShop-umbrella.h */,
+				17399F3ACC54E2A1F246EF79E737236D /* Pods-CoffeShop.debug.xcconfig */,
+				F69290135608F8ADAA9A0EBADF061877 /* Pods-CoffeShop.release.xcconfig */,
+			);
+			name = "Pods-CoffeShop";
+			path = "Target Support Files/Pods-CoffeShop";
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5800BB3AAFD3E119788196BC84235B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,62 +219,62 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
-				4C0B769BA145C34A41002F615178B40D /* Pods */,
-				088FBB394C848CBF752F83C586E171F2 /* Products */,
-				94D6AB9034BEC8A69EC41F0BBCEE649C /* Targets Support Files */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				4B23E791B8839DB6941C7EB499DAE965 /* Pods */,
+				01FFDD6F2D9E551F7A779DDCF4090809 /* Products */,
+				D2206E01363816302AC36E3C91DB4887 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D1DF497A28241908D642A287CCD1EF16 /* Pods-CoffeShop-CoffeShopUITests */ = {
+		D2206E01363816302AC36E3C91DB4887 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3973EEFF2F2B16226D5F5096110B5353 /* Pods-CoffeShop-CoffeShopUITests.modulemap */,
-				CBF97DA47A2842AF08367E8EDB94FA60 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown */,
-				ED95A574A02ACCDBFEF8E2B1B41E2225 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist */,
-				93D984FDA3C9D81C63CF4614B28AFD0E /* Pods-CoffeShop-CoffeShopUITests-dummy.m */,
-				63DDCEB30E57C06A861BD09A461FD57F /* Pods-CoffeShop-CoffeShopUITests-frameworks.sh */,
-				3F8917F3E4F5069F90BE789C47654649 /* Pods-CoffeShop-CoffeShopUITests-Info.plist */,
-				E184FE9BDBC5C802F24EDDC8D4FF59C3 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */,
-				D26AE9736458E4AC9DC62BAC04E9B4D1 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */,
-				5EE718568FD7397E212F3D137EFD8CE4 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */,
+				8B12249BD3663CC9C782398C8D4374C4 /* Pods-CoffeShop */,
+				F77AA783406ABCA10EEA6E0EB082316F /* Pods-CoffeShop-CoffeShopUITests */,
+				66DB5C3275A96B28FD4D80789C0C5513 /* Pods-CoffeShopTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F77AA783406ABCA10EEA6E0EB082316F /* Pods-CoffeShop-CoffeShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D81C3A3DCF5F77E8E2E0662D823B4B1 /* Pods-CoffeShop-CoffeShopUITests.modulemap */,
+				EEAB8E7043D04FB4145BD00640BE093C /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.markdown */,
+				7DDD75BAADB9ED805334403809B4F4A4 /* Pods-CoffeShop-CoffeShopUITests-acknowledgements.plist */,
+				62A91BABB2B3AAD9B41C29AF209C5F84 /* Pods-CoffeShop-CoffeShopUITests-dummy.m */,
+				785420518AFF505A6D85993646EF12DC /* Pods-CoffeShop-CoffeShopUITests-frameworks.sh */,
+				B4AAC3F4DD220A2D0E26CDC47A1268C5 /* Pods-CoffeShop-CoffeShopUITests-Info.plist */,
+				17C799E9DD854B49A8C6558274A7E4C5 /* Pods-CoffeShop-CoffeShopUITests-umbrella.h */,
+				CE9225FC32DD5EF5570561E579F55481 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */,
+				22532B7A28B460F9FB2A5226863B1084 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */,
 			);
 			name = "Pods-CoffeShop-CoffeShopUITests";
 			path = "Target Support Files/Pods-CoffeShop-CoffeShopUITests";
 			sourceTree = "<group>";
 		};
-		D89D0A53F9C4160DF116B68A459F3ED5 /* Pods-CoffeShopTests */ = {
+		FC5800BB3AAFD3E119788196BC84235B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E0D31BDF13C5614D0CCC42D74A5517D6 /* Pods-CoffeShopTests.modulemap */,
-				931D157B0A78409756A7122B24112666 /* Pods-CoffeShopTests-acknowledgements.markdown */,
-				B7DF46F00C42D5F4BCADF54CB19BD79F /* Pods-CoffeShopTests-acknowledgements.plist */,
-				144A1B852F7044EBBBF9495BFB4BD923 /* Pods-CoffeShopTests-dummy.m */,
-				5E477FEFC7652ED892D253AEC3ED5A85 /* Pods-CoffeShopTests-frameworks.sh */,
-				CDBF39C2F7899B1F962CAC2D4A8CD136 /* Pods-CoffeShopTests-Info.plist */,
-				A0F2C7BC39ABFF76BEBAD96922084301 /* Pods-CoffeShopTests-umbrella.h */,
-				54016EE492173E8101A109325ECBCA2C /* Pods-CoffeShopTests.debug.xcconfig */,
-				389986B7147D8724AD1DAE92CDAC57DF /* Pods-CoffeShopTests.release.xcconfig */,
+				F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */,
+				0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */,
+				434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */,
+				F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */,
 			);
-			name = "Pods-CoffeShopTests";
-			path = "Target Support Files/Pods-CoffeShopTests";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		F751BAF289653C92C5A08C9650964CA2 /* Pods-CoffeShop */ = {
+		FDB06735842FB3FBE5AB3C4E35E664C4 /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
-				CB6D4008FDC32CCFFBAB3A662E0FF421 /* Pods-CoffeShop.modulemap */,
-				09F0E2F21D431E0FABC6453F7FE042E5 /* Pods-CoffeShop-acknowledgements.markdown */,
-				F901C46C02E0D6CDA5AC490E22120936 /* Pods-CoffeShop-acknowledgements.plist */,
-				F5C5D0A436C72386662C1471DFD7900C /* Pods-CoffeShop-dummy.m */,
-				7EA7FEEE54454A230C5602803C3D5828 /* Pods-CoffeShop-frameworks.sh */,
-				EB756A678414C77A250887E8F4DA543F /* Pods-CoffeShop-Info.plist */,
-				7C778BAD23690E6C3CC5835ACC556ADD /* Pods-CoffeShop-umbrella.h */,
-				E1E671E116FE4CC20296BFE1E0C8E413 /* Pods-CoffeShop.debug.xcconfig */,
-				44D40B87772E8AE324D2DDC7081A7CD3 /* Pods-CoffeShop.release.xcconfig */,
+				B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */,
+				43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */,
+				6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */,
+				453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */,
+				60232665171B90DA246EFBB82D587433 /* Support Files */,
 			);
-			name = "Pods-CoffeShop";
-			path = "Target Support Files/Pods-CoffeShop";
+			name = FLAnimatedImage;
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,27 +288,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DB53013216AE1CFCAD939686EC8C0A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D6622CDE2793B13735F47C44A7743ED /* SnapshotTesting-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		56405E7ADF8A75F9E651A4A093D2F133 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C0CB576917C2027120F9FD4A53E0811B /* Pods-CoffeShop-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		985D4FEE002B662643DD017D990830A7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D90B495E6670A06760E9380CF15AAB70 /* Pods-CoffeShopTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +303,14 @@
 				EA35339386CD1251FAD44A9E74A25D74 /* FLAnimatedImage.h in Headers */,
 				9F7158EF1A3E6E778AB1F8712A3AA86E /* FLAnimatedImage-umbrella.h in Headers */,
 				DB1D0708A4D56029D14636419B03F14C /* FLAnimatedImageView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6014A15FBBDE4E3D79861A507E1A6E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D596789F9ED1EA00F4AB72FBCD561D /* Pods-CoffeShopTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +329,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BA6BE4695430EB052E6F4CC58FBAF93F /* PBXTargetDependency */,
+				B6F94053004AD2875E2BD9283358026A /* PBXTargetDependency */,
 			);
 			name = "Pods-CoffeShop-CoffeShopUITests";
 			productName = Pods_CoffeShop_CoffeShopUITests;
@@ -531,7 +366,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				854D7FE8A1A0925ABD7BA9884445CCBD /* PBXTargetDependency */,
+				D8399986020C145B0AB1A8E7BE4F92ED /* PBXTargetDependency */,
 			);
 			name = "Pods-CoffeShop";
 			productName = Pods_CoffeShop;
@@ -540,40 +375,21 @@
 		};
 		7ED01B27118EAF7FA542F81667EC3A51 /* Pods-CoffeShopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5AD4551CF6CDCD616B45D72B1C74B3F /* Build configuration list for PBXNativeTarget "Pods-CoffeShopTests" */;
+			buildConfigurationList = 32903C3201ADBFDDAD78358B6FC987D1 /* Build configuration list for PBXNativeTarget "Pods-CoffeShopTests" */;
 			buildPhases = (
-				985D4FEE002B662643DD017D990830A7 /* Headers */,
-				24D51A6C6733D1D7BBA2D72557E75617 /* Sources */,
-				D2EFA3ED8E85328C3842130E41D796E2 /* Frameworks */,
-				0B99DF93BF7499A6F12D29E985D28B78 /* Resources */,
+				CF6014A15FBBDE4E3D79861A507E1A6E /* Headers */,
+				AAA9B0F2E91B7670E3072C2F7F22EAF4 /* Sources */,
+				A4317248097984F354EE0646F440D01E /* Frameworks */,
+				1C512E99C8ADDB14247397EB868E5084 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				08BE2DFC3D1DD44E091C9CF6B3459AA6 /* PBXTargetDependency */,
-				496DB4C11ACAFD7A6B1695D862C2EA9F /* PBXTargetDependency */,
+				C210BAA1EB19D045B3DB6010F0ABE0B6 /* PBXTargetDependency */,
 			);
 			name = "Pods-CoffeShopTests";
 			productName = Pods_CoffeShopTests;
 			productReference = D54B397F3051237D2710A080395A6436 /* Pods-CoffeShopTests */;
-			productType = "com.apple.product-type.framework";
-		};
-		ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 331A33CBF071F9C6C103AB492799B536 /* Build configuration list for PBXNativeTarget "SnapshotTesting" */;
-			buildPhases = (
-				3DB53013216AE1CFCAD939686EC8C0A4 /* Headers */,
-				A6FA35379EB6A1D3271EA288BC860175 /* Sources */,
-				A3E6F437DCDBD6A93A734772AFD5F236 /* Frameworks */,
-				EABF71C4857BAE69F08CA52822E17A0D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SnapshotTesting;
-			productName = SnapshotTesting;
-			productReference = A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -594,7 +410,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 088FBB394C848CBF752F83C586E171F2 /* Products */;
+			productRefGroup = 01FFDD6F2D9E551F7A779DDCF4090809 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -602,13 +418,12 @@
 				4E2CD53AF2BC0FFAC258235A6A3703E0 /* Pods-CoffeShop */,
 				1B79DFFD25880DD704E40C638580F581 /* Pods-CoffeShop-CoffeShopUITests */,
 				7ED01B27118EAF7FA542F81667EC3A51 /* Pods-CoffeShopTests */,
-				ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0B99DF93BF7499A6F12D29E985D28B78 /* Resources */ = {
+		1C512E99C8ADDB14247397EB868E5084 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -623,13 +438,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AE4C62C7920C14C5D33ECB86FC26D35B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EABF71C4857BAE69F08CA52822E17A0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -656,14 +464,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24D51A6C6733D1D7BBA2D72557E75617 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8197A8F23E3FBF53C8C4BD6265E60F49 /* Pods-CoffeShopTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A1A6F090325FE857B067DA501DEDF03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,44 +472,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6FA35379EB6A1D3271EA288BC860175 /* Sources */ = {
+		AAA9B0F2E91B7670E3072C2F7F22EAF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F1B4D31269CC69CB5F41DBBCEF5222 /* Any.swift in Sources */,
-				4249BA5FD30CFB0680582D7C7C6EE392 /* AssertInlineSnapshot.swift in Sources */,
-				3DAFC3A87D54F6BA47518F4904B7FE54 /* AssertSnapshot.swift in Sources */,
-				CFFD67104AE4ABBFEB3801F9B8149664 /* Async.swift in Sources */,
-				C56B3E1A07308BCC8376D15C735B1C25 /* CALayer.swift in Sources */,
-				DA787DFD55A7814418DE78F66BA70847 /* CaseIterable.swift in Sources */,
-				07319FC388250B963206DB0BF5262128 /* CGPath.swift in Sources */,
-				4F4D449821AB24276FA18CB343B2C3E8 /* Codable.swift in Sources */,
-				78BBB110735B5BD1BDDC3CD4FC563323 /* Data.swift in Sources */,
-				532436EEB8C806728018E24162505A32 /* Description.swift in Sources */,
-				6FA42D338F2CDE1914908E7D0662AED5 /* Diff.swift in Sources */,
-				2C0C1A356E0D75368E196C24C3761129 /* Diffing.swift in Sources */,
-				5CA71008BD23B355944AC5383821C4E2 /* Internal.swift in Sources */,
-				957508AA897C27F86D544CCF1CED1904 /* NSBezierPath.swift in Sources */,
-				97BEDF828D70F8BE2BE4E917DD992C48 /* NSImage.swift in Sources */,
-				3D1E0E44DB5DB31C932BBB9F1385B57A /* NSView.swift in Sources */,
-				9D65BFC4B2C4B6102D6B7EC25A7CD739 /* NSViewController.swift in Sources */,
-				70060B0C311FBDF840146EEE9B762220 /* PlistEncoder.swift in Sources */,
-				6235B3883B6D9B3EF262ACFF43631F3D /* SceneKit.swift in Sources */,
-				486A6DAD276EB55E6D7C9F515C86C227 /* SnapshotTestCase.swift in Sources */,
-				1D0EF6FBAF37BB930183B8F5AA719CD2 /* SnapshotTesting-dummy.m in Sources */,
-				EB5F8B0D9E74FD8A1724B04E6AACFABE /* Snapshotting.swift in Sources */,
-				480D1264071DA1967F86F28F5CF29B8B /* SpriteKit.swift in Sources */,
-				88DE0AA2E9071FD322F40132B5ACE852 /* String.swift in Sources */,
-				FEB8176EE5F7E44C5399D94BC6DE0C46 /* String+SpecialCharacters.swift in Sources */,
-				D7AE9DBB6C5D2522EB24A673921F9365 /* SwiftUIView.swift in Sources */,
-				7F5C5DD662B656505ECF172E1DDC232E /* UIBezierPath.swift in Sources */,
-				9104476A4778BB28C819AB92599A5B6E /* UIImage.swift in Sources */,
-				9F6B241BE1332F18DFCC2BF32E03C42C /* UIView.swift in Sources */,
-				D3C4D4F28C0180E812B6BA5FC4F5015B /* UIViewController.swift in Sources */,
-				96E71750BD8C847E125FAB3C7A336224 /* URLRequest.swift in Sources */,
-				928DBECCA86A6F98E4B42FA62C5FF051 /* View.swift in Sources */,
-				9B00AEBE5F221FE9815159125313C0BD /* Wait.swift in Sources */,
-				D0A29718080A06AB351F6FA41B725BEA /* XCTAttachment.swift in Sources */,
+				8DB85E8A0BEFE46424FACEF36E35255D /* Pods-CoffeShopTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,36 +491,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08BE2DFC3D1DD44E091C9CF6B3459AA6 /* PBXTargetDependency */ = {
+		B6F94053004AD2875E2BD9283358026A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLAnimatedImage;
+			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
+			targetProxy = FBDFA79BC18A6A4BCC735D63506A95D0 /* PBXContainerItemProxy */;
+		};
+		C210BAA1EB19D045B3DB6010F0ABE0B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-CoffeShop";
 			target = 4E2CD53AF2BC0FFAC258235A6A3703E0 /* Pods-CoffeShop */;
-			targetProxy = 792479077C17205EDE0324D04E97A3B4 /* PBXContainerItemProxy */;
+			targetProxy = 8A2851C7662C036ED597E6D0D5716699 /* PBXContainerItemProxy */;
 		};
-		496DB4C11ACAFD7A6B1695D862C2EA9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapshotTesting;
-			target = ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */;
-			targetProxy = 708565351F6E436346BAD00AFBE548E1 /* PBXContainerItemProxy */;
-		};
-		854D7FE8A1A0925ABD7BA9884445CCBD /* PBXTargetDependency */ = {
+		D8399986020C145B0AB1A8E7BE4F92ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FLAnimatedImage;
 			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
-			targetProxy = 4443ACFE93304A4E20DAAA3098E23A73 /* PBXContainerItemProxy */;
-		};
-		BA6BE4695430EB052E6F4CC58FBAF93F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FLAnimatedImage;
-			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
-			targetProxy = 919B57AE08A3EF2EE8FBC83EF78747D7 /* PBXContainerItemProxy */;
+			targetProxy = 07D2A33F7BD5F54517480571558C24CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		27B8B3DCD5178F92BD52144B780ACC30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E20C9E5A09BA9834C9DF97FB684AC40 /* FLAnimatedImage.release.xcconfig */;
+			baseConfigurationReference = 0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -779,42 +540,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		38054F06D12494D19A4C008BB03C6C4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C94F9F2A18DDCAA88A04FC2CDC237893 /* SnapshotTesting.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapshotTesting/SnapshotTesting-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapshotTesting/SnapshotTesting-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SnapshotTesting/SnapshotTesting.modulemap";
-				PRODUCT_MODULE_NAME = SnapshotTesting;
-				PRODUCT_NAME = SnapshotTesting;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -888,9 +613,84 @@
 			};
 			name = Debug;
 		};
+		7072F1700A7888EAF6A50E126CBA7112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAD1A71BCD9D6C5236D37B847F74E04C /* Pods-CoffeShopTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		798CF4EA29274FF203EEACA91371125F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F85BF13F53EAD4256F35DA8DD93DAA5 /* Pods-CoffeShopTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		7E1686052941A4CDEA118D1C4BA17D3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EE718568FD7397E212F3D137EFD8CE4 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */;
+			baseConfigurationReference = 22532B7A28B460F9FB2A5226863B1084 /* Pods-CoffeShop-CoffeShopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -928,7 +728,7 @@
 		};
 		82D27F028BAA6AFF96E930638F2132A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D40B87772E8AE324D2DDC7081A7CD3 /* Pods-CoffeShop.release.xcconfig */;
+			baseConfigurationReference = F69290135608F8ADAA9A0EBADF061877 /* Pods-CoffeShop.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -964,44 +764,9 @@
 			};
 			name = Release;
 		};
-		8B2A9AB578F492EBA041FAA048620A24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB637637A7D9B8A9511773718B7ABF5A /* SnapshotTesting.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapshotTesting/SnapshotTesting-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapshotTesting/SnapshotTesting-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SnapshotTesting/SnapshotTesting.modulemap";
-				PRODUCT_MODULE_NAME = SnapshotTesting;
-				PRODUCT_NAME = SnapshotTesting;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A3D6BDAE0E4336A04DEDB02D196F886F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E671E116FE4CC20296BFE1E0C8E413 /* Pods-CoffeShop.debug.xcconfig */;
+			baseConfigurationReference = 17399F3ACC54E2A1F246EF79E737236D /* Pods-CoffeShop.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1036,46 +801,9 @@
 			};
 			name = Debug;
 		};
-		BDE2EF98645CB16BC1054A04807DE027 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54016EE492173E8101A109325ECBCA2C /* Pods-CoffeShopTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C398B633D376AB8998C483C575DFEA7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D26AE9736458E4AC9DC62BAC04E9B4D1 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */;
+			baseConfigurationReference = CE9225FC32DD5EF5570561E579F55481 /* Pods-CoffeShop-CoffeShopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1174,7 +902,7 @@
 		};
 		D601095F1A4ED71897812C817A0EF4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 208BBC066791DE3BDA66D0D6693A542F /* FLAnimatedImage.debug.xcconfig */;
+			baseConfigurationReference = CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1206,44 +934,6 @@
 			};
 			name = Debug;
 		};
-		E78B80A82D98606E8F03F111F6958728 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 389986B7147D8724AD1DAE92CDAC57DF /* Pods-CoffeShopTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CoffeShopTests/Pods-CoffeShopTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1256,11 +946,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		331A33CBF071F9C6C103AB492799B536 /* Build configuration list for PBXNativeTarget "SnapshotTesting" */ = {
+		32903C3201ADBFDDAD78358B6FC987D1 /* Build configuration list for PBXNativeTarget "Pods-CoffeShopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B2A9AB578F492EBA041FAA048620A24 /* Debug */,
-				38054F06D12494D19A4C008BB03C6C4F /* Release */,
+				798CF4EA29274FF203EEACA91371125F /* Debug */,
+				7072F1700A7888EAF6A50E126CBA7112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1288,15 +978,6 @@
 			buildConfigurations = (
 				D601095F1A4ED71897812C817A0EF4C1 /* Debug */,
 				27B8B3DCD5178F92BD52144B780ACC30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5AD4551CF6CDCD616B45D72B1C74B3F /* Build configuration list for PBXNativeTarget "Pods-CoffeShopTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDE2EF98645CB16BC1054A04807DE027 /* Debug */,
-				E78B80A82D98606E8F03F111F6958728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

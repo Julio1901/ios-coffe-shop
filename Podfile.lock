@@ -1,20 +1,16 @@
 PODS:
   - FLAnimatedImage (1.0.17)
-  - SnapshotTesting (1.9.0)
 
 DEPENDENCIES:
   - FLAnimatedImage (~> 1.0)
-  - SnapshotTesting
 
 SPEC REPOS:
   trunk:
     - FLAnimatedImage
-    - SnapshotTesting
 
 SPEC CHECKSUMS:
   FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
-  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
 
-PODFILE CHECKSUM: f28d1495de1eb5266d0d2d52fc9af54b89ce0b48
+PODFILE CHECKSUM: 62852577c959bb6e7b4cc5f4791bc39f8a8cb490
 
 COCOAPODS: 1.15.2
