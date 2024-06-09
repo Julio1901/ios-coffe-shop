@@ -18,6 +18,9 @@ class HomeViewModel : CoffeeListViewModelDelegate {
 
     
     var loadingImageIsHidden = false
+    var locationRepository : LocationRepository!
+    
+    var locationList : [Location] = []
     
     func updateCoffeeList() {
         loadingImageIsHidden = true
@@ -29,9 +32,11 @@ class HomeViewModel : CoffeeListViewModelDelegate {
     var delegate : HomeViewModelDelegate!
     
     //TODO: make this with dependency injection
-    init(coffeRepository: CoffeeRepository) {
+    init(coffeRepository: CoffeeRepository, locationRepository: LocationRepository) {
         self.coffeeListViewModel = CoffeeListViewModel(coffeeRepository: coffeRepository)
+        self.locationRepository = locationRepository
         coffeeListViewModel.delegate = self
+        
     }
         
     func loadCoffeeListData() async {
@@ -40,6 +45,16 @@ class HomeViewModel : CoffeeListViewModelDelegate {
 
     func populateCoffessType() {
         delegate.populateCoffessType()
+    }
+    
+    func loadLocationsData() async {
+        do{
+            locationList = try await locationRepository.getLocations()
+        }
+        catch {
+           print("Error fetch location list \(error.localizedDescription)")
+       }
+       
     }
     
     

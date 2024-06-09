@@ -20,12 +20,12 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         initialScreen.coffeeList.delegate = self
         initialScreen.coffeeList.register(CoffeeWithPriceCell.self, forCellWithReuseIdentifier: "CoffeeWithPriceCell")
         let coffeeRepository = CoffeeRepositoryImpl()
-        homeViewModel = HomeViewModel(coffeRepository: coffeeRepository)
+        let locationRepository = LocationRepositoryImpl()
+        homeViewModel = HomeViewModel(coffeRepository: coffeeRepository, locationRepository: locationRepository)
         homeViewModel.delegate = self
         populateCoffeeList()
+        populateLocatins()
         prepareLoadingImage()
-
-        
         view = initialScreen
     }
     
@@ -101,7 +101,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }
     }
     
-    func populateCoffeListCategory() {
+    private func populateCoffeListCategory() {
         for type in homeViewModel.coffeeListViewModel.coffeesType {
             let button = SelectableCustomButton()
             button.delegate = self
@@ -110,6 +110,32 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }
     }
     
+    private func populateLocatins() {
+        Task{
+            await homeViewModel.loadLocationsData()
+            DispatchQueue.main.async{
+                self.initialScreen.locationButton.menu = self.createLocationMenu(locations: self.homeViewModel.locationList)
+            }
+        }
+    }
+    
+    @objc func menuButtonTapped(_ action: UIAction) {
+        initialScreen.locationButton.setTitle(action.title, for: .normal)
+     }
+    
+    private func createLocationMenu(locations : [Location]) -> UIMenu {
+        let actions = locations.map { location in
+            UIAction(title: location.name, handler: self.menuButtonTapped)
+              }
+        let menuTitle =  NSLocalizedString("location_options", comment: "")
+        let locationMenu = UIMenu(
+                    title: menuTitle,
+                    options: .displayInline,
+                    children: actions
+                )
+                return locationMenu
+    }
+        
 }
 
 extension HomeViewController : SelectableCustomButtonDelegate {

@@ -19,19 +19,7 @@ class HomeScreen : UIView {
         it.backgroundColor = UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 1.0)
         return it
     }()
-    
-//    private var titleLabel: UILabel = {
-//       let it = UILabel()
-//        it.translatesAutoresizingMaskIntoConstraints = false
-//        it.setText(key: "home_screen")
-//        it.textColor = UIColor(.black)
-//        it.font = UIFont(name: "Sora-SemiBold", size: 32)
-//        it.numberOfLines = 0
-//        it.textAlignment = .center
-//        it.lineBreakMode = .byWordWrapping
-//        return it
-//    }()
-    
+        
     private var locationLabel: UILabel = {
         let it = UILabel()
         it.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +29,7 @@ class HomeScreen : UIView {
         return it
     }()
     
-    private var locationButton: UIButton = {
+    var locationButton: UIButton = {
         let it  = UIButton()
         it.translatesAutoresizingMaskIntoConstraints = false
         it.titleLabel?.font = UIFont(name: "Sora-SemiBold", size: 14)
@@ -54,24 +42,7 @@ class HomeScreen : UIView {
         it.showsMenuAsPrimaryAction = true
         return it
     }()
-    
-    var locationMenu: UIMenu = {
-        let it  = UIMenu(
-            title: "Location options", options: .displayInline, children: [
-                UIAction(title: "Test 1",  handler: { (_) in
-                    print("test 1 pressed")
-                }),
-                UIAction(title: "Test 2",  handler: { (_) in
-                    print("test 2 pressed")
-                }),
-                UIAction(title: "Test 3",  handler: { (_) in
-                    print("test 3 pressed")
-                })
-            ]
-        )
-        return it
-    }()
-    
+        
     
     var listCategoryScrollView: UIScrollView = {
            let scrollView = UIScrollView()
@@ -117,7 +88,7 @@ class HomeScreen : UIView {
         addSubview(listCategoryScrollView)
         listCategoryScrollView.addSubview(listCategoryStackView)
         setupConstraints()
-        locationButton.menu = locationMenu
+//        locationButton.menu = locationMenu
     }
     
     required init?(coder: NSCoder) {
