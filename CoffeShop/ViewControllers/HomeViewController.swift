@@ -26,6 +26,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         populateCoffeeList()
         populateLocatins()
         prepareLoadingImage()
+        setupSearchListener()
         view = initialScreen
     }
     
@@ -134,6 +135,17 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
                     children: actions
                 )
                 return locationMenu
+    }
+    
+    
+    private func setupSearchListener() {
+        initialScreen.searchComponent.addTarget(self, action: #selector(searchTextFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc private func searchTextFieldDidChange(_ textField: UITextField) {
+        if let text = textField.text {
+            print(text)
+        }
     }
         
 }
