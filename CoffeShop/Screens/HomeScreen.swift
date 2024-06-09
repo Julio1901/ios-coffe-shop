@@ -43,6 +43,7 @@ class HomeScreen : UIView {
         return it
     }()
         
+    var searchComponent = SearchCustomComponent()
     
     var listCategoryScrollView: UIScrollView = {
            let scrollView = UIScrollView()
@@ -87,8 +88,8 @@ class HomeScreen : UIView {
         addSubview(loadingImage)
         addSubview(listCategoryScrollView)
         listCategoryScrollView.addSubview(listCategoryStackView)
+        addSubview(searchComponent)
         setupConstraints()
-//        locationButton.menu = locationMenu
     }
     
     required init?(coder: NSCoder) {
@@ -109,6 +110,12 @@ class HomeScreen : UIView {
             
             locationButton.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 8),
             locationButton.leadingAnchor.constraint(equalTo: locationLabel.leadingAnchor),
+            
+            searchComponent.topAnchor.constraint(equalTo: locationButton.bottomAnchor, constant: 24),
+            searchComponent.leadingAnchor.constraint(equalTo: locationButton.leadingAnchor),
+            searchComponent.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -92),
+            searchComponent.heightAnchor.constraint(equalToConstant: 52),
+            
             
             listCategoryScrollView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
             listCategoryScrollView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),

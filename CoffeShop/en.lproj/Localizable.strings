@@ -16,3 +16,6 @@
 "price_not_found" = "Price not found";
 "location" = "Location";
 "location_options" = "Location options";
+
+//MARK: Custom Components
+"search_coffee" = "Search coffee";
