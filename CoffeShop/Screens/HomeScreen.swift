@@ -43,7 +43,11 @@ class HomeScreen : UIView {
         return it
     }()
         
-    var searchComponent = SearchCustomComponent()
+    var searchComponent : SearchCustomComponent = {
+        let it = SearchCustomComponent()
+        it.setupPlaceHolder(placeholder: NSLocalizedString("search_coffee", comment: ""))
+        return it
+    }()
     
     var listCategoryScrollView: UIScrollView = {
            let scrollView = UIScrollView()

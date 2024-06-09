@@ -9,6 +9,9 @@ import UIKit
 
 class SearchCustomComponent: UITextField {
 
+    private var paragraphStyle : NSMutableParagraphStyle!
+    private var placeholderAttributes: [NSAttributedString.Key: Any]!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -19,22 +22,23 @@ class SearchCustomComponent: UITextField {
         setupView()
     }
     
-    private func setupView() {
+    
+    private func setupView(placeholder: String = "") {
         self.borderStyle = .none
         self.backgroundColor = UIColor(red: 42/255.0, green: 42/255.0, blue: 42/255.0, alpha: 1.0)
         self.layer.cornerRadius = 12
         self.translatesAutoresizingMaskIntoConstraints = false
+        
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.firstLineHeadIndent = 24
+        self.paragraphStyle = paragraphStyle
         
-        let placeholderAttributes: [NSAttributedString.Key: Any] = [
-                .foregroundColor:  UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0),
-                .font: UIFont(name: "Sora-Regular", size: 12) as Any,
-                .paragraphStyle: paragraphStyle
-        ]
-        
-        let placeHolder = NSLocalizedString("search_coffee", comment: "")
-        self.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: placeholderAttributes)
+         let placeholderAttributes: [NSAttributedString.Key: Any] = [
+                        .foregroundColor:  UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0),
+                        .font: UIFont(name: "Sora-Regular", size: 12) as Any,
+                        .paragraphStyle: self.paragraphStyle]
+        self.placeholderAttributes = placeholderAttributes
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: placeholderAttributes)
         
         let textAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
@@ -55,4 +59,10 @@ class SearchCustomComponent: UITextField {
         self.leftView = iconContainerView
         self.leftViewMode = .always
     }
+    
+    func setupPlaceHolder(placeholder : String) {
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: self.placeholderAttributes)
+    }
+    
+    
 }
