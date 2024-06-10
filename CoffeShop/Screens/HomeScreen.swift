@@ -45,7 +45,6 @@ class HomeScreen : UIView {
         
     var searchComponent : SearchCustomComponent = {
         let it = SearchCustomComponent()
-//        it.setupPlaceHolder(placeholder: NSLocalizedString("search_coffee", comment: ""))
         it.setupDisableState()
         return it
     }()
@@ -56,6 +55,56 @@ class HomeScreen : UIView {
         it.translatesAutoresizingMaskIntoConstraints = false
         it.layer.cornerRadius = 12
         it.layer.masksToBounds = true
+        return it
+    }()
+    
+    var bannerPromoTag : UIView = {
+        let it = UIView()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.layer.cornerRadius = 8
+        it.layer.masksToBounds = true
+        it.backgroundColor = UIColor(red: 237/255, green: 81/255, blue: 81/255, alpha: 1.0)
+        return it
+    }()
+    
+    var bannerPromoTagLabel : UILabel = {
+        let it = UILabel()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.text = NSLocalizedString("banner_promo", comment: "")
+        it.font = UIFont(name: "Sora-SemiBold", size: 14)
+        it.textColor = .white
+        return it
+    } ()
+    
+    var firstLinePromoBannerBackLayer : UIView = {
+        let it = UIView()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.backgroundColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1.0)
+        return it
+    }()
+    
+    var secondLinePromoBannerBackLayer : UIView = {
+        let it = UIView()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.backgroundColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1.0)
+        return it
+    }()
+    
+    var firstLinePromoLabel : UILabel = {
+        let it = UILabel()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.font = UIFont(name: "Sora-SemiBold", size: 32)
+        it.textColor = .white
+        it.text = NSLocalizedString("banner_first_line_label_text", comment: "")
+        return it
+    }()
+    
+    var secondLinePromoLabel : UILabel = {
+        let it = UILabel()
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.font = UIFont(name: "Sora-SemiBold", size: 32)
+        it.textColor = .white
+        it.text = NSLocalizedString("banner_second_line_label_text", comment: "")
         return it
     }()
     
@@ -104,6 +153,12 @@ class HomeScreen : UIView {
         listCategoryScrollView.addSubview(listCategoryStackView)
         addSubview(searchComponent)
         addSubview(coffeeBanner)
+        bannerPromoTag.addSubview(bannerPromoTagLabel)
+        addSubview(bannerPromoTag)
+        addSubview(firstLinePromoBannerBackLayer)
+        addSubview(secondLinePromoBannerBackLayer)
+        addSubview(firstLinePromoLabel)
+        addSubview(secondLinePromoLabel)
         setupConstraints()
     }
     
@@ -137,6 +192,30 @@ class HomeScreen : UIView {
             coffeeBanner.leadingAnchor.constraint(equalTo: searchComponent.leadingAnchor),
             coffeeBanner.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -28),
             
+            bannerPromoTag.widthAnchor.constraint(equalToConstant: 60),
+            bannerPromoTag.heightAnchor.constraint(equalToConstant: 26),
+            bannerPromoTag.topAnchor.constraint(equalTo: coffeeBanner.topAnchor, constant: 13),
+            bannerPromoTag.leadingAnchor.constraint(equalTo: coffeeBanner.leadingAnchor, constant: 24),
+            
+            bannerPromoTagLabel.centerXAnchor.constraint(equalTo: bannerPromoTag.centerXAnchor),
+            bannerPromoTagLabel.centerYAnchor.constraint(equalTo: bannerPromoTag.centerYAnchor),
+            
+            firstLinePromoBannerBackLayer.widthAnchor.constraint(equalToConstant: 200),
+            firstLinePromoBannerBackLayer.heightAnchor.constraint(equalToConstant: 27),
+            firstLinePromoBannerBackLayer.topAnchor.constraint(equalTo: bannerPromoTag.bottomAnchor, constant: 23),
+            firstLinePromoBannerBackLayer.leadingAnchor.constraint(equalTo: bannerPromoTag.leadingAnchor),
+            
+            
+            secondLinePromoBannerBackLayer.widthAnchor.constraint(equalToConstant: 149),
+            secondLinePromoBannerBackLayer.heightAnchor.constraint(equalToConstant: 23),
+            secondLinePromoBannerBackLayer.topAnchor.constraint(equalTo: firstLinePromoBannerBackLayer.bottomAnchor, constant: 12),
+            secondLinePromoBannerBackLayer.leadingAnchor.constraint(equalTo: firstLinePromoBannerBackLayer.leadingAnchor),
+            
+            firstLinePromoLabel.topAnchor.constraint(equalTo: firstLinePromoBannerBackLayer.topAnchor, constant: -15),
+            firstLinePromoLabel.leadingAnchor.constraint(equalTo: firstLinePromoBannerBackLayer.leadingAnchor, constant: 1),
+            
+            secondLinePromoLabel.topAnchor.constraint(equalTo: secondLinePromoBannerBackLayer.topAnchor, constant: -15),
+            secondLinePromoLabel.leadingAnchor.constraint(equalTo: secondLinePromoBannerBackLayer.leadingAnchor, constant: 1),
             
             listCategoryScrollView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
             listCategoryScrollView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
@@ -144,19 +223,20 @@ class HomeScreen : UIView {
             listCategoryScrollView.heightAnchor.constraint(equalToConstant: 29),
             
             listCategoryStackView.leadingAnchor.constraint(equalTo: listCategoryScrollView.leadingAnchor),
-                       listCategoryStackView.trailingAnchor.constraint(equalTo: listCategoryScrollView.trailingAnchor),
-                       listCategoryStackView.topAnchor.constraint(equalTo: listCategoryScrollView.topAnchor),
-                       listCategoryStackView.bottomAnchor.constraint(equalTo: listCategoryScrollView.bottomAnchor),
-                       listCategoryStackView.heightAnchor.constraint(equalTo: listCategoryScrollView.heightAnchor),
+            listCategoryStackView.trailingAnchor.constraint(equalTo: listCategoryScrollView.trailingAnchor),
+            listCategoryStackView.topAnchor.constraint(equalTo: listCategoryScrollView.topAnchor),
+            listCategoryStackView.bottomAnchor.constraint(equalTo: listCategoryScrollView.bottomAnchor),
+            listCategoryStackView.heightAnchor.constraint(equalTo: listCategoryScrollView.heightAnchor),
             
             coffeeList.topAnchor.constraint(equalTo: listCategoryScrollView.bottomAnchor, constant: 16),
             coffeeList.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             coffeeList.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             
-            loadingImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            loadingImage.centerYAnchor.constraint(equalTo: centerYAnchor)
             
+            
+            loadingImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingImage.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor, constant: (topContainer.frame.height + (280 / 2) - 50))
         ])
     }
 }

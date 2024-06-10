@@ -16,6 +16,9 @@
 "price_not_found" = "Price not found";
 "location" = "Location";
 "location_options" = "Location options";
+"banner_promo" = "Promo";
+"banner_first_line_label_text" = "Buy one get";
+"banner_second_line_label_text" = "one FREE";
 
 //MARK: Custom Components
 "search_coffee" = "Search coffee";
