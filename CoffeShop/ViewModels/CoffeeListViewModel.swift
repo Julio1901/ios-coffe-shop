@@ -68,7 +68,6 @@ class CoffeeListViewModel {
         handleFilters()
     }
     
-    
     private func handleFilters(){
         var filteredList: [CoffeeViewModel] = _coffeesViewModel
 
@@ -86,10 +85,9 @@ class CoffeeListViewModel {
         case (true, true):
             break
         }
-
+        
         coffeesViewModel = filteredList
         delegate.updateCoffeeList()
     }
-    
-    
+
 }
