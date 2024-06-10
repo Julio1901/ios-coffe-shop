@@ -13,7 +13,6 @@ class SearchCustomComponent: UITextField {
     private var paragraphStyle : NSMutableParagraphStyle!
     private var placeholderAttributes: [NSAttributedString.Key: Any]!
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -22,23 +21,21 @@ class SearchCustomComponent: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
-        
     }
-    
     
     private func setupView() {
         self.borderStyle = .none
         self.backgroundColor = UIColor(red: 42/255.0, green: 42/255.0, blue: 42/255.0, alpha: 1.0)
         self.layer.cornerRadius = 12
         self.translatesAutoresizingMaskIntoConstraints = false
-        
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.firstLineHeadIndent = 24
         self.paragraphStyle = paragraphStyle
         let placeholderAttributes: [NSAttributedString.Key: Any] = [
-                        .foregroundColor:  UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0),
-                        .font: UIFont(name: "Sora-Regular", size: 12) as Any,
-                        .paragraphStyle: self.paragraphStyle]
+            .foregroundColor:  UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0),
+            .font: UIFont(name: "Sora-Regular", size: 12) as Any,
+            .paragraphStyle: paragraphStyle
+        ]
         self.placeholderAttributes = placeholderAttributes
         self.attributedPlaceholder = NSAttributedString(string: "", attributes: placeholderAttributes)
         let textAttributes: [NSAttributedString.Key: Any] = [

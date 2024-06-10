@@ -10,7 +10,6 @@ import FLAnimatedImage
 
 class HomeViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewModelDelegate {
   
-    
     private var initialScreen = HomeScreen()
     private var homeViewModel : HomeViewModel!
     
@@ -136,7 +135,6 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
                 )
                 return locationMenu
     }
-    
     
     private func setupSearchListener() {
         initialScreen.searchComponent.addTarget(self, action: #selector(searchTextFieldDidChange(_:)), for: .editingChanged)

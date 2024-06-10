@@ -28,11 +28,11 @@ class SelectableCustomButton: UIButton {
         self.clipsToBounds = true
         self.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
-    
+
     func setupSelectedState() {
         wasSelected = true
         self.titleLabel?.textColor = UIColor(.white)
-        self.configuration?.baseBackgroundColor = UIColor(red: 198/255, green: 123/255, blue: 78/255, alpha: 1.0)
+        self.configuration?.baseBackgroundColor = UIColor(red: 198/255, green: 124/255, blue: 77/255, alpha: 1.0)
     }
     
     func setupDefaultState() {

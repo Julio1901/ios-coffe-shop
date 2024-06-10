@@ -49,6 +49,15 @@ class HomeScreen : UIView {
         return it
     }()
     
+    var coffeeBanner : UIImageView = {
+        let it = UIImageView()
+        it.image = UIImage(named: "coffee-banner")
+        it.translatesAutoresizingMaskIntoConstraints = false
+        it.layer.cornerRadius = 12
+        it.layer.masksToBounds = true
+        return it
+    }()
+    
     var listCategoryScrollView: UIScrollView = {
            let scrollView = UIScrollView()
            scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,6 +102,7 @@ class HomeScreen : UIView {
         addSubview(listCategoryScrollView)
         listCategoryScrollView.addSubview(listCategoryStackView)
         addSubview(searchComponent)
+        addSubview(coffeeBanner)
         setupConstraints()
     }
     
@@ -120,10 +130,16 @@ class HomeScreen : UIView {
             searchComponent.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -92),
             searchComponent.heightAnchor.constraint(equalToConstant: 52),
             
+            coffeeBanner.heightAnchor.constraint(equalToConstant: 140),
+            coffeeBanner.widthAnchor.constraint(equalToConstant: 327),
+            coffeeBanner.topAnchor.constraint(equalTo: searchComponent.bottomAnchor, constant: 24),
+            coffeeBanner.leadingAnchor.constraint(equalTo: searchComponent.leadingAnchor),
+            coffeeBanner.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -28),
+            
             
             listCategoryScrollView.leadingAnchor.constraint(equalTo: coffeeList.leadingAnchor),
             listCategoryScrollView.trailingAnchor.constraint(equalTo: coffeeList.trailingAnchor),
-            listCategoryScrollView.topAnchor.constraint(equalTo: topContainer.bottomAnchor),
+            listCategoryScrollView.topAnchor.constraint(equalTo: coffeeBanner.bottomAnchor, constant: 24),
             listCategoryScrollView.heightAnchor.constraint(equalToConstant: 29),
             
             listCategoryStackView.leadingAnchor.constraint(equalTo: listCategoryScrollView.leadingAnchor),
