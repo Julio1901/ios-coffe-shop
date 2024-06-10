@@ -45,7 +45,8 @@ class HomeScreen : UIView {
         
     var searchComponent : SearchCustomComponent = {
         let it = SearchCustomComponent()
-        it.setupPlaceHolder(placeholder: NSLocalizedString("search_coffee", comment: ""))
+//        it.setupPlaceHolder(placeholder: NSLocalizedString("search_coffee", comment: ""))
+        it.setupDisableState()
         return it
     }()
     

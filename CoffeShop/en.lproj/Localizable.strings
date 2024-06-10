@@ -19,3 +19,4 @@
 
 //MARK: Custom Components
 "search_coffee" = "Search coffee";
+"search_desable_state_place_holder" = "Wait for loading before searching";

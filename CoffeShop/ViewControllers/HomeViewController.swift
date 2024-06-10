@@ -98,6 +98,11 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     func handleLoadingState() {
         DispatchQueue.main.async {
             self.initialScreen.loadingImage.isHidden = self.homeViewModel.loadingImageIsHidden
+            if (self.homeViewModel.loadingImageIsHidden) {
+                self.initialScreen.searchComponent.setupEnabledState(placeholder: NSLocalizedString("search_coffee", comment: ""))
+            } else {
+                self.initialScreen.searchComponent.setupDisableState()
+            }
         }
     }
     
