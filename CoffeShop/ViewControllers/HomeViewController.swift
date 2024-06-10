@@ -143,6 +143,8 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     @objc private func searchTextFieldDidChange(_ textField: UITextField) {
         if let text = textField.text {
             print(text)
+//            homeViewModel.coffeeListViewModel.filterByCoffeeName(name: text)
+            homeViewModel.coffeeListViewModel.applyNameFilter(name: text)
         }
     }
         
@@ -150,7 +152,11 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
 
 extension HomeViewController : SelectableCustomButtonDelegate {
     func buttonPressed(buttonTitle: String) {
-        homeViewModel.coffeeListViewModel.filterByGrind(grindOption: buttonTitle)
+        
+//        homeViewModel.coffeeListViewModel.filterByGrind(grindOption: buttonTitle)
+        homeViewModel.coffeeListViewModel.applyGrindFilter(grindFilter: buttonTitle)
+        
+        
         initialScreen.listCategoryStackView.subviews.forEach { subView in
             if let selectableCustomButton = subView as? SelectableCustomButton {
                 if (selectableCustomButton.titleLabel?.text != buttonTitle) {

@@ -18,6 +18,10 @@ class CoffeeListViewModel {
     var coffeesViewModel: [CoffeeViewModel]
     private var _coffeesViewModel : [CoffeeViewModel]
     
+    private var grindFilter = ""
+    private var nameFilter = ""
+    
+    
     var coffeesType: [String] = []
     
     var delegate : CoffeeListViewModelDelegate!
@@ -54,14 +58,43 @@ class CoffeeListViewModel {
           }
     }
     
-    func filterByGrind(grindOption: String){
-        if (grindOption == "") {
-            coffeesViewModel = _coffeesViewModel
-        }else {
-            coffeesViewModel = _coffeesViewModel.filter{ $0.grindOption.uppercased() == grindOption.uppercased() }
+    
+    
+    func applyGrindFilter(grindFilter: String) {
+        self.grindFilter = grindFilter
+        handleFilters()
+    }
+    
+    func applyNameFilter(name: String){
+        self.nameFilter = name
+        handleFilters()
+    }
+    
+    
+    private func handleFilters(){
+        var filteredList : [CoffeeViewModel] = []
+        
+        if (self.nameFilter != "" && self.grindFilter == "") {
+            filteredList =  _coffeesViewModel.filter{ $0.name.contains(self.nameFilter)}
         }
+        
+        if (self.grindFilter != "" && self.nameFilter == "") {
+            filteredList =  _coffeesViewModel.filter{ $0.grindOption.uppercased() == self.grindFilter.uppercased() }
+        }
+        
+        if (self.grindFilter != "" && self.nameFilter != "") {
+            filteredList = _coffeesViewModel.filter{ $0.name.contains(self.nameFilter)}
+            filteredList = filteredList.filter{$0.grindOption.uppercased() == self.grindFilter.uppercased()}
+        }
+        
+        if (self.grindFilter == "" && self.nameFilter == "") {
+            filteredList = _coffeesViewModel
+        }
+        coffeesViewModel = filteredList
         delegate.updateCoffeeList()
     }
+    
+
 
     
 }
