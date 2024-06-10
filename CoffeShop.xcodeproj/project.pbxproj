@@ -108,6 +108,7 @@
 		F475CF182BFB6FF20074AA86 /* CoffeeApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApiError.swift; sourceTree = "<group>"; };
 		F47EA1BE2C0B67E900C93A32 /* loading-coffee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-coffee.gif"; sourceTree = "<group>"; };
 		F4BCDBF82C0A2FD400555F7F /* CoffeeImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeImageUrl.swift; sourceTree = "<group>"; };
+		F4DBFC412C17B0BF00203F01 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F4F209252C12797D0085C121 /* SelectableCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCustomButton.swift; sourceTree = "<group>"; };
 		F4F246DA2C1547F300711F4D /* SearchCustomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomComponent.swift; sourceTree = "<group>"; };
 		FB6F2E76DEF9DE5AD9C7C115 /* Pods_CoffeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +185,7 @@
 		F439B8862BF2D96500CD0BA4 = {
 			isa = PBXGroup;
 			children = (
+				F4DBFC412C17B0BF00203F01 /* README.md */,
 				F439B8912BF2D96500CD0BA4 /* CoffeShop */,
 				F439B8A82BF2D96700CD0BA4 /* CoffeShopTests */,
 				F439B8B22BF2D96700CD0BA4 /* CoffeShopUITests */,
