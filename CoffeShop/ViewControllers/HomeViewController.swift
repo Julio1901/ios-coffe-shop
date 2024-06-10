@@ -18,6 +18,9 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         initialScreen.coffeeList.dataSource = self
         initialScreen.coffeeList.delegate = self
         initialScreen.coffeeList.register(CoffeeWithPriceCell.self, forCellWithReuseIdentifier: "CoffeeWithPriceCell")
+        
+        navigationController?.isNavigationBarHidden = true
+        
         let coffeeRepository = CoffeeRepositoryImpl()
         let locationRepository = LocationRepositoryImpl()
         homeViewModel = HomeViewModel(coffeRepository: coffeeRepository, locationRepository: locationRepository)
