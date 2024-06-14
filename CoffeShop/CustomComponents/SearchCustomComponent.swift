@@ -66,7 +66,7 @@ class SearchCustomComponent: UITextField {
         self.setupPlaceHolder(placeholder: placeholder)
         self.backgroundColor = UIColor(red: 42/255.0, green: 42/255.0, blue: 42/255.0, alpha: 1.0)
         self.accessibilityHint = "The search component is enabled to search for a coffee in the loaded list."
-        UIAccessibility.post(notification: .layoutChanged, argument: self)
+//        UIAccessibility.post(notification: .layoutChanged, argument: self)
     }
     
     private func setupSearchIcon(isEnableState: Bool) {

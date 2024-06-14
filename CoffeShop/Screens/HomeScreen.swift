@@ -26,6 +26,9 @@ class HomeScreen : UIView {
         it.font = UIFont(name: "Sora-Regular", size: 12)
         it.textColor = UIColor(red: 162/255.0, green: 162/255.0, blue: 162/255.0, alpha: 1.0)
         it.setText(key: "location")
+        it.isAccessibilityElement = true
+        it.accessibilityLabel = "Location"
+        it.accessibilityHint = "Location button title. This have no associated action."
         return it
     }()
     
@@ -40,6 +43,9 @@ class HomeScreen : UIView {
         it.imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
         it.tintColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0)
         it.showsMenuAsPrimaryAction = true
+        it.isAccessibilityElement = true
+        it.accessibilityLabel = "Bilzn, Tanjungbalai"
+        it.accessibilityHint = "Double tap to select location."
         return it
     }()
         
@@ -55,6 +61,10 @@ class HomeScreen : UIView {
         it.translatesAutoresizingMaskIntoConstraints = false
         it.layer.cornerRadius = 12
         it.layer.masksToBounds = true
+        it.isAccessibilityElement = true
+        it.accessibilityTraits = .image
+        it.accessibilityHint = "Decorative image: no associated action."
+        it.tag = 123
         return it
     }()
     
@@ -64,6 +74,7 @@ class HomeScreen : UIView {
         it.layer.cornerRadius = 8
         it.layer.masksToBounds = true
         it.backgroundColor = UIColor(red: 237/255, green: 81/255, blue: 81/255, alpha: 1.0)
+        it.isAccessibilityElement = false
         return it
     }()
     
@@ -73,6 +84,7 @@ class HomeScreen : UIView {
         it.text = NSLocalizedString("banner_promo", comment: "")
         it.font = UIFont(name: "Sora-SemiBold", size: 14)
         it.textColor = .white
+        it.isAccessibilityElement = false
         return it
     } ()
     
@@ -80,6 +92,7 @@ class HomeScreen : UIView {
         let it = UIView()
         it.translatesAutoresizingMaskIntoConstraints = false
         it.backgroundColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1.0)
+        it.isAccessibilityElement = false
         return it
     }()
     
@@ -87,6 +100,7 @@ class HomeScreen : UIView {
         let it = UIView()
         it.translatesAutoresizingMaskIntoConstraints = false
         it.backgroundColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1.0)
+        it.isAccessibilityElement = false
         return it
     }()
     
@@ -96,6 +110,7 @@ class HomeScreen : UIView {
         it.font = UIFont(name: "Sora-SemiBold", size: 32)
         it.textColor = .white
         it.text = NSLocalizedString("banner_first_line_label_text", comment: "")
+        it.isAccessibilityElement = false
         return it
     }()
     
@@ -105,6 +120,7 @@ class HomeScreen : UIView {
         it.font = UIFont(name: "Sora-SemiBold", size: 32)
         it.textColor = .white
         it.text = NSLocalizedString("banner_second_line_label_text", comment: "")
+        it.isAccessibilityElement = false
         return it
     }()
     
@@ -137,6 +153,9 @@ class HomeScreen : UIView {
         it.translatesAutoresizingMaskIntoConstraints = false
         it.heightAnchor.constraint(equalToConstant: 200).isActive = true
         it.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        it.isAccessibilityElement = true
+        it.accessibilityLabel = "Animated image of coffee moving horizontally indicating the coffee list is loading."
+        it.accessibilityHint = "Decorative image: no associated action."
         return it
     }()
     
@@ -145,7 +164,8 @@ class HomeScreen : UIView {
         self.backgroundColor = UIColor(.white)
         setupSubViews()
         setupConstraints()
-        setupAccessibility()
+//        setupAggroupedAccessibilityElements()
+//        setupAccessibility()
     }
     
     required init?(coder: NSCoder) {
@@ -153,13 +173,31 @@ class HomeScreen : UIView {
     }
 
     
+    func setupAggroupedAccessibilityElements(){
+        coffeeBanner.accessibilityLabel = "\(bannerPromoTagLabel.text ?? "") \(firstLinePromoLabel.text ?? "") \(secondLinePromoLabel.text ?? "")"
+    }
     
+//    private func getCoffeBannerHierarchIndex () -> Int {
+//        var indexToReturn = self.accessibilityElements?.count ?? 0
+//        
+//        if let elements = self.accessibilityElements {
+//            for (index, element) in elements.enumerated() {
+//                if let imageView = element as? UIImageView, imageView.tag == 123 {
+//                    indexToReturn =  index
+//                    break
+//                }
+//            }
+//        }
+//        return indexToReturn
+//    }
+//    
     func setupLoadingImage(animatedImage: FLAnimatedImage?) {
         loadingImage.animatedImage = animatedImage
         loadingImage.isAccessibilityElement = true
         loadingImage.accessibilityLabel = "Animated image of coffee moving horizontally indicating the coffee list is loading."
         loadingImage.accessibilityHint = "Decorative image: no associated action."
-        self.accessibilityElements?.insert(loadingImage!, at: 4)
+//        let index = getCoffeBannerHierarchIndex()
+//        self.accessibilityElements?.insert(loadingImage!, at: index)
     }
     
     private func setupSubViews() {
@@ -180,31 +218,30 @@ class HomeScreen : UIView {
         addSubview(secondLinePromoLabel)
     }
     
-    private func setupAccessibility() {
-        var accessibilityElements : [Any] = []
-        locationLabel.isAccessibilityElement = true
-        locationLabel.accessibilityLabel = "Location"
-        locationLabel.accessibilityHint = "Location button title. This have no associated action."
-        accessibilityElements.append(locationLabel)
-        locationButton.isAccessibilityElement = true
-        locationButton.accessibilityLabel = "Bilzn, Tanjungbalai"
-        locationButton.accessibilityHint = "Double tap to select location."
-        accessibilityElements.append(locationButton)
-        searchComponent.isAccessibilityElement = true
-        accessibilityElements.append(searchComponent)
-        coffeeBanner.isAccessibilityElement = true
-        coffeeBanner.accessibilityTraits = .image
-        coffeeBanner.accessibilityLabel = "\(bannerPromoTagLabel.text ?? "") \(firstLinePromoLabel.text ?? "") \(secondLinePromoLabel.text ?? "")"
-        coffeeBanner.accessibilityHint = "Decorative image: no associated action."
-        accessibilityElements.append(coffeeBanner)
-        coffeeList.isAccessibilityElement = true
-        accessibilityElements.append(coffeeList)
-        listCategoryScrollView.isAccessibilityElement = true
-        listCategoryScrollView.accessibilityLabel = "Horizontal list to filter coffees by preparation method."
-        accessibilityElements.append(listCategoryScrollView)
-        
-        self.accessibilityElements = accessibilityElements
-    }
+//    private func setupAccessibility() {
+//        var accessibilityElements : [Any] = []
+//        locationLabel.isAccessibilityElement = true
+//        locationLabel.accessibilityLabel = "Location"
+//        locationLabel.accessibilityHint = "Location button title. This have no associated action."
+//        accessibilityElements.append(locationLabel)
+//        locationButton.isAccessibilityElement = true
+//        locationButton.accessibilityLabel = "Bilzn, Tanjungbalai"
+//        locationButton.accessibilityHint = "Double tap to select location."
+//        accessibilityElements.append(locationButton)
+//        searchComponent.isAccessibilityElement = true
+//        accessibilityElements.append(searchComponent)
+//        coffeeBanner.isAccessibilityElement = true
+//        coffeeBanner.accessibilityTraits = .image
+//        coffeeBanner.accessibilityLabel = "\(bannerPromoTagLabel.text ?? "") \(firstLinePromoLabel.text ?? "") \(secondLinePromoLabel.text ?? "")"
+//        coffeeBanner.accessibilityHint = "Decorative image: no associated action."
+//        accessibilityElements.append(coffeeBanner)
+//        coffeeList.isAccessibilityElement = true
+//        accessibilityElements.append(coffeeList)
+//        listCategoryScrollView.isAccessibilityElement = true
+//        listCategoryScrollView.accessibilityLabel = "Horizontal list to filter coffees by preparation method."
+//        accessibilityElements.append(listCategoryScrollView)
+//        self.accessibilityElements = accessibilityElements
+//    }
     
     private func setupAccessibilityItemAtViewHierarchIndex(_ index: Int, component: Any) {
         

@@ -27,6 +27,8 @@ class SelectableCustomButton: UIButton {
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
         self.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        self.isAccessibilityElement = true
+        self.accessibilityTraits = .button
     }
 
     func setupSelectedState() {
@@ -57,11 +59,16 @@ class SelectableCustomButton: UIButton {
         
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension SelectableCustomButton {
     
-    
+    override func setTitle(_ title: String?, for state: UIControl.State) {
+        super.setTitle(title, for: state)
+        self.accessibilityHint = "Double tap to select \(title ?? "")"
+    }
     
 }
