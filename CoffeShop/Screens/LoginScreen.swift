@@ -22,6 +22,9 @@ class LoginScreen: UIView {
         let it = UIImageView()
         it.image = UIImage(named: "coffe-background-image")
         it.translatesAutoresizingMaskIntoConstraints = false
+        it.isAccessibilityElement = true
+        it.accessibilityLabel = "A background image with a full coffee cup and coffee beans below it, falling into the cup."
+        it.accessibilityTraits = .image
         return it
     }()
     
@@ -34,6 +37,8 @@ class LoginScreen: UIView {
         it.numberOfLines = 0
         it.textAlignment = .center
         it.lineBreakMode = .byWordWrapping
+        it.isAccessibilityElement = true
+        it.accessibilityHint = "Decorative message: no associated action."
         return it
     }()
     
@@ -46,6 +51,8 @@ class LoginScreen: UIView {
         it.numberOfLines = 0
         it.textAlignment = .center
         it.lineBreakMode = .byWordWrapping
+        it.isAccessibilityElement = true
+        it.accessibilityHint = "Decorative message: no associated action."
         return it
     }()
     
@@ -61,6 +68,8 @@ class LoginScreen: UIView {
         it.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchDown)
         it.addTarget(self, action: #selector(buttonReleased(_:)), for: .touchUpInside)
         it.translatesAutoresizingMaskIntoConstraints = false
+        it.isAccessibilityElement = true
+        it.accessibilityHint = "Double tap to go to the Home screen."
         return it
     }()
     

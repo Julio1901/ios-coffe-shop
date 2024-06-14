@@ -32,6 +32,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         view = initialScreen
     }
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -85,9 +86,9 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         if let path = Bundle.main.path(forResource: "loading-coffee", ofType: "gif"),
         let gifData = try? Data(contentsOf: URL(fileURLWithPath: path)) {
             let animatedImage = FLAnimatedImage(animatedGIFData: gifData)
-            initialScreen.loadingImage.animatedImage = animatedImage
+            initialScreen.setupLoadingImage(animatedImage: animatedImage)
         }else{
-            print("Erro ao carregar o GIF.")
+            print("Error loading GIF.")
         }
     }
     
@@ -134,14 +135,18 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     private func createLocationMenu(locations : [Location]) -> UIMenu {
         let actions = locations.map { location in
             UIAction(title: location.name, handler: self.menuButtonTapped)
-              }
+        }
+        actions.forEach { action in
+            action.isAccessibilityElement = true
+            action.accessibilityHint = "Double tap to select location."
+        }
         let menuTitle =  NSLocalizedString("location_options", comment: "")
         let locationMenu = UIMenu(
                     title: menuTitle,
                     options: .displayInline,
                     children: actions
-                )
-                return locationMenu
+        )
+        return locationMenu
     }
     
     private func setupSearchListener() {

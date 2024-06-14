@@ -44,7 +44,8 @@ class SearchCustomComponent: UITextField {
             .paragraphStyle: paragraphStyle
         ]
         self.defaultTextAttributes = textAttributes
-      
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "Search component where you can filter the list of coffees by the name of the coffee you are looking for."
     }
     
     func setupPlaceHolder(placeholder : String) {
@@ -56,6 +57,7 @@ class SearchCustomComponent: UITextField {
         setupSearchIcon(isEnableState: false)
         self.setupPlaceHolder(placeholder: NSLocalizedString("search_desable_state_place_holder", comment: ""))
         self.backgroundColor = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1.0)
+        self.accessibilityHint = "The search component is disabled, waiting for the coffee list to load."
     }
    
     func setupEnabledState(placeholder: String) {
@@ -63,6 +65,8 @@ class SearchCustomComponent: UITextField {
         setupSearchIcon(isEnableState: true)
         self.setupPlaceHolder(placeholder: placeholder)
         self.backgroundColor = UIColor(red: 42/255.0, green: 42/255.0, blue: 42/255.0, alpha: 1.0)
+        self.accessibilityHint = "The search component is enabled to search for a coffee in the loaded list."
+        UIAccessibility.post(notification: .layoutChanged, argument: self)
     }
     
     private func setupSearchIcon(isEnableState: Bool) {

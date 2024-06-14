@@ -140,10 +140,29 @@ class HomeScreen : UIView {
         return it
     }()
     
-    
     init(){
         super.init(frame: .zero)
         self.backgroundColor = UIColor(.white)
+        setupSubViews()
+        setupConstraints()
+        setupAccessibility()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
+    
+    func setupLoadingImage(animatedImage: FLAnimatedImage?) {
+        loadingImage.animatedImage = animatedImage
+        loadingImage.isAccessibilityElement = true
+        loadingImage.accessibilityLabel = "Animated image of coffee moving horizontally indicating the coffee list is loading."
+        loadingImage.accessibilityHint = "Decorative image: no associated action."
+        self.accessibilityElements?.insert(loadingImage!, at: 4)
+    }
+    
+    private func setupSubViews() {
         addSubview(topContainer)
         addSubview(locationLabel)
         addSubview(locationButton)
@@ -159,11 +178,36 @@ class HomeScreen : UIView {
         addSubview(secondLinePromoBannerBackLayer)
         addSubview(firstLinePromoLabel)
         addSubview(secondLinePromoLabel)
-        setupConstraints()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func setupAccessibility() {
+        var accessibilityElements : [Any] = []
+        locationLabel.isAccessibilityElement = true
+        locationLabel.accessibilityLabel = "Location"
+        locationLabel.accessibilityHint = "Location button title. This have no associated action."
+        accessibilityElements.append(locationLabel)
+        locationButton.isAccessibilityElement = true
+        locationButton.accessibilityLabel = "Bilzn, Tanjungbalai"
+        locationButton.accessibilityHint = "Double tap to select location."
+        accessibilityElements.append(locationButton)
+        searchComponent.isAccessibilityElement = true
+        accessibilityElements.append(searchComponent)
+        coffeeBanner.isAccessibilityElement = true
+        coffeeBanner.accessibilityTraits = .image
+        coffeeBanner.accessibilityLabel = "\(bannerPromoTagLabel.text ?? "") \(firstLinePromoLabel.text ?? "") \(secondLinePromoLabel.text ?? "")"
+        coffeeBanner.accessibilityHint = "Decorative image: no associated action."
+        accessibilityElements.append(coffeeBanner)
+        coffeeList.isAccessibilityElement = true
+        accessibilityElements.append(coffeeList)
+        listCategoryScrollView.isAccessibilityElement = true
+        listCategoryScrollView.accessibilityLabel = "Horizontal list to filter coffees by preparation method."
+        accessibilityElements.append(listCategoryScrollView)
+        
+        self.accessibilityElements = accessibilityElements
+    }
+    
+    private func setupAccessibilityItemAtViewHierarchIndex(_ index: Int, component: Any) {
+        
     }
     
     private func setupConstraints() {
@@ -204,8 +248,7 @@ class HomeScreen : UIView {
             firstLinePromoBannerBackLayer.heightAnchor.constraint(equalToConstant: 27),
             firstLinePromoBannerBackLayer.topAnchor.constraint(equalTo: bannerPromoTag.bottomAnchor, constant: 23),
             firstLinePromoBannerBackLayer.leadingAnchor.constraint(equalTo: bannerPromoTag.leadingAnchor),
-            
-            
+        
             secondLinePromoBannerBackLayer.widthAnchor.constraint(equalToConstant: 149),
             secondLinePromoBannerBackLayer.heightAnchor.constraint(equalToConstant: 23),
             secondLinePromoBannerBackLayer.topAnchor.constraint(equalTo: firstLinePromoBannerBackLayer.bottomAnchor, constant: 12),
@@ -232,8 +275,6 @@ class HomeScreen : UIView {
             coffeeList.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: DEFAULT_LEADING_ANCHOR_VALUE),
             coffeeList.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: DEFAULT_TRAILING_ANCHOR_VALUE),
             coffeeList.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            
-            
             
             loadingImage.centerXAnchor.constraint(equalTo: centerXAnchor),
             loadingImage.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor, constant: (topContainer.frame.height + (280 / 2) - 50))
