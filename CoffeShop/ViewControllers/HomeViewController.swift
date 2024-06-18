@@ -82,7 +82,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
         }
     }
     
-    func prepareLoadingImage() {
+    private func prepareLoadingImage() {
         if let path = Bundle.main.path(forResource: "loading-coffee", ofType: "gif"),
         let gifData = try? Data(contentsOf: URL(fileURLWithPath: path)) {
             let animatedImage = FLAnimatedImage(animatedGIFData: gifData)
@@ -93,7 +93,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     }
     
     
-    func populateCoffeeList()  {
+    private func populateCoffeeList()  {
         Task {
             await homeViewModel.loadCoffeeListData()
         }
@@ -104,11 +104,15 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
             self.initialScreen.loadingImage.isHidden = self.homeViewModel.loadingImageIsHidden
             if (self.homeViewModel.loadingImageIsHidden) {
                 self.initialScreen.searchComponent.setupEnabledState(placeholder: NSLocalizedString("search_coffee", comment: ""))
-                self.notifyUIchangesForAccessibility()
+                self.notifyAccessibilityUIChanges()
             } else {
                 self.initialScreen.searchComponent.setupDisableState()
             }
         }
+    }
+    
+    private func notifyAccessibilityUIChanges(){
+        UIAccessibility.post(notification: .announcement, argument: "The filtering component has been enabled to filter the list of coffees by name. Above the list, there is also a horizontal list of buttons where you can filter the coffees by preparation method.")
     }
     
     private func populateCoffeListCategory() {
@@ -116,8 +120,6 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
             let button = SelectableCustomButton()
             button.delegate = self
             button.setTitle(type, for: .normal)
-//            button.accessibilityHint = "Double tap to select \(type)"
-//            button.accessibilityLabel = type
             initialScreen.listCategoryStackView.addArrangedSubview(button)
         }
     }
@@ -163,11 +165,6 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
             homeViewModel.coffeeListViewModel.applyNameFilter(name: text)
         }
     }
-    
-    private func notifyUIchangesForAccessibility(){
-        UIAccessibility.post(notification: .announcement, argument: "The filtering component has been enabled to filter the list of coffees by name. Above the list, there is also a horizontal list of buttons where you can filter the coffees by preparation method.")
-    }
-        
 }
 
 extension HomeViewController : SelectableCustomButtonDelegate {
