@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol CoffeeWithPriceCellDelegate {
+    func  didTap()
+}
+
 class CoffeeWithPriceCell: UICollectionViewCell {
     
     static let reuseIdentifier = "CoffeeWithPriceCell"
     
     private let DEFAULT_LEADING_ANCHOR_VALUE : CGFloat = 8
     private let DEFAULT_TRAILING_ANCHOR_VALUE : CGFloat = -8
+    
+    var delegate : CoffeeWithPriceCellDelegate!
     
     var rating: String? {
         didSet {
@@ -135,11 +141,17 @@ class CoffeeWithPriceCell: UICollectionViewCell {
             addSubview(activityIndicator)
             setupConstraints()
             showLoader()
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+            self.addGestureRecognizer(tapGesture)
         }
         
         required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
+    
+    @objc private func cellTapped() {
+        delegate.didTap()
+    }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([

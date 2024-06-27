@@ -20,6 +20,9 @@
 "banner_first_line_label_text" = "Buy one get";
 "banner_second_line_label_text" = "one FREE";
 
+//MARK: Details Screen
+"details_screen_title" = "Details Screen";
+
 //MARK: Custom Components
 "search_coffee" = "Search coffee";
 "search_desable_state_place_holder" = "Wait for loading before searching";

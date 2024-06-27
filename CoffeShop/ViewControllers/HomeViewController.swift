@@ -43,6 +43,7 @@ class HomeViewController: UIViewController,  UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeWithPriceCell", for: indexPath) as! CoffeeWithPriceCell
+        cell.delegate = self
 
         cell.rating = ""
         cell.title = ""
@@ -181,5 +182,17 @@ extension HomeViewController : SelectableCustomButtonDelegate {
                 }
             }
         }
+    }
+}
+
+extension HomeViewController: CoffeeWithPriceCellDelegate {
+    func didTap() {
+        print("Cell pressed")
+        navigateToDetailsScreen()
+    }
+    
+    func navigateToDetailsScreen() {
+        let detailsScreen = DetailsViewController()
+        navigationController?.pushViewController(detailsScreen, animated: true)
     }
 }
