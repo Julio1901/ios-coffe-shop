@@ -19,7 +19,9 @@ class ViewController: UIViewController, LoginScreenDelegate {
     }
         
     func navigateToHome() {
-        let homeViewController = HomeViewController()
+//        let homeViewController = HomeViewController()
+        let homeViewController = DetailsViewController()
+        
         navigationController?.pushViewController(homeViewController, animated: true)
     }
 

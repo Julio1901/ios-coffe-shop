@@ -21,7 +21,8 @@
 "banner_second_line_label_text" = "one FREE";
 
 //MARK: Details Screen
-"details_screen_title" = "Details Screen";
+"details_screen_title" = "Detail";
+"temperature_options" = "Ice/Hot";
 
 //MARK: Custom Components
 "search_coffee" = "Search coffee";

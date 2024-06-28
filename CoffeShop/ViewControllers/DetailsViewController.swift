@@ -12,12 +12,21 @@ class DetailsViewController : UIViewController {
     
     private var initialScreen = DetailsScreen()
     var coffeeViewModel : CoffeeViewModel!
-    
+    var isFavorite = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
+        initialScreen.delegate = self
         view = initialScreen
     }
+}
+
+extension DetailsViewController : DetailsScreenDelegate {
+    func favoriteButtonDidTapped() {
+        initialScreen.setFavoriteIconState(isSelected: isFavorite)
+        self.isFavorite = !isFavorite
+    }
+    
     
 }
